@@ -1,4 +1,4 @@
-name: "Generate charts, deltas and packaged"
+name: "Test package"
 
 on: [push,pull_request]
 

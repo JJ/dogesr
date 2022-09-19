@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: JJ Merelo
 Maintainer: JJ Merelo <jjmerelo@gmail.com>
 Description: Work with data on Venetian doges and dogaresse, and use it for social network analysis
-License: GPL-3.0
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Depends:
@@ -13,3 +13,5 @@ Depends:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    rcmdcheck
