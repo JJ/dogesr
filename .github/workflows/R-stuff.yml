@@ -3,7 +3,7 @@ name: "Test package"
 on: [push,pull_request]
 
 jobs:
-  generate-charts:
+  run-checks:
     runs-on: ubuntu-latest
 
     steps:
