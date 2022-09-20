@@ -12,4 +12,4 @@
 
 lib <- modules::use("R")
 load("data/doges.rda")
-data.doges$Years <- data.doges$End - data.doges$Start
+
