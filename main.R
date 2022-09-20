@@ -11,4 +11,5 @@
 
 
 lib <- modules::use("R")
-doges.dat <- read.csv("data/venice-doges.Rda")
+load("data/doges.rda")
+data.doges$Years <- data.doges$End - data.doges$Start

@@ -4,4 +4,4 @@
   
 # dogesR
 
-Module (with data) to work with the dogi and dogaresse of the Venetian republic
+Module (with data) to work with the dogi and dogaresse of the Venetian republic. Main intention is to analyze social networks.
