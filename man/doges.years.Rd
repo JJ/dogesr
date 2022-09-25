@@ -2,7 +2,7 @@
 \alias{doges.years}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Sub-dataset with reigning information for every doge.
+Sub-dataset with years they were ruling.
 }
 \description{
 Create a sub-dataset with doge data and reigning years.
