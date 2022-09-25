@@ -8,7 +8,7 @@ Sub-dataset with reigning information for every doge.
 Create a sub-dataset with doge data and reigning years.
 }
 \usage{
-data.doges.years <- doges.years()
+doges.years()
 }
 \details{
 Eliminates data from the original dataset \code{doges} referring to dogaresse, and leaves just data for the doges, eliminating also the "raw" column.
