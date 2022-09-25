@@ -1,4 +1,4 @@
-name: "Test package"
+name: "Check and test package"
 
 on: [push,pull_request]
 
