@@ -1,4 +1,4 @@
-data("doges")
+globalVariables(c("data.doges"))
 doges.years <- function() {
   data.doges.years <- data.doges
   data.doges.years$Doge.raw <- NULL
