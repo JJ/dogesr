@@ -6,3 +6,4 @@
 ^main.R
 ^script/
 ^cran-comments\.md$
+^CRAN-SUBMISSION$
