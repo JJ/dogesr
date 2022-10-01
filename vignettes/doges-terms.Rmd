@@ -46,6 +46,16 @@ And quite a few during 1 year or less
 unique(doges.years[doges.years$years <= 1,])
 ```
 
+So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
 
+```{r longest.doge}
+doges.years[which.max(doges.years$years),]
+```
+
+Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges.
+
+We can see whether this has any kind of influence using now several functions provided by the `dogesr` package next.
+
+## Analyzing the evolution of the effective terms of the doges using `doges.years`
 
 ## References
