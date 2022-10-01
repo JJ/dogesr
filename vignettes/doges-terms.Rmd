@@ -1,10 +1,10 @@
 ---
-title: "Ruling for life: Life and Times of Venetian doges"
+title: "Doge years: Life and Times of Venetian doges"
 author: "JJ Merelo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Ruling for life: Life and Times of Venetian doges}
+  %\VignetteIndexEntry{Doge years: Life and Times of Venetian doges}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 bibliography: ../inst/doges.bib
@@ -33,6 +33,19 @@ This will import the data from the `dogesr` package into the `data.doges` data f
 ```{r years}
 doges.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
 ```
+
+Several doges only were able to stay alive during the same year
+
+```{r same.year}
+doges.years[doges.years$years == 0,]
+```
+
+And quite a few during 1 year or less
+
+```{r one.year.or.less}
+unique(doges.years[doges.years$years <= 1,])
+```
+
 
 
 ## References
