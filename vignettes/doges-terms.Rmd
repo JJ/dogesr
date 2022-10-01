@@ -1,0 +1,20 @@
+---
+title: "Ruling for life: Life and Times of Venetian doges"
+author: "JJ Merelo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using `dogesr` to analyze the reigns of doges}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long.
