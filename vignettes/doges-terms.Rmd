@@ -75,5 +75,11 @@ library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
 
+The distribution is skewed because it includes the first years of the institution. This is the distribution by centuries
+
+```{r boxplot}
+doges.years.all$Century <- as.factor(doges.years.all$Century)
+ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
+```
 
 ## References
