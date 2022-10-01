@@ -37,19 +37,19 @@ doges.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
 Several doges only were able to stay alive during the same year
 
 ```{r same.year}
-doges.years[doges.years$years == 0,]
+knitr::kable(doges.years[doges.years$years == 0,]$doge, col.names=NULL)
 ```
 
 And quite a few during 1 year or less
 
 ```{r one.year.or.less}
-unique(doges.years[doges.years$years <= 1,])
+knitr::kable(unique(doges.years[doges.years$years <= 1,]),col.names=NULL)
 ```
 
 So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
 
 ```{r longest.doge}
-doges.years[which.max(doges.years$years),]
+knitr::kable(doges.years[which.max(doges.years$years),])
 ```
 
 Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges.
