@@ -17,4 +17,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long.
+## Introduction
+
+Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed
+
+## Set up
+
+```{r load}
+library(dogesr)
+data("doges")
+```
+
+This will import the data from the `dogesr` package into the `data.doges` data frame. We are interested in the `Doges` and `Years` variables. Let's create a data frame out of that:
+
+```{r years}
+doges.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
+```
+
+
+## References
