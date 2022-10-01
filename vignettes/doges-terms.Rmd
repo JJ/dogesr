@@ -63,6 +63,7 @@ This can be analyzed a but further with a function provided by `dogesr`, `doges.
 
 ```{r using.doges.years}
 doges.years.all <- doges.years()
+doges.years.all$Century <- doges.years.all$Century +1 
 knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
 ```
 
