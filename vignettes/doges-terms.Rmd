@@ -4,10 +4,10 @@ author: "JJ Merelo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Using `dogesr` to analyze the reigns of doges}
+  %\VignetteIndexEntry{Ruling for life: Life and Times of Venetian doges}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-
+bibliography: ../inst/doges.bib
 ---
 
 ```{r setup, include = FALSE}
