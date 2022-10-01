@@ -43,7 +43,8 @@ knitr::kable(doges.years[doges.years$years == 0,]$doge, col.names=NULL)
 And quite a few during 1 year or less
 
 ```{r one.year.or.less}
-knitr::kable(unique(doges.years[doges.years$years <= 1,]),col.names=NULL)
+doges.one.year <- unique(doges.years[doges.years$years <= 1,])
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL)
 ```
 
 So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
