@@ -2,8 +2,8 @@ Package: dogesr
 Type: Package
 Title: Work with the Doges/Dogaresse Dataset
 Version: 0.1.0
-Author: JJ Merelo
-Maintainer: JJ Merelo <jjmerelo@gmail.com>
+Author: Juan Julián Merelo-Guervós
+Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
 Description: Work with data on Venetian doges and dogaresse, and use it for social network analysis, as used in Merelo (2022) <arXiv:2209.07334>.
 License: GPL-3
 Encoding: UTF-8
@@ -13,3 +13,10 @@ Depends:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    dplyr,
+    ggplot2,
+    knitr,
+    qpdf,
+    rmarkdown
+VignetteBuilder: knitr
