@@ -5,6 +5,8 @@
   
 # dogesR
 
+> **Hacktoberfest**: check the [help wanted](https://github.com/JJ/dogesr/labels/help%20wanted) issues
+
 Module (with data) to work with the dogi and dogaresse of the Venetian republic. Main intention is to analyze social networks resulting from marriages and other interactions.
 
 It grew from the data used in this paper; please cite it if you are using this module:
