@@ -67,11 +67,11 @@ doges.years.all$Century <- doges.years.all$Century +1
 knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
 ```
 
-First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected after the afore mentioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier. The distribution in bins of 5 years, below, shows how infrequent was a term of more than 10 years.
+First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected after the aforementioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier. The distribution in bins of 5 years, below, shows how infrequent was a term of more than 10 years.
 
 > In fact, doges' years of ruling were as short as the life of the common dog.
 
-```{r distribution}
+```{r distribution, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
@@ -82,5 +82,7 @@ The distribution is skewed because it includes the first years of the institutio
 doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 ```
+
+There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. 
 
 ## References
