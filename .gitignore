@@ -44,3 +44,5 @@ vignettes/*.pdf
 *~
 
 CRAN-SUBMISSION
+
+revdep/
