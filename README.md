@@ -9,7 +9,10 @@
 
 Module (with data) to work with the dogi and dogaresse of the Venetian republic. Main intention is to analyze social networks resulting from marriages and other interactions.
 
-It grew from the data used in this paper; please cite it if you are using this module:
+
+## Reference
+
+It grew from the data used in [this paper](https://arxiv.org/abs/2209.07334); please cite it if you are using this module:
 
 ```
 @misc{https://doi.org/10.48550/arxiv.2209.07334,
