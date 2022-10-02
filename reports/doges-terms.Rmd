@@ -15,36 +15,24 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(dogesr)
+data("doges")
+doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
+
 ```
 
 ## Introduction
 
-Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed
+Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
 
-## Set up
 
-```{r load, include = FALSE}
-library(dogesr)
-data("doges")
-```
+## Examining doges' terms
 
-This will import the data from the `dogesr` package into the `data.doges` data frame. We are interested in the `Doges` and `Years` variables. Let's create a data frame out of that:
-
-```{r years, include = FALSE}
-doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
-```
-
-Several doges only were able to stay alive during the same year
-
-```{r same.year, echo = FALSE}
-knitr::kable(doges.all.years[doges.all.years$years == 0,]$doge, col.names=NULL)
-```
-
-And quite a few during 1 year or less
+There were a number of doges whose tenure spanned one or two natural years
 
 ```{r one.year.or.less, echo = FALSE}
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL)
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate.")
 ```
 
 So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
