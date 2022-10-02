@@ -17,6 +17,7 @@ A dataframe with a row for every doge and doge marriage, and the columns
   \item \code{Dogaressa.raw} Full entry copied from the Wikipedia, original format. Years of marriage are include when known; in other cases, they are simply the same as the years of ruling.
   \item \code{Century, Start, End, Years } Century where the ofice of the doge took place, years it started and ended, and how many years it lasted, parsed from \code{Doge.raw}.
   \item \code{Family.doge, Family.dogaressa} Normalized names of the patrician family the doge and dogaressa belonged. The second is null if it was not a patrician family (usual in the first centuries).
+  \item \code{Family.mother} The family name of the mother of the doge, extracted generally from the Wikipedia
 }
 }
 
