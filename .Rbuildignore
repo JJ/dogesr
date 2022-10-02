@@ -12,3 +12,4 @@
 ^\.tex$
 ^doc$
 ^Meta$
+^report/
