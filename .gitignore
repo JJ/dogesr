@@ -46,3 +46,5 @@ vignettes/*.pdf
 CRAN-SUBMISSION
 
 revdep/
+/doc/
+/Meta/
