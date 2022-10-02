@@ -1,5 +1,6 @@
   <!-- badges: start -->
   [![Test package](https://github.com/JJ/dogesr/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/dogesr/actions/workflows/R-stuff.yml)
+    [![CRAN status](https://www.r-pkg.org/badges/version/dogesr)](https://CRAN.R-project.org/package=dogesr)
   <!-- badges: end -->
   
 # dogesR
