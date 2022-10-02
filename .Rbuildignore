@@ -8,3 +8,5 @@
 ^script/
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^revdep$
+^\.tex$
