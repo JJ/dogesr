@@ -48,3 +48,7 @@ CRAN-SUBMISSION
 revdep/
 /doc/
 /Meta/
+
+*.tex
+*.pdf
+**/*_files/

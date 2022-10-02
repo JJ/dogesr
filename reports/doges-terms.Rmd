@@ -1,13 +1,13 @@
 ---
-title: "Using `dogesr` to work with Venetian doges tenures"
+title: "It's a doges' life: examining term limits in Venetian doges life tenure"
 author: "JJ Merelo"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Using `dogesr` to work with Venetian doges tenures}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  pdf_document:
+    keep_tex: true
 bibliography: ../inst/doges.bib
+abstract: |
+  During most of the lifespan of the Venetian republic, doges or presidents were elected for life. However, a long tenure was a rare event, which effectively resulted in term limits, as found by [@smith2021long]. In this paper we examine these terms limits and its evolution during the existence of the Venetian republic.
 ---
 
 ```{r setup, include = FALSE}
