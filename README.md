@@ -21,3 +21,5 @@ It grew from the data used in this paper; please cite it if you are using this m
   copyright = {Creative Commons Attribution Share Alike 4.0 International}
 }
 ```
+
+You can retrieve this from the [bibliography file](inst/doges.bib) along with other references used in examples.
