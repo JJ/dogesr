@@ -23,6 +23,10 @@ doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
 
 ## Introduction
 
+The Venetian republic, which existed from the seventh to the end of the eighteenth century, was a unique polity in many different aspects, including the fact that it existed for more than one thousand years essentially under the same set of laws and its stability in a geographic milieu, the Italian peninsula, that underwent many waves of upheaval under the opposite forces of the Papal states, the Holy Roman Empire, and later the Ottoman, French, Spanish and Austro-Hungarian empires [@madden2012venice].
+
+Many explanations have been sought for this fact, and of course the governing institutions have been examined, including the head of government, the so called *doge* (*doxe* in the vernacular Veneto language; the term is equivalent to "duke" approximately in other languages). Doges were elected for life by an electoral college composed of 41 nobles, which were also elected through a series of lotteries and nominations emanating from the *Maggior Consiglio*, which included all noble families in Venice [@molinari2020republic].
+
 Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
 
 The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time, check if there were some shifts in the tenure duration. Finally, we will present our conclusions and discuss its implications.
