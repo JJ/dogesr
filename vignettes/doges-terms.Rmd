@@ -83,6 +83,23 @@ doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 ```
 
-There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. 
+There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. Was there a real difference?
+
+```{r serrata}
+doges.years.all$pre.serrata <- TRUE
+doges.years.all[doges.years.all$Start >= 1297,]$pre.serrata <- FALSE
+means <- aggregate(Years ~  pre.serrata, doges.years.all, mean)
+medians <- aggregate(Years ~  pre.serrata, doges.years.all, median)
+ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
+  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
+  geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
+  geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
+```
+
+This difference is significant, as indicated by the Wilcoxon test
+
+```{r wilcox}
+ wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
+```
 
 ## References
