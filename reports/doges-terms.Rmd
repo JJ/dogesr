@@ -23,33 +23,33 @@ Since doges were elected for life, it was apparently a conscious design by the e
 
 ## Set up
 
-```{r load}
+```{r load, include = FALSE}
 library(dogesr)
 data("doges")
 ```
 
 This will import the data from the `dogesr` package into the `data.doges` data frame. We are interested in the `Doges` and `Years` variables. Let's create a data frame out of that:
 
-```{r years}
+```{r years, include = FALSE}
 doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
 ```
 
 Several doges only were able to stay alive during the same year
 
-```{r same.year}
+```{r same.year, echo = FALSE}
 knitr::kable(doges.all.years[doges.all.years$years == 0,]$doge, col.names=NULL)
 ```
 
 And quite a few during 1 year or less
 
-```{r one.year.or.less}
+```{r one.year.or.less, echo = FALSE}
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
 knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL)
 ```
 
 So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
 
-```{r longest.doge}
+```{r longest.doge, echo = FALSE}
 knitr::kable(doges.all.years[which.max(doges.all.years$years),])
 ```
 
@@ -61,7 +61,7 @@ We can see whether this has any kind of influence using now several functions pr
 
 This can be analyzed a but further with a function provided by `dogesr`, `doges.years`. This filters part of the original data, leaving only data needed to work with the doges' terms (or years)
 
-```{r using.doges.years}
+```{r using.doges.years, echo = FALSE}
 doges.years.all <- doges.years()
 doges.years.all$Century <- doges.years.all$Century +1 
 knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
@@ -71,21 +71,21 @@ First thing we can note is that, among the top 10, there is only one, Leonardo L
 
 > In fact, doges' years of ruling were as short as the life of the common dog.
 
-```{r distribution, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
+```{r distribution, , echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
 
 The distribution is skewed because it includes the first years of the institution. This is the distribution by centuries
 
-```{r boxplot}
+```{r boxplot, echo = FALSE}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 ```
 
 There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. Was there a real difference?
 
-```{r serrata}
+```{r serrata, echo = FALSE}
 doges.years.all$pre.serrata <- TRUE
 doges.years.all[doges.years.all$Start >= 1297,]$pre.serrata <- FALSE
 means <- aggregate(Years ~  pre.serrata, doges.years.all, mean)
@@ -98,8 +98,8 @@ ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
 
 This difference is significant, as indicated by the Wilcoxon test
 
-```{r wilcox}
-wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
+```{r wilcox, echo = FALSE}
+wtest <- wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
 ```
 
 ## Conclusions
