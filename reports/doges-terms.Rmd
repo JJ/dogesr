@@ -61,8 +61,6 @@ knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
 
 First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected after the aforementioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier. The distribution in bins of 5 years, below, shows how infrequent was a term of more than 10 years.
 
-> In fact, doges' years of ruling were as short as the life of the common dog.
-
 ```{r distribution, fig.height=3, fig.pos="!H", echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
@@ -98,6 +96,8 @@ wtest <- wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,  
 
 As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. According to the figure above, there does not seem to be a significant difference between the XII and XIII century in terms of tenure. However, 1297 does seem to be a watershed event, with all terms after that being significantly different to terms prior to it. We can conclude, then, that the Serrata, closing of the Maggior Consiglio to all but a few patrician families, was in fact the event that marked the shift to electing older doges.
 
-This vignette also shows how, using `dogesr`, it becomes significantly easier for everyone with the skill to work with the R language to reproduce or work upon results related to life terms and other Venetian doges data.
 
+## Acknowledgments
+
+This paper has been supported in part by project and DemocratAI PID2020-115570GB-C22.
 ## References
