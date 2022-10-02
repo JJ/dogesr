@@ -1,10 +1,10 @@
 ---
-title: "Doge years: Life and Times of Venetian doges"
+title: "Using `dogesr` to work with Venetian doges tenures"
 author: "JJ Merelo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Doge years: Life and Times of Venetian doges}
+  %\VignetteIndexEntry{Using `dogesr` to work with Venetian doges tenures}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 bibliography: ../inst/doges.bib
@@ -99,7 +99,13 @@ ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
 This difference is significant, as indicated by the Wilcoxon test
 
 ```{r wilcox}
- wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
+wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
 ```
+
+## Conclusions
+
+As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. According to the figure above, there does not seem to be a significant difference between the XII and XIII century in terms of tenure. However, 1297 does seem to be a watershed event, with all terms after that being significantly different to terms prior to it. We can conclude, then, that the Serrata, closing of the Maggior Consiglio to all but a few patrician families, was in fact the event that marked the shift to electing older doges.
+
+This vignette also shows how, using `dogesr`, it becomes significantly easier for everyone with the skill to work with the R language to reproduce or work upon results related to life terms and other Venetian doges data.
 
 ## References
