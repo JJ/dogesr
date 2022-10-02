@@ -23,12 +23,16 @@ doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
 
 ## Introduction
 
-Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
+Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
+
+The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time, check if there were some shifts in the tenure duration. Finally, we will present our conclusions and discuss its implications.
+
+## State of the art
 
 
 ## Examining doges' terms
 
-There were a number of doges whose tenure spanned one or two natural years
+There were a number of doges whose tenure spanned one or two natural years, as is shown below:
 
 ```{r one.year.or.less, echo = FALSE}
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
