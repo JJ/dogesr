@@ -7,7 +7,7 @@ output:
     keep_tex: true
 bibliography: ../inst/doges.bib
 abstract: |
-  During most of the lifespan of the Venetian republic, doges or presidents were elected for life. However, a long tenure was a rare event, which effectively resulted in term limits, as found by [@smith2021long]. In this paper we examine these terms limits and its evolution during the existence of the Venetian republic.
+  During most of the lifespan of the Venetian republic, doges or presidents were elected for life. However, a long tenure was a rare event, which effectively resulted in term limits, as found by [@smith2021long]. In this paper we examine these tenures and its evolution during the existence of the Venetian republic, trying to prove Smith et al. thesis, but also the event or events that effectively caused that limitation by design. Finally, we will discuss for the causes of this limitation and its effective consequences.
 ---
 
 ```{r setup, include = FALSE}
