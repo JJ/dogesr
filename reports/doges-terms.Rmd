@@ -72,7 +72,7 @@ library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
 
-The distribution is skewed because it includes the first years of the institution. This is the distribution by centuries
+The distribution is skewed towards very short terms because it includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons. This is the distribution by centuries
 
 ```{r boxplot, echo = FALSE, fig.pos="!H",}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
