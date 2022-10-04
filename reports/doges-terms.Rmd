@@ -39,6 +39,7 @@ The rest of the paper is organized as follows. Next we will show the state of th
 
 ## State of the art
 
+In a previous version of this paper [@dogesr:vignette], we concluded that it was *not* the date and event proposed by Smith et al. the one that created a change in the attitude of the electoral college when choosing the next doge; we concluded that it was closer to the afore mentioned Serrata. In this paper we will try to use more precise statistical techniques to assess the precise point of change, and also check if there ware other events that produced changes during the history of the Republic
 
 ## Examining doges' terms
 
