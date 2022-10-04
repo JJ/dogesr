@@ -54,3 +54,6 @@ revdep/
 **/*_files/
 
 auto/
+
+# Rpubs
+rsconnect/
