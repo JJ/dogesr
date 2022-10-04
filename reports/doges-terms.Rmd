@@ -35,13 +35,13 @@ Be that as it may, this single fact had to be compounded with others to account 
 
 Another factor might be at play here. Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
 
-The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time, check if there were some shifts in the tenure duration. Finally, we will present our conclusions and discuss its implications.
+The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time and check if there were some shifts in the tenure duration in the [next section](#terms). Finally, we will present our [conclusions](#conclusions) and discuss its implications.
 
 ## State of the art
 
 In a previous version of this paper [@dogesr:vignette], we concluded that it was *not* the date and event proposed by Smith et al. the one that created a change in the attitude of the electoral college when choosing the next doge; we concluded that it was closer to the afore mentioned Serrata. In this paper we will try to use more precise statistical techniques to assess the precise point of change, and also check if there ware other events that produced changes during the history of the Republic
 
-## Examining doges' terms
+## Examining doges' terms {#terms}
 
 There were a number of doges whose tenure spanned one or two natural years, as is shown below:
 
@@ -59,8 +59,6 @@ knitr::kable(doges.all.years[which.max(doges.all.years$years),])
 Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges.
 
 We can see whether this has any kind of influence using now several functions provided by the `dogesr` package next.
-
-## Analyzing the evolution of the effective terms of the doges using `doges.years`
 
 This can be analyzed a but further with a function provided by `dogesr`, `doges.years`. This filters part of the original data, leaving only data needed to work with the doges' terms (or years)
 
@@ -121,7 +119,7 @@ change.doge.2 <- after.dandolo[as.integer(cp.estimate.2$estimate),]$doge
 
 In this case, we use another change-point detection test which is more adequate in this case, Pettitt's test [@pettitt1979non]. This indicates the change point occurs with the `r change.doge.2` tenure.
 
-## Conclusions
+## Conclusions {#conclusions}
 
 As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. According to the figure above, there does not seem to be a significant difference between the XII and XIII century in terms of tenure. However, 1297 does seem to be a watershed event, with all terms after that being significantly different to terms prior to it. We can conclude, then, that the Serrata, closing of the Maggior Consiglio to all but a few patrician families, was in fact the event that marked the shift to electing older doges.
 
