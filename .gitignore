@@ -52,3 +52,5 @@ revdep/
 *.tex
 *.pdf
 **/*_files/
+
+auto/
