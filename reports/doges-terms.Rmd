@@ -110,8 +110,15 @@ cp.estimate <- lanzante.test(doges.all.years$years)
 change.doge <- doges.all.years[as.integer(cp.estimate$estimate),]$doge
 ```
 
-Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office.
+Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change.
 
+```{r change.point2, echo=FALSE}
+after.dandolo <- tail(doges.all.years,cp.estimate$estimate)
+cp.estimate.2 <- pettitt.test(tail(doges.all.years$years,cp.estimate$estimate))
+change.doge.2 <- after.dandolo[as.integer(cp.estimate.2$estimate),]$doge
+```
+
+In this case, we use another change-point detection test which is more adequate in this case, Pettitt's test [@pettitt1979non]. This indicates the change point occurs with the `r change.doge.2` tenure.
 
 ## Conclusions
 
