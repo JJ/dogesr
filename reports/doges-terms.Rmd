@@ -27,9 +27,13 @@ The Venetian republic, which existed from the seventh to the end of the eighteen
 
 Many explanations have been sought for this fact, and of course the governing institutions have been examined, including the head of government, the so called *doge* (*doxe* in the vernacular Veneto language; the term is equivalent to "duke" approximately in other languages). Doges were elected for life by an electoral college composed of 41 nobles, which were also elected through a series of lotteries and nominations emanating from the *Maggior Consiglio*, which included all noble families in Venice [@molinari2020republic].
 
-This had a series of consequences, including the creation of a (relatively) egalitarian society [@Stockwell2011]
+Although initially this electoral council was composed of all persons with a certain economic position or at any rate chosen by the doge, by the beginning of the XIV century  a *closure* (*serrata*) took place [@serrata]: seats were closed to only a few families, hereafter called *vecchie* or "old" families.
 
-Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
+This had a series of consequences, including the creation of a (relatively) egalitarian society [@Stockwell2011], at least among the nobles; according to other authors [@serrata], this had the opposite effect of creating a chasm between the aristocrats and the *popolani*, or common folk, which ultimately brought the demise of the Republic.
+
+Be that as it may, this single fact had to be compounded with others to account for the fact that the system persisted through several centuries, and that except for a single case, no doge had to be indicted of corruption or treason, or for that matter simply destituted or murdered, as was the case in many of the other Italian city-states or Europe at large.
+
+Another factor might be at play here. Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
 
 The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time, check if there were some shifts in the tenure duration. Finally, we will present our conclusions and discuss its implications.
 
