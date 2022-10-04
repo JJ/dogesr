@@ -102,6 +102,17 @@ This difference is significant, as indicated by the Wilcoxon test
 wtest <- wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
 ```
 
+We can check this hypothesis via change-point detection, an algorithm that checks a time series and points to the precise moment where the change occurred.
+
+```{r change.point, echo=FALSE}
+library(trend)
+cp.estimate <- lanzante.test(doges.all.years$years)
+change.doge <- doges.all.years[as.integer(cp.estimate$estimate),]$doge
+```
+
+Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office.
+
+
 ## Conclusions
 
 As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. According to the figure above, there does not seem to be a significant difference between the XII and XIII century in terms of tenure. However, 1297 does seem to be a watershed event, with all terms after that being significantly different to terms prior to it. We can conclude, then, that the Serrata, closing of the Maggior Consiglio to all but a few patrician families, was in fact the event that marked the shift to electing older doges.
@@ -110,4 +121,5 @@ As indicated by [@smith2021long], there seems to be evidence in the term limits 
 ## Acknowledgments
 
 This paper has been supported in part by project and DemocratAI PID2020-115570GB-C22.
+
 ## References
