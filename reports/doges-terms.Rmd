@@ -156,7 +156,11 @@ In this case, the difference in medians, of 1.5 years, is smaller; same happens 
 
 ## Conclusions {#conclusions}
 
-As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. According to the figure above, there does not seem to be a significant difference between the XII and XIII century in terms of tenure. However, 1297 does seem to be a watershed event, with all terms after that being significantly different to terms prior to it. We can conclude, then, that the Serrata, closing of the Maggior Consiglio to all but a few patrician families, was in fact the event that marked the shift to electing older doges.
+As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. The analysis that we have performed in this paper effectively indicates that, at a certain point in time during the history of the Republic of Venice, there was a conscious choice by the electoral college to choose, among the eligible candidates, those that were beyond a certain age, and thus with a limited lifespan.
+
+## Source code and data availability note
+
+This paper has been written using RMarkdown, and all analysis performed are embedded in its source code, which is [available at GitHub](https://github.com/JJ/dogesr/blob/main/reports/doges-terms.Rmd) under a free license. As indicated, it uses as data source version 0.1.1 of the CRAN `dogesR` package.
 
 
 ## Acknowledgments
