@@ -45,39 +45,40 @@ In a first exploration of this hypothesis using our data [@dogesr:vignette], we 
 
 ## Examining doges' terms {#terms}
 
-There were a number of doges whose tenure spanned one or two natural years, as is shown below:
+Let us first examine the claims about doges' terms using independent data, the one provided by the `dogesr` package and collected independently from the one mentioned by [@smith2021long]. How this data was collected is explained in [@dogesr]; it does not include the exact date of election and death, just the year, so it is in fact impossible to know the precise number of months they were in office, only the year it started and ended. A term of 0 years thus simply indicates that both events occurred in the same physical year. Taking this into account, there were quite a few doges whose tenure was extraordinarily short, staying in office during less than two natural years:
 
 ```{r one.year.or.less, echo = FALSE}
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate.")
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table")
 ```
 
-So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
+This represented the `r sprintf("%.2f", 100*nrow(doges.one.year)/nrow(doges.all.years))` percent of all doges, a remarkable number. The first column indicates a high number of them ruled at the beginning of the republic (when their cause of death was probably murder) and by the end of the republic (when, as is the main hypothesis, they were actually elected at an old age).
+
+So it effectively looks like many doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
 
 ```{r longest.doge, echo = FALSE}
 knitr::kable(doges.all.years[which.max(doges.all.years$years),])
 ```
 
-Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges.
-
-We can see whether this has any kind of influence using now several functions provided by the `dogesr` package next.
-
-This can be analyzed a but further with a function provided by `dogesr`, `doges.years`. This filters part of the original data, leaving only data needed to work with the doges' terms (or years)
+Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges and given a pension for life [@wiel1891two]. In fact, he died a few days later, although the stress caused by his demise might have contributed to that. Looking at the other end, the 10 doges that staid in power the longest:
 
 ```{r using.doges.years, echo = FALSE}
 doges.years.all <- doges.years()
+doges.years.all$Femily.doge <- NULL
 doges.years.all$Century <- doges.years.all$Century +1 
-knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
+knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges with the longest tenure; as in the previous table, the left-most column indicates their position in the temporally ordered list of doges; it also shows the precise years where they acceded to power and left, and the total number of years.")
 ```
 
-First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected after the aforementioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier. The distribution in bins of 5 years, below, shows how infrequent was a term of more than 10 years.
+First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected years after the aforementioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier, and it might have happened that the change point that brought informal term limits was the bad experience with Foscari. This ranking, however, shows how very long terms were extremely infrequent, and there were no doge that ruled for more than 20 years after 1521, when Leonardo Loredan died.
+
+The histogram with 5-years wide bins, below, shows how infrequent, in fact, were terms of more than 10 years.
 
 ```{r distribution, fig.height=3, fig.pos="!H", echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
 
-The distribution is skewed towards very short terms because it includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons. This is the distribution by centuries
+The distribution is skewed towards very short terms because it includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons. This is the distribution by centuries.
 
 ```{r boxplot, echo = FALSE, fig.pos="!H",}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
