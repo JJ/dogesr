@@ -104,7 +104,7 @@ Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs
 
 ```{r serrata, echo=FALSE, fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable)"}
 doges.years.all$pre.serrata <- TRUE
-doges.years.all[doges.years.all$Start >= 1329,]$pre.serrata <- FALSE
+doges.years.all[doges.years.all$Start >= 1328,]$pre.serrata <- FALSE
 means <- aggregate(Years ~  pre.serrata, doges.years.all, mean)
 medians <- aggregate(Years ~  pre.serrata, doges.years.all, median)
 ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
@@ -128,16 +128,28 @@ cp.estimate.2 <- pettitt.test(before.dandolo$years)
 
 \newpage
 
-The Pettitt test [@pettitt1979non], which works better for smaller series, yields a change point at index 9 (after Galla Gaulo, who was blinded and exiled after a year in power); however, this result has a p-value higher than 0.05 and thus we need to conclude that there is, indeed, no significant structural change in this period, not even after the introduction of the electoral college, as affirmed by [@smith2021long]. As a matter of fact, looking at Figure 2, we see that the VIII century had exceptionally short terms; it increased slightly during the IX century, but then stabilized until the change point in the XIV century, when it shows a clear decrease, which is statistically significant.
+The Pettitt test [@pettitt1979non], which works better for smaller series, yields a change point at index 9 (after Galla Gaulo, who was blinded and exiled after a year in power); however, this result has a p-value higher than 0.05 and thus we need to conclude that there is, indeed, no significant structural change in this period, not even after the introduction of the electoral college, as affirmed by [@smith2021long]. As a matter of fact, looking at Figure 2, we see that the VIII century had exceptionally short terms; it increased slightly during the IX century, but then stabilized until the change point in the XIV century, when it shows a clear decrease, which is statistically significant. Other tests, the Buishand and Buishand U test, stop at index = 28, but again the p-value is relatively high. This would also happen before the year 1000, and thus, again, does not match the hypothesis of change in regime by the end of the XII century.
 
 However, there seems to be some significant change by the end of the republic, at least according to Figure 2. Let us look at the series that starts with Francesco Dandolo and look for some significant change points. 
 
 ```{r change.point3, echo=FALSE}
 cp.estimate.3 <- pettitt.test(after.dandolo$years)
-change.doge.2 <- after.dandolo[as.integer(cp.estimate.2$estimate),]$doge
+change.doge.3 <- after.dandolo[as.integer(cp.estimate.3$estimate),]$doge
+doges.years.post.serrata <- doges.years.all[ doges.years.all$pre.serrata == FALSE,]
+doges.years.post.serrata$pre.decline <- TRUE
+doges.years.post.serrata[doges.years.post.serrata$Start >= 1658,]$pre.decline <- FALSE
 ```
 
-In this case, we use another change-point detection test which is more adequate in this case, Pettitt's test [@pettitt1979non]. This indicates the change point occurs with the `r change.doge.2` tenure.
+In this case, we use another change-point detection test which is more adequate in this case, Pettitt's test [@pettitt1979non]. This indicates the change point occurs with the `r change.doge.3` tenure. This was an election quite unlike others previous to them. He had been a corrupt administrator, and married a non-patrician to boot. However, his hawkish attitude and the fact that he pledged his own money to support the war against the Ottoman empire tipped the balance in his favor, making him possibly the first doge to be elected not because of his qualities (and age), but because of his money. The republic at the time of him taking office, 1658, was starting to decline, and although he ruled for a single year, possibly precipitated this change in regime.
+
+```{r decline, echo=FALSE, fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office after 1329 and pre and post 1658 (indicated with the pre.decline variable)"}
+means.2 <- aggregate(Years ~  pre.decline, doges.years.post.serrata, mean)
+medians.2 <- aggregate(Years ~  pre.decline, doges.years.post.serrata, median)
+ggplot(doges.years.post.serrata, aes(x=pre.decline, y=Years))+geom_boxplot(notch=T)+
+  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
+  geom_text(data = means.2, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
+  geom_text(data = medians.2, aes(label = round(Years, 2), y = Years - 1), size = 3)
+```
 
 ## Conclusions {#conclusions}
 
