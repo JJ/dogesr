@@ -149,7 +149,9 @@ ggplot(doges.years.post.serrata, aes(x=pre.decline, y=Years))+geom_boxplot(notch
   stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
   geom_text(data = means.2, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
   geom_text(data = medians.2, aes(label = round(Years, 2), y = Years - 1), size = 3)
+wtest.post.serrata <- wilcox.test(doges.years.post.serrata[doges.years.post.serrata$pre.decline ==TRUE,]$Years,doges.years.post.serrata[doges.years.post.serrata$pre.decline ==FALSE,]$Years)
 ```
+In this case, the difference in medians, of 1.5 years, is smaller; same happens with the difference in averages. There is a clear overlap between the two intervals, and the Pettitt test has a p-value which is relatively high. As a matter of fact, a non-parametric Wilcox test shows no significant difference. We can then dismiss this change point as not significant, although it can explain the greater duration of the doges elected by the last period of the republic.
 
 ## Conclusions {#conclusions}
 
