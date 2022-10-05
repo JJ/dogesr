@@ -11,10 +11,6 @@ abstract: |
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
 library(dogesr)
 data("doges")
 doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges$Years))
