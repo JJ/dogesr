@@ -95,6 +95,9 @@ In this paper, however, we will analyze, using statistical methods, when the act
 library(trend)
 cp.estimate <- lanzante.test(doges.all.years$years)
 change.doge <- doges.all.years[as.integer(cp.estimate$estimate),]$doge
+index.cp <- as.integer(cp.estimate$estimate)
+after.dandolo <- tail(doges.all.years,-index.cp+1)
+before.dandolo <- head(doges.all.years,index.cp-1)
 ```
 
 Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. Francisco Dandolo ruled from 1329 to 1339, right after the last laws of the Serrata were enacted, please see also [@dogesr] for the importance of the Dandolo family in the social network of Venetian noble families. 
@@ -102,7 +105,6 @@ Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs
 There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change.
 
 ```{r change.point2, echo=FALSE}
-after.dandolo <- tail(doges.all.years,cp.estimate$estimate)
 cp.estimate.2 <- pettitt.test(tail(doges.all.years$years,cp.estimate$estimate))
 change.doge.2 <- after.dandolo[as.integer(cp.estimate.2$estimate),]$doge
 ```
