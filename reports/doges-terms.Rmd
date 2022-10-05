@@ -82,7 +82,7 @@ The distribution is skewed towards very short terms because it also includes the
 
 [@smith2021long] also indicate that term limitation was introduced at a certain point in time. Let us start checking that fact by looking at the average duration in office through the history of the Republic.
 
-```{r boxplot, echo = FALSE, fig.pos="!H",}
+```{r boxplot, echo = FALSE, fig.height=4,fig.pos="!H",fig.cap="Boxplot of doge duration in office vs. century"}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 ```
@@ -100,11 +100,37 @@ after.dandolo <- tail(doges.all.years,-index.cp+1)
 before.dandolo <- head(doges.all.years,index.cp-1)
 ```
 
-Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. Francisco Dandolo ruled from 1329 to 1339, right after the last laws of the Serrata were enacted, please see also [@dogesr] for the importance of the Dandolo family in the social network of Venetian noble families. 
+Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. Francisco Dandolo ruled from 1329 to 1339, right after the last laws of the Serrata were enacted, please see also [@dogesr] for the importance of the Dandolo family in the social network of Venetian noble families. Other tests also yield the same change point.
 
-There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change.
+```{r serrata, echo=FALSE, fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable)"}
+doges.years.all$pre.serrata <- TRUE
+doges.years.all[doges.years.all$Start >= 1329,]$pre.serrata <- FALSE
+means <- aggregate(Years ~  pre.serrata, doges.years.all, mean)
+medians <- aggregate(Years ~  pre.serrata, doges.years.all, median)
+ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
+  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
+  geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
+  geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
+```
+```{r table, echo=FALSE}
+knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years, Median=medians$Years),
+              caption="Table with the median and average span, in years, of the doge rule, pre and post the found change point" )
+
+```
+
+There is a difference of more than four years in the average, and median, pre-and post Serrata, although this effect was not immediate, but took a few elections to sink in. Please note than both quantities are lower than the ones published in [@smith2021long], with the difference also being smaller.
+
+This, in fact, points to other change points present in the time series. Let us try and analyze, separately, these two periods, looking for other change points. First, the pre-Serrata period. We would be interested in checking if, after all, the introduction of the electoral college effectively had some effect. 
 
 ```{r change.point2, echo=FALSE}
+cp.estimate.2 <- pettitt.test(before.dandolo$years)
+```
+
+The Pettitt test [@pettitt1979non], which works better for smaller series, yields a change point at index 9; however, this has a p-value higher than 0.05 and thus we need to conclude that there is, indeed, no significant structural change in this period, not even after the introduction of the electoral college, as affirmed by [@smith2021long].
+
+There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change. 
+
+```{r change.point3, echo=FALSE}
 cp.estimate.2 <- pettitt.test(tail(doges.all.years$years,cp.estimate$estimate))
 change.doge.2 <- after.dandolo[as.integer(cp.estimate.2$estimate),]$doge
 ```
