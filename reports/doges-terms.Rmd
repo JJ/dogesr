@@ -78,33 +78,18 @@ library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
 
-The distribution is skewed towards very short terms because it includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons. This is the distribution by centuries.
+The distribution is skewed towards very short terms because it also includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons, but since it is clustered in the shorter terms, it is quite clear that the limitation [@smith2021long] talks about is indeed at work.
+
+[@smith2021long] also indicate that term limitation was introduced at a certain point in time. Let us start checking that fact by looking at the average duration in office through the history of the Republic.
 
 ```{r boxplot, echo = FALSE, fig.pos="!H",}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 ```
 
-There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. Was there a real difference?
+There seems to be a clear difference before and after the fourteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. However, this is *later* than Smith et al. indicate almost by a whole century. In our previous report [@dogesr:vignette] we showed that the difference between the average term pre- and post-Serrata is *higher* than the one indicated by Smith et al. in their paper; effectively, Serrata laws were introduced in the early XIV century.
 
-```{r serrata, echo = FALSE, fig.pos="!H",}
-doges.years.all$pre.serrata <- TRUE
-doges.years.all[doges.years.all$Start >= 1297,]$pre.serrata <- FALSE
-means <- aggregate(Years ~  pre.serrata, doges.years.all, mean)
-medians <- aggregate(Years ~  pre.serrata, doges.years.all, median)
-ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
-  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
-  geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
-  geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
-```
-
-This difference is significant, as indicated by the Wilcoxon test
-
-```{r wilcox, echo = FALSE}
-wtest <- wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
-```
-
-We can check this hypothesis via change-point detection, an algorithm that checks a time series and points to the precise moment where the change occurred.
+In this paper, however, we will analyze, using statistical methods, when the actual change points in the time series that includes all the terms, and which we have already summarized above, occurs. Change-point detection algorithms indicate the precise moment when a structural change occurs, so that averages before and after the change are maximized. There are many such algorithms that use different statistical tests.
 
 ```{r change.point, echo=FALSE}
 library(trend)
@@ -112,7 +97,9 @@ cp.estimate <- lanzante.test(doges.all.years$years)
 change.doge <- doges.all.years[as.integer(cp.estimate$estimate),]$doge
 ```
 
-Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change.
+Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. Francisco Dandolo ruled from 1329 to 1339, right after the last laws of the Serrata were enacted, please see also [@dogesr] for the importance of the Dandolo family in the social network of Venetian noble families. 
+
+There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change.
 
 ```{r change.point2, echo=FALSE}
 after.dandolo <- tail(doges.all.years,cp.estimate$estimate)
