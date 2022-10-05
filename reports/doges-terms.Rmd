@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 )
 library(dogesr)
 data("doges")
-doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
+doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges$Years))
 
 ```
 
@@ -63,7 +63,7 @@ knitr::kable(doges.all.years[which.max(doges.all.years$years),])
 Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges and given a pension for life [@wiel1891two]. In fact, he died a few days later, although the stress caused by his demise might have contributed to that. Looking at the other end, the 10 doges that staid in power the longest:
 
 ```{r using.doges.years, echo = FALSE}
-doges.years.all <- doges.years()
+doges.years.all <- unique(doges.years())
 doges.years.all$Femily.doge <- NULL
 doges.years.all$Century <- doges.years.all$Century +1 
 knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges with the longest tenure; as in the previous table, the left-most column indicates their position in the temporally ordered list of doges; it also shows the precise years where they acceded to power and left, and the total number of years.")
@@ -120,18 +120,20 @@ knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years,
 
 There is a difference of more than four years in the average, and median, pre-and post Serrata, although this effect was not immediate, but took a few elections to sink in. Please note than both quantities are lower than the ones published in [@smith2021long], with the difference also being smaller.
 
-This, in fact, points to other change points present in the time series. Let us try and analyze, separately, these two periods, looking for other change points. First, the pre-Serrata period. We would be interested in checking if, after all, the introduction of the electoral college effectively had some effect. 
+This, in fact, points to other change points present in the time series. Let us try and analyze, separately, these two periods, looking for other change points. First, the pre-Serrata period. We would be interested in checking if, after all, the introduction of the electoral college effectively had some effect.
 
 ```{r change.point2, echo=FALSE}
 cp.estimate.2 <- pettitt.test(before.dandolo$years)
 ```
 
-The Pettitt test [@pettitt1979non], which works better for smaller series, yields a change point at index 9; however, this has a p-value higher than 0.05 and thus we need to conclude that there is, indeed, no significant structural change in this period, not even after the introduction of the electoral college, as affirmed by [@smith2021long].
+\newpage
 
-There seems to be also some significant change by the end of the republic; we will test again from this doge on looking for this change. 
+The Pettitt test [@pettitt1979non], which works better for smaller series, yields a change point at index 9 (after Galla Gaulo, who was blinded and exiled after a year in power); however, this result has a p-value higher than 0.05 and thus we need to conclude that there is, indeed, no significant structural change in this period, not even after the introduction of the electoral college, as affirmed by [@smith2021long]. As a matter of fact, looking at Figure 2, we see that the VIII century had exceptionally short terms; it increased slightly during the IX century, but then stabilized until the change point in the XIV century, when it shows a clear decrease, which is statistically significant.
+
+However, there seems to be some significant change by the end of the republic, at least according to Figure 2. Let us look at the series that starts with Francesco Dandolo and look for some significant change points. 
 
 ```{r change.point3, echo=FALSE}
-cp.estimate.2 <- pettitt.test(tail(doges.all.years$years,cp.estimate$estimate))
+cp.estimate.3 <- pettitt.test(after.dandolo$years)
 change.doge.2 <- after.dandolo[as.integer(cp.estimate.2$estimate),]$doge
 ```
 
