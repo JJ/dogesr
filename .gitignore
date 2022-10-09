@@ -52,3 +52,10 @@ revdep/
 *.tex
 *.pdf
 **/*_files/
+
+auto/
+
+# Rpubs
+rsconnect/
+
+*.tgz

@@ -7,83 +7,100 @@ output:
     keep_tex: true
 bibliography: ../inst/doges.bib
 abstract: |
-  During most of the lifespan of the Venetian republic, doges or presidents were elected for life. However, a long tenure was a rare event, which effectively resulted in term limits, as found by [@smith2021long]. In this paper we examine these terms limits and its evolution during the existence of the Venetian republic.
+  During most of the lifespan of the Venetian republic, doges or presidents were elected for life. However, a long tenure was a rare event, which effectively resulted in term limits, as found by [@smith2021long]. In this paper we examine these tenures and its evolution during the existence of the Venetian republic, trying to prove Smith et al. thesis, but also the event or events that effectively caused that limitation by design. Finally, we will discuss for the causes of this limitation and its effective consequences.
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
 library(dogesr)
 data("doges")
-doges.all.years <- data.frame( doge = data.doges$Doge, years = data.doges$Years)
+doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges$Years))
 
 ```
 
 ## Introduction
 
-The Venetian republic, which existed from the seventh to the end of the eighteenth century, was a unique polity in many different aspects, including the fact that it existed for more than one thousand years essentially under the same set of laws and its stability in a geographic milieu, the Italian peninsula, that underwent many waves of upheaval under the opposite forces of the Papal states, the Holy Roman Empire, and later the Ottoman, French, Spanish and Austro-Hungarian empires [@madden2012venice].
+The Venetian republic, which existed from the seventh to the end of the eighteenth century, was a unique polity in many different aspects, including the fact that it lasted for more than one thousand years essentially under the same set of laws; its stability in a geographic milieu, the Italian peninsula, that underwent many waves of upheaval under the opposite forces of the Papal states, the Holy Roman Empire, and later the Ottoman, French, Spanish and Austro-Hungarian empires [@madden2012venice] was also quite remarkable.
 
-Many explanations have been sought for this fact, and of course the governing institutions have been examined, including the head of government, the so called *doge* (*doxe* in the vernacular Veneto language; the term is equivalent to "duke" approximately in other languages). Doges were elected for life by an electoral college composed of 41 nobles, which were also elected through a series of lotteries and nominations emanating from the *Maggior Consiglio*, which included all noble families in Venice [@molinari2020republic].
+Many explanations have been sought for this fact, and of course the governing institutions have been examined, including the head of government, the so called *doge* (*doxe* in the vernacular Veneto language; the term is approximately equivalent to "duke"  in other languages). During the longest period, doges were elected for life by an electoral college composed of 41 nobles, which were also elected through a series of lotteries and nominations emanating from the *Maggior Consiglio*, which included all noble families in Venice [@molinari2020republic].
 
-This had a series of consequences, including the creation of a (relatively) egalitarian society [@Stockwell2011]
+Although initially this electoral council was composed of all persons with a certain economic position or at any rate chosen by the doge, by the beginning of the XIV century  a *closure* (*serrata*) took place [@serrata]: seats in the Maggior Consiglio were closed to only a few families, hereafter called *vecchie* or "old" families.
 
-Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed.
+This had a series of consequences, including the creation of a (relatively) egalitarian society [@Stockwell2011], at least among the nobles; according to other authors [@serrata], this had the opposite effect of creating a chasm between the aristocrats and the *popolani*, or common folk, which ultimately brought the demise of the Republic. At any rate, it brought stability and certainty in the succession of the head of the state, which happened in a few weeks after the deceased doge was interred; it is also a fact that  except for a single case, no doge had to be indicted of corruption or treason, or for that matter simply  removed or murdered, as was the case in many of the other Italian city-states or Europe at large.
 
-The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time, check if there were some shifts in the tenure duration. Finally, we will present our conclusions and discuss its implications.
+But the way election was performed, as well as the pool of eligible candidates, cannot by themselves explain the stability and duration of the republic. Another factor might be at play here: Since doges were elected for life, it was apparently a conscious design by the electoral college to choose them in such a way that their terms would not last too long [@smith2021long]. Using data from `dogesr` [@dogesr], we will, in this paper, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed. We will also look at the change points in the duration of the elected rulers, and try to relate them to specific events in the history of Venice.
+
+The rest of the paper is organized as follows. Next we will show the state of the art in studies of how doge election and related choices affected the stability of the Venetian republic. Then we will analyze these terms, and its evolution with time and check if there were some shifts in the tenure duration in the [next section](#terms). Finally, we will present our [conclusions](#conclusions) and discuss its implications.
 
 ## State of the art
 
+The main reference in this area is the paper by Smith et al. [@smith2021long], which focuses on how electing doges with a certain age imposed term limits on their tenure, and also how these limits changed during war time, electing in these cases younger doges who might be more open to taking aggressive measures to protect the republic. They propose that by not having a term limit by law, it is impossible for any ruler to change it; the time a ruler stays in power will be enforced by nature itself, as long as the pool of candidates is reduced to persons that have a certain age. This also has the side effect of including only candidates with a long life of service to the republic, including (term-limited) appointments at the Senate and other institutions with executive power. In general, term limits pursue avoiding accumulation of power (and associated wealth) by elected officials; in some cases they are extremely short. The republic of Ragusa (current Dubrovnik, a country that was once a Venetian colony and that is heavily influenced by Venetian politics) limited terms of *rectors* to a single month [@kunvcevic2018political], and they could not be reelected until after two years. Limited terms also produced rotation and sharing of power between the different families that were a part of the nobility, which again contributed to long-term stability.
 
-## Examining doges' terms
+How this was introduced in the political mindset is subject to discussion. Smith et al. put the point of change in 1172, when new laws made the election the responsibility of an electoral committee, which underwent a series of changes until, after the Serrata that reduced the eligibility to a closed set of noble families, it became a permanent fixture. These new laws also made terms for certain offices limited, and in general, it was a complete overhaul of the political system. For Smith et al., it produced as a side effect the effective reduction of doges' rule, producing doges that were increasingly older at the moment of taking office. Their results indicate that between 1172 and 1797 (end of the Republic) the average term duration was 7.6 years, while before that, it was almost double, 13.2 years.
 
-There were a number of doges whose tenure spanned one or two natural years, as is shown below:
+In a first exploration of this hypothesis using our data [@dogesr:vignette], we concluded that it was *not* the date and event proposed by Smith et al., that is, 1172 and the introduction of the electoral college, the one that created a change in the attitude of the state when choosing the next doge; we concluded that it was closer to the aforementioned Serrata. In this paper we will try to use more precise statistical techniques to assess the precise point of change, and also check if there ware other events that produced changes during the history of the Republic
+
+## Examining doges' terms {#terms}
+
+Let us first examine the claims about doges' terms using independent data, the one provided by the `dogesr` package and collected independently from the one mentioned by [@smith2021long]. How this data was collected is explained in [@dogesr]; it does not include the exact date of election and death, just the year, so it is in fact impossible to know the precise number of months they were in office, only the year it started and ended. A term of 0 years thus simply indicates that both events occurred in the same physical year. Taking this into account, there were quite a few doges whose tenure was extraordinarily short, staying in office during less than two natural years:
 
 ```{r one.year.or.less, echo = FALSE}
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate.")
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table")
 ```
 
-So it effectively looks like most doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
+This represented the `r sprintf("%.2f", 100*nrow(doges.one.year)/nrow(doges.all.years))` percent of all doges, a remarkable number. The first column indicates a high number of them ruled at the beginning of the republic (when their cause of death was probably murder) and by the end of the republic (when, as is the main hypothesis, they were actually elected at an old age).
+
+So it effectively looks like many doges effectively had a short shelf life. As a matter of fact, the doge that staid in power the longest was
 
 ```{r longest.doge, echo = FALSE}
 knitr::kable(doges.all.years[which.max(doges.all.years$years),])
 ```
 
-Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges.
-
-We can see whether this has any kind of influence using now several functions provided by the `dogesr` package next.
-
-## Analyzing the evolution of the effective terms of the doges using `doges.years`
-
-This can be analyzed a but further with a function provided by `dogesr`, `doges.years`. This filters part of the original data, leaving only data needed to work with the doges' terms (or years)
+Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After being in power for 34 years, he was the only doge forced to abdicate after the *serrata* or new rules electing the doges and given a pension for life [@wiel1891two]. In fact, he died a few days later, although the stress caused by his demise might have contributed to that. Looking at the other end, the 10 doges that staid in power the longest:
 
 ```{r using.doges.years, echo = FALSE}
-doges.years.all <- doges.years()
+doges.years.all <- unique(doges.years())
+doges.years.all$Femily.doge <- NULL
 doges.years.all$Century <- doges.years.all$Century +1 
-knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
+knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges with the longest tenure; as in the previous table, the left-most column indicates their position in the temporally ordered list of doges; it also shows the precise years where they acceded to power and left, and the total number of years.")
 ```
 
-First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected after the aforementioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier. The distribution in bins of 5 years, below, shows how infrequent was a term of more than 10 years.
+First thing we can note is that, among the top 10, there is only one, Leonardo Loredan, who was elected years after the aforementioned Francesco Foscari. This was, according to everyone, an unexpected event [@loredan], and he was chosen by the minimum needed to get elected. So he was really an outlier, and it might have happened that the change point that brought informal term limits was the bad experience with Foscari. This ranking, however, shows how very long terms were extremely infrequent, and there were no doge that ruled for more than 20 years after 1521, when Leonardo Loredan died.
+
+The histogram with 5-years wide bins, below, shows how infrequent, in fact, were terms of more than 10 years.
 
 ```{r distribution, fig.height=3, fig.pos="!H", echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 ```
 
-The distribution is skewed because it includes the first years of the institution. This is the distribution by centuries
+The distribution is skewed towards very short terms because it also includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons, but since it is clustered in the shorter terms, it is quite clear that the limitation [@smith2021long] talks about is indeed at work.
 
-```{r boxplot, echo = FALSE, fig.pos="!H",}
+[@smith2021long] also indicate that term limitation was introduced at a certain point in time. Let us start checking that fact by looking at the average duration in office through the history of the Republic.
+
+```{r boxplot, echo = FALSE, fig.height=4,fig.pos="!H",fig.cap="Boxplot of doge duration in office vs. century"}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 ```
 
-There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. Was there a real difference?
+There seems to be a clear difference before and after the fourteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. However, this is *later* than Smith et al. indicate almost by a whole century. In our previous report [@dogesr:vignette] we showed that the difference between the average term pre- and post-Serrata is *higher* than the one indicated by Smith et al. in their paper; effectively, Serrata laws were introduced in the early XIV century.
 
-```{r serrata, echo = FALSE, fig.pos="!H",}
+In this paper, however, we will analyze, using statistical methods, when the actual change points in the time series that includes all the terms, and which we have already summarized above, occurs. Change-point detection algorithms indicate the precise moment when a structural change occurs, so that averages before and after the change are maximized. There are many such algorithms that use different statistical tests.
+
+```{r change.point, echo=FALSE}
+library(trend)
+cp.estimate <- lanzante.test(doges.all.years$years)
+change.doge <- doges.all.years[as.integer(cp.estimate$estimate),]$doge
+index.cp <- as.integer(cp.estimate$estimate)
+after.dandolo <- tail(doges.all.years,-index.cp+1)
+before.dandolo <- head(doges.all.years,index.cp-1)
+```
+
+Using Lanzante's test [@lanzante] from the `trend` R package, this change occurs in the moment `r change.doge` took office. Francisco Dandolo ruled from 1329 to 1339, right after the last laws of the Serrata were enacted, please see also [@dogesr] for the importance of the Dandolo family in the social network of Venetian noble families. Other tests also yield the same change point.
+
+```{r serrata, echo=FALSE, fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable)"}
 doges.years.all$pre.serrata <- TRUE
-doges.years.all[doges.years.all$Start >= 1297,]$pre.serrata <- FALSE
+doges.years.all[doges.years.all$Start >= 1328,]$pre.serrata <- FALSE
 means <- aggregate(Years ~  pre.serrata, doges.years.all, mean)
 medians <- aggregate(Years ~  pre.serrata, doges.years.all, median)
 ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
@@ -91,19 +108,68 @@ ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
   geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
   geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
 ```
+```{r table, echo=FALSE}
+knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years, Median=medians$Years),
+              caption="Table with the median and average span, in years, of the doge rule, pre and post the found change point" )
 
-This difference is significant, as indicated by the Wilcoxon test
-
-```{r wilcox, echo = FALSE}
-wtest <- wilcox.test(doges.years.all[doges.years.all$pre.serrata == T,]$Years,   doges.years.all[doges.years.all$pre.serrata == F,]$Years )
 ```
 
-## Conclusions
+There is a difference of more than four years in the average, and median, pre-and post Serrata, although this effect was not immediate, but took a few elections to sink in. Please note than both quantities are lower than the ones published in [@smith2021long], with the difference also being smaller.
 
-As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. According to the figure above, there does not seem to be a significant difference between the XII and XIII century in terms of tenure. However, 1297 does seem to be a watershed event, with all terms after that being significantly different to terms prior to it. We can conclude, then, that the Serrata, closing of the Maggior Consiglio to all but a few patrician families, was in fact the event that marked the shift to electing older doges.
+This, in fact, points to other change points present in the time series. Let us try and analyze, separately, these two periods, looking for other change points. First, the pre-Serrata period. We would be interested in checking if, after all, the introduction of the electoral college effectively had some effect.
+
+```{r change.point2, echo=FALSE}
+cp.estimate.2 <- pettitt.test(before.dandolo$years)
+```
+
+\newpage
+
+The Pettitt test [@pettitt1979non], which works better for smaller series, yields a change point at index 9 (after Galla Gaulo, who was blinded and exiled after a year in power); however, this result has a p-value higher than 0.05 and thus we need to conclude that there is, indeed, no significant structural change in this period, not even after the introduction of the electoral college, as affirmed by [@smith2021long]. As a matter of fact, looking at Figure 2, we see that the VIII century had exceptionally short terms; it increased slightly during the IX century, but then stabilized until the change point in the XIV century, when it shows a clear decrease, which is statistically significant. Other tests, the Buishand and Buishand U test, stop at index = 28, but again the p-value is relatively high. This would also happen before the year 1000, and thus, again, does not match the hypothesis of change in regime by the end of the XII century.
+
+However, there seems to be some significant change by the end of the republic, at least according to Figure 2. Let us look at the series that starts with Francesco Dandolo and look for some significant change points. 
+
+```{r change.point3, echo=FALSE}
+cp.estimate.3 <- pettitt.test(after.dandolo$years)
+change.doge.3 <- after.dandolo[as.integer(cp.estimate.3$estimate),]$doge
+doges.years.post.serrata <- doges.years.all[ doges.years.all$pre.serrata == FALSE,]
+doges.years.post.serrata$pre.decline <- TRUE
+doges.years.post.serrata[doges.years.post.serrata$Start >= 1658,]$pre.decline <- FALSE
+```
+
+In this case, we use another change-point detection test which is more adequate in this case, Pettitt's test [@pettitt1979non]. This indicates the change point occurs with the `r change.doge.3` tenure. This was an election quite unlike others previous to them. He had been a corrupt administrator, and married a non-patrician to boot. However, his hawkish attitude and the fact that he pledged his own money to support the war against the Ottoman empire tipped the balance in his favor, making him possibly the first doge to be elected not because of his qualities (and age), but because of his money. The republic at the time of him taking office, 1658, was starting to decline, and although he ruled for a single year, possibly precipitated this change in regime.
+
+```{r decline, echo=FALSE, fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office after 1329 and pre and post 1658 (indicated with the pre.decline variable)"}
+means.2 <- aggregate(Years ~  pre.decline, doges.years.post.serrata, mean)
+medians.2 <- aggregate(Years ~  pre.decline, doges.years.post.serrata, median)
+ggplot(doges.years.post.serrata, aes(x=pre.decline, y=Years))+geom_boxplot(notch=T)+
+  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
+  geom_text(data = means.2, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
+  geom_text(data = medians.2, aes(label = round(Years, 2), y = Years - 1), size = 3)
+wtest.post.serrata <- wilcox.test(doges.years.post.serrata[doges.years.post.serrata$pre.decline ==TRUE,]$Years,doges.years.post.serrata[doges.years.post.serrata$pre.decline ==FALSE,]$Years)
+wtest.periods <- wilcox.test(doges.years.post.serrata[doges.years.post.serrata$pre.decline ==TRUE,]$Years,doges.years.all[doges.years.all$pre.serrata ==TRUE,]$Years)
+```
+In this case, the difference in medians, of 1.5 years, is smaller; same happens with the difference in averages. There is a clear overlap between the two intervals, and the Pettitt test has a p-value which is relatively high. As a matter of fact, a non-parametric Wilcox test shows no significant difference. We can then dismiss this change point as not significant, although it can explain the greater duration of the doges elected by the last period of the republic. If we compare the period between the Serrata and this candidate to change point and the pre-Serrata era, the Wilcox test yields a p-value of `r wtest.periods$p.value` which is quite low indeed, indicating a *very* significant difference.
+
+## Conclusions and discussion {#conclusions}
+
+As indicated by [@smith2021long], there seems to be evidence in the term limits of doges of the Republic of Venice. In their paper they indicate 1172 as a departure point for the term "limits", when the Maggior Consiglio was formed. The analysis that we have performed in this paper effectively indicates that, at a certain point in time during the history of the Republic of Venice, there was a conscious choice by the electoral college to choose, among the eligible candidates, those that were beyond a certain age, and thus with a limited lifespan.
+
+However, our analysis does not support their claim that this "design" change took place immediately after 1172; using change-point analysis, several algorithms support the election of Francesco Dandolo as the moment where the shift in the central tendencies, the median and the average, took place; no significant structural shift occurred either before or after that, although there are smaller, non significant ones, that support a certain segmentation of this tradition, so that we could say that between 1328 and 1658 most nobles sitting in the final stage of the electoral college were aware of this "tradition", and so elected older persons to the office, with a median life span of just 5 years. How this informal measure in this reduced time period contributed to stability is difficult to say. However, we can discuss that the fact that it happened after the Serrata points to a rationale among electors that is different to the one claimed by [@smith2021long], that is, avoiding entrenchment in power and corruption.
+
+What happened in the Serrata is that the pool of eligible families was reduced to just two dozens. This pool was continuously expanded, but still, at any point in time, there were just a few males in every family who could even aspire to be candidates. If a doge was chosen for an extended term, the probability of becoming doge in every generation was quite diminished. By having such a high churn in the highest office, any candidate who was defeated in an election was relatively likely to be chosen in the *next* one taking place a few years (less than six, on average), down the line. This simple fact probably kept powerful families from staging a coup, which was riskier than simply waiting for nature to follow its course. "What goes around, comes around", they could think. With a very small set of families, their turn would eventually come sooner or later, probably in this same generation.
+
+Having an electoral college did not really have that effect. Electing a person who could stay in power for many years did not decrease the possibility of having a person in your own family be elected. Since the pool was larger, the possibilities stayed more or less the same, and close to zero. Someone in your family could or could not be elected next, but since there were many other possible candidates, it was really indifferent that this happened many years later, since it would not be the *turn* of your family no matter what.
+
+The number of families inscribed in the Golden Book increased with time, however. By the XVII century, anyone could pay their way into the Maggior Consiglio, thus increasing the number of possible families to choose from and decreasing the incentive of choosing doges for short terms. This might be a future and interesting line of work, that might be pursued in future papers.
+
+
+## Source code and data availability note
+
+This paper has been written using RMarkdown, and all analysis performed are embedded in its source code, which is [available at GitHub](https://github.com/JJ/dogesr/blob/main/reports/doges-terms.Rmd) under a free license. As indicated, it uses as data source version 0.1.1 of the CRAN `dogesR` package and it can be compiled using RStudio or `pandoc` after installing the needed packages.
 
 
 ## Acknowledgments
 
 This paper has been supported in part by project and DemocratAI PID2020-115570GB-C22.
+
 ## References
