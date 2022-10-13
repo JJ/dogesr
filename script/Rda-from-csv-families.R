@@ -1,5 +1,6 @@
 #!/usr/bin/env Rscript
 
-data.doges <- read.csv("data-raw/venice-doges.csv")
-data.doges$Years <- data.doges$End - data.doges$Start
-save(data.doges, file="data/doges.rda")
+family.types.data <- read.csv("data-raw/family-types.csv")
+family.types <- family.types.data$Type
+names(family.types) <- family.types.data$Family
+save(family.types, file="data/families.rda")
