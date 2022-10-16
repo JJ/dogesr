@@ -1,0 +1,51 @@
+---
+title: "Using `dogesr` to work with Venetian doges family types"
+author: "JJ Merelo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using `dogesr` to work with Venetian doges family types}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: ../inst/doges.bib
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+For the longest part of its existence, Venetian noble families used tactical marriage to improve the lot of their *case* or dynasties. Since access to nobility was closed by the beginning of the XIV century, and then enlarged little by little, there was a kind of stratification in the nobility, and marrying *older* families was a way of improving the political, commercial and social prospects for your own family.
+
+Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and how different types of families married with each other.
+
+## Set up
+
+We load the datasets needed; `doges` describes doges and their marriages, `families` includes data for every noble family.
+
+```{r load}
+devtools::load_all(".")
+data("doges")
+data("families")
+```
+
+This will import the data from the `dogesr` package into the `data.doges` data frame, and family data in the `family.types` list. Let's merge them into a single data frame.
+
+```{r years}
+marriages.types <- 
+  data.frame( doge.family = data.doges$Family.doge,
+              dogaressa.family = data.doges$Family.dogaressa,
+              fam.type.doge = unname( unlist ( family.types[ data.doges$Family.doge ] )),
+              fam.type.dogaressa = unname( unlist ( family.types[ data.doges$Family.dogaressa ] ))
+)
+                               
+```
+
+## Conclusions
+
+
+## References
