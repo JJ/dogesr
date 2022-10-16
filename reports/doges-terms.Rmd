@@ -76,7 +76,7 @@ ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 
 The distribution is skewed towards very short terms because it also includes the first years of the institution, when murder or destitution by popular revolt was relatively usual; it also shows a relatively long tail exactly for the same reasons, but since it is clustered in the shorter terms, it is quite clear that the limitation [@smith2021long] talks about is indeed at work.
 
-[@smith2021long] also indicate that term limitation was introduced at a certain point in time. Let us start checking that fact by looking at the average duration in office through the history of the Republic.
+The authors of [@smith2021long] also indicate that an informal term limitation was introduced at a certain point in time. Let us start checking that fact by looking at the average duration in office through the history of the Republic.
 
 ```{r boxplot, echo = FALSE, fig.height=4,fig.pos="!H",fig.cap="Boxplot of doge duration in office vs. century"}
 doges.years.all$Century <- as.factor(doges.years.all$Century)
