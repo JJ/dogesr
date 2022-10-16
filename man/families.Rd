@@ -1,0 +1,33 @@
+\name{family.types}
+\alias{family.types}
+\title{Load data for Venetian family types into the environment}
+\usage{
+data("families")
+}
+\description{
+Load \code{family.types} into the environment
+}
+
+\value{
+A list with  every noble family in the republic of Venice, and the columns
+\itemize{
+  \item Key: family name.
+  \item Value: type of family: Estinte, Vecchie, Apostoliche, Evangeliche, Ducali, Nuove, Nuovissime, Soldo. This describes how they accessed nobility.
+}
+}
+
+\examples{
+library(dogesr)
+data("family")
+
+# Which type was the Dandolo family?
+family.types[["Dandolo"]]
+
+# Which families bought their way into the nobility
+family.types == "Soldo"
+# The families that actually "made doge"
+unique(data.doges$Family.doge)
+
+# Families that had either doge or dogaresse
+unique( c(data.doges$Family.doge,data.doges$Family.dogaressa))
+}

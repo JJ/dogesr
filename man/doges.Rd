@@ -5,7 +5,7 @@
 data("doges")
 }
 \description{
-Load data.doges into the environment
+Load \code{data.doges} into the environment
 }
 
 \value{
