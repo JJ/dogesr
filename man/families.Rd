@@ -16,6 +16,8 @@ A list with  every noble family in the republic of Venice, and the columns
 }
 }
 
+Main design decision here is that this can be used as external index for the type of family.
+
 \examples{
 library(dogesr)
 data("family")
