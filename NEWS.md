@@ -1,3 +1,10 @@
+## version 0.1.2
+
+* Add family type data
+
+---
+
+
 ## version 0.1.1
 
 * Some bug and data fixes
