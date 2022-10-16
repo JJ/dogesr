@@ -1,6 +1,12 @@
 ## version 0.1.2
 
-* Add family type data
+* Family data included
+
+---
+
+## version 0.1.2
+
+* Created mainly for the report waiting to be published in ArXiV
 
 ---
 

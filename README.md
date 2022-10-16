@@ -9,6 +9,14 @@
 
 Module (with data) to work with the dogi and dogaresse of the Venetian republic. Main intention is to analyze social networks resulting from marriages and other interactions.
 
+## Install
+
+Install released versions from CRAN as usual, or development version from here 
+
+```R
+library(devtools)
+install_github("JJ/dogesr")
+```
 
 ## Reference
 
