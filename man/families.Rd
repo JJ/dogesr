@@ -14,9 +14,10 @@ A list with  every noble family in the republic of Venice, and the columns
   \item Key: family name.
   \item Value: type of family: Estinte, Vecchie, Apostoliche, Evangeliche, Ducali, Nuove, Nuovissime, Soldo. This describes how they accessed nobility.
 }
+Main design decision here is that this can be used as external index for the type of family.
 }
 
-Main design decision here is that this can be used as external index for the type of family.
+
 
 \examples{
 library(dogesr)
