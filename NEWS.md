@@ -1,15 +1,19 @@
-## version 0.1.2
+## version 0.1.4
 
 * Family data included
 
 ---
 
-## version 0.1.2
+## version 0.1.3
 
-* Created mainly for the report waiting to be published in ArXiV
+* Report waiting to be published ar ArXiV
 
 ---
+## version 0.1.2
 
+* Created mainly for the vignette
+
+---
 
 ## version 0.1.1
 
