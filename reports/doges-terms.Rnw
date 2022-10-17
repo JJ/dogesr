@@ -239,14 +239,7 @@ this change occurs in the moment Francesco Dandolo took office.
 Francisco Dandolo ruled from 1329 to 1339, right after the last laws of
 the Serrata were enacted, please see also \cite{dogesr} for the
 importance of the Dandolo family in the social network of Venetian noble
-families. Other tests also yield the same change point.
-
-\begin{figure}
-\centering
-\includegraphics{doges-terms_files/figure-latex/serrata-1.pdf}
-\caption{Box-and-whiskers plot of the span, in years, of doges in office
-pre and post 1329 (indicated with the pre.serrata variable)}
-\end{figure}
+families. Other tests also yield the same change point. See \ref{fig:serrata} for a boxplot of the difference, in years, of the doges' term pre- and post-Serrata.
 
 <<r change.point, echo=FALSE>>=
 library(trend)
@@ -279,6 +272,10 @@ change points. First, the pre-Serrata period. We would be interested in
 checking if, after all, the introduction of the electoral college
 effectively had some effect.
 
+<<r change.point2, echo=FALSE>>=
+cp.estimate.2 <- pettitt.test(before.dandolo$years)
+@
+
 The Pettitt test \cite{pettitt1979non}, which works better for smaller series,
 yields a change point at index 9 (after Galla Gaulo, who was blinded and
 exiled after a year in power); however, this result has a p-value higher
@@ -298,6 +295,14 @@ republic, at least according to Figure 2. Let us look at the series that
 starts with Francesco Dandolo and look for some significant change
 points.
 
+<<r change.point3, echo=FALSE>>=
+cp.estimate.3 <- pettitt.test(after.dandolo$years)
+change.doge.3 <- after.dandolo[as.integer(cp.estimate.3$estimate),]$doge
+doges.years.post.serrata <- doges.years.all[ doges.years.all$pre.serrata == FALSE,]
+doges.years.post.serrata$pre.decline <- TRUE
+doges.years.post.serrata[doges.years.post.serrata$Start >= 1658,]$pre.decline <- FALSE
+@
+
 In this case, we use another change-point detection test which is more
 adequate in this case, Pettitt's test \cite{pettitt1979non}. This indicates the
 change point occurs with the Giovanni Pesaro tenure. This was an
@@ -310,8 +315,8 @@ age), but because of his money. The republic at the time of him taking
 office, 1658, was starting to decline, and although he ruled for a
 single year, possibly precipitated this change in regime.
 
-\includegraphics{doges-terms_files/figure-latex/decline-1.pdf} In this
-case, the difference in medians, of 1.5 years, is smaller; same happens
+
+In this case, plotted in Figure \ref{fig:decline}, the difference in medians, of 1.5 years, is smaller; same happens
 with the difference in averages. There is a clear overlap between the
 two intervals, and the Pettitt test has a p-value which is relatively
 high. As a matter of fact, a non-parametric Wilcox test shows no
@@ -400,16 +405,38 @@ PID2020-115570GB-C22.
 \bibliographystyle{Frontiers-Harvard}
 \bibliography{../inst/doges.bib}
 
+\newpage
+
 \section*{Figure captions}
 
-<<r distribution, fig.height=4, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
+<<r distribution, fig.pos="h!tbp", fig.height=4, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 @
 
-<<r boxplot, echo = FALSE, fig.height=4,fig.cap="Boxplot of doge duration in office vs. century.\\protect\\label{fig:boxplot}">>=
+
+<<r boxplot, echo = FALSE, fig.pos="h!tbp", fig.height=4,fig.cap="Boxplot of doge duration in office vs. century.\\protect\\label{fig:boxplot}">>=
 doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
+@
+
+
+<<r serrata, echo=FALSE, fig.pos="h!tbp", fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable).\\protect\\label{fig:serrata}">>=
+ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
+  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
+  geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) +
+  geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
+@
+
+<<r decline, echo=FALSE, fig.pos="h!tbp", fig.height=4, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office after 1329 and pre and post 1658 (indicated with the pre.decline variable).\\protect\\label{fig:decline}">>=
+means.2 <- aggregate(Years ~  pre.decline, doges.years.post.serrata, mean)
+medians.2 <- aggregate(Years ~  pre.decline, doges.years.post.serrata, median)
+ggplot(doges.years.post.serrata, aes(x=pre.decline, y=Years))+geom_boxplot(notch=T)+
+  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
+  geom_text(data = means.2, aes(label = round(Years, 2), y = Years + 2), size = 3) +
+  geom_text(data = medians.2, aes(label = round(Years, 2), y = Years - 1), size = 3)
+wtest.post.serrata <- wilcox.test(doges.years.post.serrata[doges.years.post.serrata$pre.decline ==TRUE,]$Years,doges.years.post.serrata[doges.years.post.serrata$pre.decline ==FALSE,]$Years)
+wtest.periods <- wilcox.test(doges.years.post.serrata[doges.years.post.serrata$pre.decline ==TRUE,]$Years,doges.years.all[doges.years.all$pre.serrata ==TRUE,]$Years)
 @
 
 \end{document}
