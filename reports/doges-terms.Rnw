@@ -215,13 +215,7 @@ shorter terms, it is quite clear that the limitation \cite{smith2021long} talks 
 The authors of \cite{smith2021long} also indicate that
 an informal term limitation was introduced at a certain point in time.
 Let us start checking that fact by looking at the average duration in
-office through the history of the Republic.
-
-\begin{figure}
-\centering
-\includegraphics{doges-terms_files/figure-latex/boxplot-1.pdf}
-\caption{Boxplot of doge duration in office vs.~century}
-\end{figure}
+office through the history of the Republic, shown in figure \ref{fig:boxplot}.
 
 There seems to be a clear difference before and after the fourteenth
 century; there is also a return to longer tenures by the end of the
@@ -408,9 +402,14 @@ PID2020-115570GB-C22.
 
 \section*{Figure captions}
 
-<<r distribution, fig.height=3, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
+<<r distribution, fig.height=4, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
+@
+
+<<r boxplot, echo = FALSE, fig.height=4,fig.cap="Boxplot of doge duration in office vs. century.\\protect\\label{fig:boxplot}">>=
+doges.years.all$Century <- as.factor(doges.years.all$Century)
+ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 @
 
 \end{document}
