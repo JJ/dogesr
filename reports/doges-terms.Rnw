@@ -411,6 +411,9 @@ PID2020-115570GB-C22.
 
 \newpage
 
+% Remember to change path to figures (although not totally sure it's reconstructed)
+% Also convert to jpg if there's some change
+
 \section*{Figure captions}
 
 <<distribution, fig.pos="h!tbp",  echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
