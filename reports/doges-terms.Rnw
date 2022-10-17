@@ -395,7 +395,7 @@ note}\label{source-code-and-data-availability-note}}
 
 This paper has been written using RMarkdown, and all analysis performed
 are embedded in its source code, which is
-\href{https://github.com/JJ/dogesr/blob/main/reports/doges-terms.Rmd}{available
+\href{https://github.com/JJ/dogesr/blob/main/reports/doges-terms.Rnw}{available
 at GitHub} under a free license. As indicated, it uses as data source
 version 0.1.1 of the CRAN \texttt{dogesR} package and it can be compiled
 using RStudio or \texttt{pandoc} after installing the needed packages.
@@ -407,7 +407,7 @@ This paper has been supported in part by project and DemocratAI
 PID2020-115570GB-C22.
 
 \bibliographystyle{Frontiers-Harvard}
-\bibliography{../inst/doges.bib}
+\bibliography{doges.bib}
 
 \newpage
 
