@@ -59,3 +59,11 @@ auto/
 rsconnect/
 
 *.tgz
+
+# Publication
+*.zip
+*.gz
+*.aux
+*.out
+*.bbl
+*.log
