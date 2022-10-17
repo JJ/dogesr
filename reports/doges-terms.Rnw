@@ -385,6 +385,10 @@ choose from and decreasing the incentive of choosing doges for short
 terms. This might be a future and interesting line of work, that might
 be pursued in future papers.
 
+A more sensitive analysis could become a future line of work. In their paper, \cite{smith2021long} examine also how the presence or absence of conflict could have an influence in the age of the elected doge; that could be one additional line of research, but, along the lines of the \cite{dogesr} report, how the position of the candidate in the social network could also play an additional role in this choice.
+
+It would be interesting to check whether other republics with similar systems, such as the Vatican or the republic of Genoa, did have a similar informal term limit and what kind of factors influenced it. Further research will be needed to prove or disprove these hypotheses, and show similarities (or disparities) with the Venetian system.
+
 \hypertarget{source-code-and-data-availability-note}{%
 \section{Source code and data availability
 note}\label{source-code-and-data-availability-note}}
