@@ -50,7 +50,7 @@ essentially under the same set of laws; its stability in a geographic
 milieu, the Italian peninsula, that underwent many waves of upheaval
 under the opposite forces of the Papal states, the Holy Roman Empire,
 and later the Ottoman, French, Spanish and Austro-Hungarian empires
-(Madden 2012) was also quite remarkable.
+\cite{madden2012venice} was also quite remarkable.
 
 Many explanations have been sought for this fact, and of course the
 governing institutions have been examined, including the head of
@@ -65,13 +65,13 @@ through a series of lotteries and nominations emanating from the
 Although initially this electoral council was composed of all persons
 with a certain economic position or at any rate chosen by the doge, by
 the beginning of the XIV century a \emph{closure} (\emph{serrata}) took
-place (Puga and Trefler 2014): seats in the Maggior Consiglio were
+place \cite{serrata}: seats in the Maggior Consiglio were
 closed to only a few families, hereafter called \emph{vecchie} or
 ``old'' families.
 
 This had a series of consequences, including the creation of a
-(relatively) egalitarian society (Stockwell 2011), at least among the
-nobles; according to other authors (Puga and Trefler 2014), this had the
+(relatively) egalitarian society \cite{Stockwell2011}, at least among the
+nobles; according to other authors \cite{serrata}, this had the
 opposite effect of creating a chasm between the aristocrats and the
 \emph{popolani}, or common folk, which ultimately brought the demise of
 the Republic. At any rate, it brought stability and certainty in the
@@ -87,7 +87,7 @@ the republic. Another factor might be at play here: Since doges were
 elected for life, it was apparently a conscious design by the electoral
 college to choose them in such a way that their terms would not last too
 long \cite{smith2021long}. Using data from
-\texttt{dogesr} (Merelo-Guervós 2022), we will, in this paper, see to
+\texttt{dogesr} \cite{dogesr}, we will, in this paper, see to
 what extent that happened and if there was some evolution during the
 time the Republic of Venice existed. We will also look at the change
 points in the duration of the elected rulers, and try to relate them to
@@ -105,8 +105,7 @@ implications.
 \hypertarget{state-of-the-art}{%
 \section{State of the art}\label{state-of-the-art}}
 
-The main reference in this area is the paper by Smith et al. (Smith,
-Crowley, and Leguizamon 2021), which focuses on how electing doges with
+The main reference in this area is the paper by Smith et al. \cite{smith2021long}, which focuses on how electing doges with
 a certain age imposed term limits on their tenure, and also how these
 limits changed during war time, electing in these cases younger doges
 who might be more open to taking aggressive measures to protect the
@@ -121,7 +120,7 @@ avoiding accumulation of power (and associated wealth) by elected
 officials; in some cases they are extremely short. The republic of
 Ragusa (current Dubrovnik, a country that was once a Venetian colony and
 that is heavily influenced by Venetian politics) limited terms of
-\emph{rectors} to a single month (Kunčević 2018), and they could not be
+\emph{rectors} to a single month \cite{kunvcevic2018political}, and they could not be
 reelected until after two years. Limited terms also produced rotation
 and sharing of power between the different families that were a part of
 the nobility, which again contributed to long-term stability.
@@ -139,7 +138,7 @@ of taking office. Their results indicate that between 1172 and 1797 (end
 of the Republic) the average term duration was 7.6 years, while before
 that, it was almost double, 13.2 years.
 
-In a first exploration of this hypothesis using our data (Merelo 2022),
+In a first exploration of this hypothesis using our data \cite{dogesr},
 we concluded that it was \emph{not} the date and event proposed by Smith
 et al., that is, 1172 and the introduction of the electoral college, the
 one that created a change in the attitude of the state when choosing the
@@ -154,9 +153,7 @@ Republic
 
 Let us first examine the claims about doges' terms using independent
 data, the one provided by the \texttt{dogesr} package and collected
-independently from the one mentioned by (Smith, Crowley, and Leguizamon
-2021). How this data was collected is explained in (Merelo-Guervós
-2022); it does not include the exact date of election and death, just
+independently from the one mentioned by \cite{smith2021long}. How this data was collected is explained in \cite{dogesr}; it does not include the exact date of election and death, just
 the year, so it is in fact impossible to know the precise number of
 months they were in office, only the year it started and ended. A term
 of 0 years thus simply indicates that both events occurred in the same
@@ -166,7 +163,7 @@ than two natural years:
 
 <<r one.year.or.less, echo = FALSE>>=
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table")
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}")
 @
 
 This represented 18.85 percent of all doges, a remarkable number.
@@ -185,7 +182,7 @@ knitr::kable(doges.all.years[which.max(doges.all.years$years),])
 Francesco Foscari was elected when he was 50, defeating Pietro Loredan.
 After being in power for 34 years, he was the only doge forced to
 abdicate after the \emph{serrata} or new rules electing the doges and
-given a pension for life (Wiel 1891). In fact, he died a few days later,
+given a pension for life \cite{wiel1891two}. In fact, he died a few days later,
 although the stress caused by his demise might have contributed to that.
 Looking at the other end, the 10 doges that staid in power the longest:
 
@@ -199,29 +196,21 @@ knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="T
 First thing we can note is that, among the top 10, there is only one,
 Leonardo Loredan, who was elected years after the aforementioned
 Francesco Foscari. This was, according to everyone, an unexpected event
-(Wikipedia contributors 2022), and he was chosen by the minimum needed
+\cite{loredan}, and he was chosen by the minimum needed
 to get elected. So he was really an outlier, and it might have happened
 that the change point that brought informal term limits was the bad
 experience with Foscari. This ranking, however, shows how very long
 terms were extremely infrequent, and there were no doge that ruled for
 more than 20 years after 1521, when Leonardo Loredan died.
 
-The histogram with 5-years wide bins, below, shows how infrequent, in
+The histogram with 5-years wide bins shown in Figure \ref{fig:histo}, shows how infrequent, in
 fact, were terms of more than 10 years.
-
-\begin{figure}
-\centering
-\includegraphics{doges-terms_files/figure-latex/distribution-1.pdf}
-\caption{This histogram reproduces, with a fixed bin size, Figure 1 in
-\cite{smith2021long}.}
-\end{figure}
 
 The distribution is skewed towards very short terms because it also
 includes the first years of the institution, when murder or destitution
 by popular revolt was relatively usual; it also shows a relatively long
 tail exactly for the same reasons, but since it is clustered in the
-shorter terms, it is quite clear that the limitation (Smith, Crowley,
-and Leguizamon 2021) talks about is indeed at work.
+shorter terms, it is quite clear that the limitation \cite{smith2021long} talks about is indeed at work.
 
 The authors of \cite{smith2021long} also indicate that
 an informal term limitation was introduced at a certain point in time.
@@ -238,7 +227,7 @@ There seems to be a clear difference before and after the fourteenth
 century; there is also a return to longer tenures by the end of the
 Republic, in the 18th century. However, this is \emph{later} than Smith
 et al.~indicate almost by a whole century. In our previous report
-(Merelo 2022) we showed that the difference between the average term
+\cite{dogesr} we showed that the difference between the average term
 pre- and post-Serrata is \emph{higher} than the one indicated by Smith
 et al.~in their paper; effectively, Serrata laws were introduced in the
 early XIV century.
@@ -251,10 +240,10 @@ change occurs, so that averages before and after the change are
 maximized. There are many such algorithms that use different statistical
 tests.
 
-Using Lanzante's test (LANZANTE 1996) from the \texttt{trend} R package,
+Using Lanzante's test \cite{LANZANTE} from the \texttt{trend} R package,
 this change occurs in the moment Francesco Dandolo took office.
 Francisco Dandolo ruled from 1329 to 1339, right after the last laws of
-the Serrata were enacted, please see also (Merelo-Guervós 2022) for the
+the Serrata were enacted, please see also \cite{dogesr} for the
 importance of the Dandolo family in the social network of Venetian noble
 families. Other tests also yield the same change point.
 
@@ -288,7 +277,7 @@ knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years,
 There is a difference of more than four years in the average, and
 median, pre-and post Serrata, although this effect was not immediate,
 but took a few elections to sink in. Please note than both quantities
-are lower than the ones published in (Smith, Crowley, and Leguizamon 2021), with the difference also being smaller.
+are lower than the ones published in \cite{smith2021long}, with the difference also being smaller.
 
 This, in fact, points to other change points present in the time series.
 Let us try and analyze, separately, these two periods, looking for other
@@ -296,13 +285,12 @@ change points. First, the pre-Serrata period. We would be interested in
 checking if, after all, the introduction of the electoral college
 effectively had some effect.
 
-The Pettitt test (Pettitt 1979), which works better for smaller series,
+The Pettitt test \cite{pettitt1979non}, which works better for smaller series,
 yields a change point at index 9 (after Galla Gaulo, who was blinded and
 exiled after a year in power); however, this result has a p-value higher
 than 0.05 and thus we need to conclude that there is, indeed, no
 significant structural change in this period, not even after the
-introduction of the electoral college, as affirmed by (Smith, Crowley,
-and Leguizamon 2021). As a matter of fact, looking at Figure 2, we see
+introduction of the electoral college, as affirmed by \cite{smith2021long}. As a matter of fact, looking at Figure 2, we see
 that the VIII century had exceptionally short terms; it increased
 slightly during the IX century, but then stabilized until the change
 point in the XIV century, when it shows a clear decrease, which is
@@ -317,7 +305,7 @@ starts with Francesco Dandolo and look for some significant change
 points.
 
 In this case, we use another change-point detection test which is more
-adequate in this case, Pettitt's test (Pettitt 1979). This indicates the
+adequate in this case, Pettitt's test \cite{pettitt1979non}. This indicates the
 change point occurs with the Giovanni Pesaro tenure. This was an
 election quite unlike others previous to them. He had been a corrupt
 administrator, and married a non-patrician to boot. However, his hawkish
@@ -366,8 +354,7 @@ older persons to the office, with a median life span of just 5 years.
 How this informal measure in this reduced time period contributed to
 stability is difficult to say. However, we can discuss that the fact
 that it happened after the Serrata points to a rationale among electors
-that is different to the one claimed by (Smith, Crowley, and Leguizamon
-2021), that is, avoiding entrenchment in power and corruption.
+that is different to the one claimed by \cite{smith2021long}, that is, avoiding entrenchment in power and corruption.
 
 What happened in the Serrata is that the pool of eligible families was
 reduced to just two dozens. This pool was continuously expanded, but
@@ -420,5 +407,10 @@ PID2020-115570GB-C22.
 \bibliography{../inst/doges.bib}
 
 \section*{Figure captions}
+
+<<r distribution, fig.height=3, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
+library(ggplot2)
+ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
+@
 
 \end{document}
