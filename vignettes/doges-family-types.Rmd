@@ -42,7 +42,12 @@ marriages.types <-
               fam.type.doge = unname( unlist ( family.types[ data.doges$Family.doge ] )),
               fam.type.dogaressa = unname( unlist ( family.types[ data.doges$Family.dogaressa ] ))
 )
-                               
+marriages.just.types <- marriages.types
+marriages.just.types$doge.family <- NULL
+marriages.just.types$dogaressa.family <- NULL
+levs <- unique(unlist(marriages.just.types$fam.type.doge, use.names = FALSE))
+types.adjacency <- table(lapply(marriages.just.types, factor, levs))                             
+
 ```
 
 ## Conclusions
