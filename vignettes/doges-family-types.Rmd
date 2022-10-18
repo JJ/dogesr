@@ -48,6 +48,22 @@ marriages.just.types$dogaressa.family <- NULL
 levs <- unique(unlist(marriages.just.types$fam.type.doge, use.names = FALSE))
 types.adjacency <- table(lapply(marriages.just.types, factor, levs))                             
 
+library(tidyr)
+library(dplyr)
+library(tibble)
+links <- types.adjacency  %>% as.data.frame() 
+nodes <- data.frame(
+  name=c(as.character(links$fam.type.doge), as.character(links$fam.type.dogaressa)) %>% 
+    unique()
+  )
+links$IDsource <- match(links$fam.type.doge, nodes$name)-1 
+links$IDtarget <- match(links$fam.type.dogaressa, nodes$name)-1
+
+library(networkD3)
+sankeyNetwork(Links = links, Nodes = nodes,
+                     Source = "IDsource", Target = "IDtarget",
+                     Value = "Freq", NodeID = "name", 
+                     sinksRight=FALSE)
 ```
 
 ## Conclusions
