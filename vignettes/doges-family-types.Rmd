@@ -42,6 +42,11 @@ marriages.types <-
               fam.type.doge = unname( unlist ( family.types[ data.doges$Family.doge ] )),
               fam.type.dogaressa = unname( unlist ( family.types[ data.doges$Family.dogaressa ] ))
 )
+knitr::kable(marriages.types)
+```
+
+
+```{r types}
 marriages.just.types <- marriages.types
 marriages.just.types$doge.family <- NULL
 marriages.just.types$dogaressa.family <- NULL
