@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-For the longest part of its existence, Venetian noble families used tactical marriage to improve the lot of their *case* or dynasties. Since access to nobility was closed by the beginning of the XIV century, and then enlarged little by little, there was a kind of stratification in the nobility, and marrying *older* families was a way of improving the political, commercial and social prospects for your own family.
+For the longest part of its existence, Venetian noble families used tactical marriage [@Telek2017MarryingTR] to improve the lot of their *case* or dynasties. Since access to nobility was closed by the beginning of the XIV century, and then enlarged little by little, there was a kind of stratification in the nobility, and marrying *older* families was a way of improving the political, commercial and social prospects for your own family.
 
 Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and how different types of families married with each other.
 
@@ -60,7 +60,7 @@ types.adjacency <- types.adjacency[-c(10:18),]
 knitr::kable(types.adjacency)
 ```
 
-The *heaviest* link seem to be between the *evangeliche* and *apostoliche* *cases*, although "Not available" is the heaviest column for doges, who either did not marry or married some non-patrician family; this happened most frequently in the pre-Serrata times.
+The *heaviest* link seem to be between the *evangeliche* and *apostoliche* *cases*, although "Not available" is the heaviest column for doges, who either did not marry or married some non-patrician family; this happened most frequently in the pre-*Serrata* [@serrata] times.
 
 Let's look at this in a Sankey diagram
 
