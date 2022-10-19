@@ -33,7 +33,7 @@ data("doges")
 data("families")
 ```
 
-This will import the data from the `dogesr` package into the `data.doges` data frame, and family data in the `family.types` list. Let's merge them into a single data frame.
+This will import the data from the `dogesr` package into the `data.doges` data frame, and family data in the `family.types` list. Let's merge them into a single data frame. The table of all family names and their corresponding family type is shown below.`
 
 ```{r years}
 marriages.types <- 
@@ -45,14 +45,24 @@ marriages.types <-
 knitr::kable(marriages.types)
 ```
 
+Let's create an adjacency matrix for this
 
 ```{r types}
 marriages.just.types <- marriages.types
 marriages.just.types$doge.family <- NULL
 marriages.just.types$dogaressa.family <- NULL
-levs <- unique(unlist(marriages.just.types$fam.type.doge, use.names = FALSE))
-types.adjacency <- table(lapply(marriages.just.types, factor, levs))                             
+marriages.just.types$fam.type.doge <- paste0(marriages.just.types$fam.type.doge,"♂")
+marriages.just.types$fam.type.dogaressa <- paste0(marriages.just.types$fam.type.dogaressa,"♀")
+levs <- c(unique(unlist(marriages.just.types$fam.type.doge, use.names = FALSE)),unique(unlist(marriages.just.types$fam.type.dogaressa, use.names = FALSE)))
+types.adjacency <- table(lapply(marriages.just.types, factor, levs))
+types.adjacency <- types.adjacency[,-c(1:9)]
+types.adjacency <- types.adjacency[-c(10:18),]
+knitr::kable(types.adjacency)
+```
 
+The *heaviest* link seem to be between the *evangeliche* and *apostoliche* *cases*. Let's look at this in a diagram
+
+```{r sankey}
 library(tidyr)
 library(dplyr)
 library(tibble)
