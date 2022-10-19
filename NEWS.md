@@ -1,3 +1,11 @@
+## version 0.1.5
+
+* Vignette for family data.
+* Corrects some data errors
+
+---
+
+
 ## version 0.1.4
 
 * Family data included
