@@ -84,7 +84,9 @@ sankeyNetwork(Links = links, Nodes = nodes,
                      sinksRight=FALSE)
 ```
 
-The "NA" category of families seems to dominate the female part of the diagram, corresponding to dogaresse. We are mostly interested, however, in the social links formed by different types of families, so we will simply eliminate those rows and columns to have a clearer picture.
+The "NA" category of families seems to dominate the female part of the diagram, corresponding to dogaresse. These are due either to non-married doges, dogaresse *not* in patrician families. This was common at the beginning of the Republic, which is why *estinte* and *apostoliche* families seem to have that as a preference. It's common, however, throughout.
+
+We are mostly interested, however, in the social links formed by different types of noble families, so we will simply eliminate those rows and columns to have a clearer picture.
 
 ```{r non.na}
 types.adjacency <- types.adjacency[-1,-1]
@@ -100,6 +102,11 @@ sankeyNetwork(Links = links2, Nodes = nodes2,
                      Source = "IDsource", Target = "IDtarget",
                      Value = "Freq", NodeID = "name")
 ```
+
+What we see here is the popularity of *apostoliche* dogaresse, and of *ducali* doges. But also how common marrying *up* was. *Apostolochie* families couldn't marry *up*, since they were in the first post-*Serrata* batch, so they married with other similar familiesas well as *evangeliche*. These, despite being only 4 families, were quite popular in terms of providing wifes for other diges. 
+
+*Ducali* families, being newer to the noble families pool, married preferably *up*: *apostoliche*, *vecchie* and *evangeliche*, as well as their own class. Only a relative minority married other *nuove* families. *Nuove* families, however, did not manage to marry into any *apostoliche* family; while the few *nuovisime* and *soldo* (paid positions) also married up, to *apostoliche* and *ducali* famili, respectively.
+
 
 ## Conclusions
 
