@@ -36,3 +36,7 @@ It grew from the data used in [this paper](https://arxiv.org/abs/2209.07334); pl
 ```
 
 You can retrieve this from the [bibliography file](inst/doges.bib) along with other references used in examples.
+
+## Examples
+
+This package includes a couple of vignettes. Once installed, write `vignettes("dogesr")` to check what's available.
