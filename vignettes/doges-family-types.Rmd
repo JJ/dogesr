@@ -60,7 +60,9 @@ types.adjacency <- types.adjacency[-c(10:18),]
 knitr::kable(types.adjacency)
 ```
 
-The *heaviest* link seem to be between the *evangeliche* and *apostoliche* *cases*. Let's look at this in a diagram
+The *heaviest* link seem to be between the *evangeliche* and *apostoliche* *cases*, although "Not available" is the heaviest column for doges, who either did not marry or married some non-patrician family; this happened most frequently in the pre-Serrata times.
+
+Let's look at this in a Sankey diagram
 
 ```{r sankey}
 library(tidyr)
@@ -81,6 +83,7 @@ sankeyNetwork(Links = links, Nodes = nodes,
                      sinksRight=FALSE)
 ```
 
+The "NA" category of families seems to dominate the female part of the diagram, corresponding to dogaresse. We are mostly interested, however, in the social links formed by different types of families, so we will simply eliminate those rows and columns to have a clearer picture.
 ## Conclusions
 
 
