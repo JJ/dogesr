@@ -14,7 +14,7 @@
 
 ## version 0.1.3
 
-* Report waiting to be published ar ArXiV
+* Report waiting to be published at ArXiV
 
 ---
 ## version 0.1.2
