@@ -12,7 +12,7 @@ Load \code{family.types} into the environment
 A list with  every noble family in the republic of Venice, and the columns
 \itemize{
   \item Key: family name.
-  \item Value: type of family: Estinte, Vecchie, Apostoliche, Evangeliche, Ducali, Nuove, Nuovissime, Soldo. This describes how they accessed nobility.
+  \item Value: type of family: Estinte, Vecchie, Apostoliche, Evangeliche, Ducali, Nuove, Nuovissime, Soldo; this last name is not standard, and simply describe those who paid to be included into the Maggior Consiglio. This describes how they accessed nobility.
 }
 Main design decision here is that this can be used as external index for the type of family.
 }
