@@ -60,8 +60,7 @@ Francesco Foscari was elected when he was 50, defeating Pietro Loredan. After be
 
 ```{r using.doges.years, echo = FALSE}
 doges.years.all <- unique(doges.years())
-doges.years.all$Femily.doge <- NULL
-doges.years.all$Century <- doges.years.all$Century +1 
+doges.years.all$Family.doge <- NULL
 knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges with the longest tenure; as in the previous table, the left-most column indicates their position in the temporally ordered list of doges; it also shows the precise years where they acceded to power and left, and the total number of years.")
 ```
 
