@@ -40,7 +40,7 @@ Several doges only were able to stay alive during the same year
 knitr::kable(doges.all.years[doges.all.years$years == 0,]$doge, col.names=NULL)
 ```
 
-And quite a few during 1 year or less
+And quite a few during one year or less
 
 ```{r one.year.or.less}
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
@@ -63,7 +63,6 @@ This can be analyzed a but further with a function provided by `dogesr`, `doges.
 
 ```{r using.doges.years}
 doges.years.all <- doges.years()
-doges.years.all$Century <- doges.years.all$Century +1 
 knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10))
 ```
 
