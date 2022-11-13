@@ -1,6 +1,6 @@
 # Comments
 
-This is an patch release
+This is a patch release
 
 ## R CMD check results
 
