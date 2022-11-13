@@ -2,7 +2,7 @@
   [![Test package](https://github.com/JJ/dogesr/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/dogesr/actions/workflows/R-stuff.yml)
     [![CRAN status](https://www.r-pkg.org/badges/version/dogesr)](https://CRAN.R-project.org/package=dogesr)
   <!-- badges: end -->
-  
+
 # dogesR
 
 > **Hacktoberfest**: check the [help wanted](https://github.com/JJ/dogesr/labels/help%20wanted) issues
@@ -43,3 +43,12 @@ This package includes a couple of vignettes. Once installed, write `vignette("do
 
 * `vignette("doges-family-types")` for how to use the family types data set
 * `vignette("doges-terms")` to analyze the amount of time the doges lived/ruled using data provided in this package.
+
+## Work with data
+
+Data in its original format is stored in the [`raw-data`](raw-data)
+directory. If you change that data anyhow, issue `make` to rebuild the
+R data files (contained in the [`data`](data/) ) directory.
+
+Any further change (columns and some such) will also need modification
+of the documentation at the [`man`](man/) directory.
