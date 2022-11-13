@@ -3,6 +3,9 @@
 Fixes:
 * Improves documentation, fixing some issues with inserting references.
 
+Changes:
+* Mainly for my own use, creates a `Makefile` with common tasks
+
 # dogesr 0.1.5
 
 Changes:
