@@ -1,3 +1,8 @@
+# dogesr 0.1.6
+
+Fixes:
+* Improves documentation, fixing some issues with inserting references.
+
 # dogesr 0.1.5
 
 Changes:
