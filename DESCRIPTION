@@ -10,17 +10,19 @@ Encoding: UTF-8
 LazyData: true
 Depends:
     R (>= 3.5.0)
-Suggests: 
+Suggests:
     testthat (>= 3.0.0),
     devtools,
     tidyr,
     networkD3,
     tibble
 Config/testthat/edition: 3
-Imports: 
+Imports:
+    Rdpack,
     dplyr,
     ggplot2,
     knitr,
     qpdf,
     rmarkdown
 VignetteBuilder: knitr
+RdMacros: Rdpack
