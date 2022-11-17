@@ -1,16 +1,35 @@
-\documentclass[utf8]{FrontiersinHarvard}
-\usepackage{url,hyperref,lineno,microtype,subcaption}
-\usepackage[onehalfspacing]{setspace}
+\documentclass[histories,article,submit,pdftex,oneauthor]{mdpi}
 
-\linenumbers
+% MDPI preface
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2022}
+\copyrightyear{2022}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{}
+%\daterevised{} % Only for the journal Acoustics
+\dateaccepted{}
+\datepublished{}
+%\datecorrected{} % Corrected papers include a "Corrected: XXX" date in the original paper.
+%\dateretracted{} % Corrected papers include a "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%------------------------------------------------------------------
 
 
-\def\keyFont{\fontsize{8}{11}\helveticabold }
-\def\firstAuthorLast{JJ Merelo}
-\def\Authors{JJ Merelo$^{1}$}
-\def\Address{Department of Computer Architecture and Technology, University of Granada}
-\def\corrEmail{jmerelo@ugr.es}
-\def\corrAuthor{JJ Merelo}
+
+
+\Author{JJ Merelo $^{1}$}
+\AuthorNames{Juan-Julián Merelo-Guervós}
+\AuthorCitation{JJ Merelo}
+
+\address{$^{1}$ \quad Department of Computer Architecture and Technology, University of Granada; jmerelo@ugr.es}
+\correspondence{Correspondence: jmerelo@ugr.es}
 
 \begin{document}
 <<setup, include = FALSE>>=
@@ -21,8 +40,9 @@ doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges
 \onecolumn
 \firstpage{1}
 
-\title[Examining term limits in Venetian doges]{It's a doges' life: examining term limits in Venetian doges life
+\Title{It's a doges' life: examining term limits in Venetian doges life
 tenure}
+\TitleCitation{Examining term limits in Venetian doges}
 
 \author[\firstAuthorLast ]{\Authors}
 \address{}
@@ -31,7 +51,7 @@ tenure}
 
 \maketitle
 
-\begin{abstract}
+\abstract{
 During most of the lifespan of the Venetian republic, doges or
 presidents were elected for life. However, a long tenure was a rare
 event, which effectively resulted in term limits, as has already been deported by several authors. In this paper we examine these tenures
@@ -39,7 +59,9 @@ and its evolution during the existence of the Venetian republic, trying
 to prove Smith et al.~thesis, but also the event or events that
 effectively caused that limitation by design. Finally, we will discuss
 for the causes of this limitation and its effective consequences.
-\end{abstract}
+}
+
+\begin{document}
 
 \section{Introduction}\label{introduction}
 
@@ -405,7 +427,7 @@ using RStudio or \texttt{pandoc} after installing the needed packages.
 This paper has been supported in part by project and DemocratAI
 PID2020-115570GB-C22.
 
-\bibliographystyle{Frontiers-Harvard}
+\bibliographystyle{mdpi}
 \bibliography{doges.bib}
 
 \newpage
