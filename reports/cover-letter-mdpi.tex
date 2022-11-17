@@ -1,0 +1,112 @@
+% molde para cartas con membrete Dpto. y para sobres con ventana direcciÂ¢n
+\documentclass{letter}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}      % castellano
+\usepackage[latin1]{inputenc}    % tildes
+\usepackage{url}
+
+% para cartas en inglÂs comentar la linea anterior e incluir la siguiente:
+%\documentstyle[12pt]{a4letter}
+% cabecera para hojas con membrete del Departamento y JJ
+% Set left margin - The default is 1 inch, so the following 
+% command sets a 0.5-inch left margin.
+\setlength{\oddsidemargin}{0.0in}
+
+% Set width of the text - What is left will be the right margin.
+% In this case, right margin is 8.5in - 0.0in - 6.5in = 2.0in.
+\setlength{\textwidth}{6.5in}
+
+% Set top margin - The default is 1 inch, so the following 
+% command sets a 0.5-inch top margin.
+\setlength{\topmargin}{-0.75in}
+
+% Set height of the text - What is left will be the bottom margin.
+% In this case, bottom margin is 11in - 0.75in - 9.5in = 0.75in
+\setlength{\textheight}{10in}
+
+% cambiar estas definiciones para personalizar el documento
+\def\yo{\sc Juan J. Merelo}
+\def\email{\tt jmerelo@ugr.es}
+\def\tel{+34-958-243162}
+
+% definiciones comunes
+\def\granada{18071 Granada (Spain)}
+\def\ucm{Universidad de Granada}
+\def\fac{ETS Ingenierías Informática y Telecomucnicaciones}
+\def\dpto{Departamento de Arquitectura y Tecnolog\'ia de Computadores}
+
+\def\cabecera{
+
+\begin{minipage}{2.5cm}
+  \centerline{  \includegraphics[width=2.5cm,height=2.5cm]{UGR-MARCA-01-color} }
+\end{minipage}
+\ \
+\begin{minipage}{13cm}
+ \rule{13cm}{0.6mm}
+ \vspace*{0.3cm}
+ {\small{\bf \dpto \hfill}} \\
+ {\footnotesize{\bf \ucm \hfill Tel. / Phone: \tel}} \\
+ {\footnotesize{\bf \granada \hfill E-mail: \email}}\\
+ \rule{13cm}{0.6mm}
+\end{minipage}
+}
+
+%\input cabecera
+\pagestyle{empty}
+
+\begin{document}
+
+\cabecera 
+
+\vspace{0.5cm}
+
+\hspace{7cm}
+
+\hfill Granada, \today
+
+\vspace{0.5cm}
+\ \
+% **** si no se quiere recuadro en la dirección, comentar la linea siguiente
+%\framebox[9cm][l]
+{
+\begin{minipage}[t]{9cm}
+Dear Histories editor(s):
+% ******* Poner aquí nombre y direcciÂ¢n del destinatario
+\end{minipage}
+ }
+
+\vspace{0.5cm}
+
+
+
+\begin{flushleft}
+
+I have submitted separately the manuscript ``It's a doges' life: examining term
+limits in Venetian doges life tenure''. This paper applies rigorous statistical
+tools to the computation of the influence of certain events in history of the
+Republic of Venice on the (proved) fact that doges (for-live presidents of the
+Venetian republic) were chosen of a certain age, which provided a \emph{natural}
+limit to their terms in office.
+
+This was proved by Smith et al.; however, in this paper we compute the exact
+point when that started to happen in the history of the republic, and also
+provide an alternative explanation of why this event (the so called
+\emph{serrata} or closure) was so important in the history of the republic.
+
+We consider that this falls entirely within the topic of your journal, and
+expect it to be considered for publication after all reviewers are satisfied.
+
+\end{flushleft}
+
+
+% ********** fin del texto  *******************
+
+\hspace*{8cm} Yours  \\
+
+\centerline{\includegraphics[width=2.5cm,height=2.5cm]{../../../../Burocracia/jj_sign}}
+
+\hspace*{8cm} Juan J. Merelo\\
+\hspace*{8cm} Catedrático de Universidad (Full professor)
+
+\end{document}
+
