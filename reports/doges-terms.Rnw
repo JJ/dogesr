@@ -21,35 +21,24 @@
 %\doinum{}
 %------------------------------------------------------------------
 
-
-
-
 \Author{JJ Merelo $^{1}$}
 \AuthorNames{Juan-Julián Merelo-Guervós}
 \AuthorCitation{JJ Merelo}
 
 \address{$^{1}$ \quad Department of Computer Architecture and Technology, University of Granada; jmerelo@ugr.es}
-\correspondence{Correspondence: jmerelo@ugr.es}
+\corres{Correspondence: jmerelo@ugr.es}
 
-\begin{document}
-<<setup, include = FALSE>>=
-library(dogesr)
-data("doges")
-doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges$Years))
-@
-\onecolumn
-\firstpage{1}
 
 \Title{It's a doges' life: examining term limits in Venetian doges life
 tenure}
 \TitleCitation{Examining term limits in Venetian doges}
 
-\author[\firstAuthorLast ]{\Authors}
-\address{}
-\correspondance{}
-\extraAuth{}
+<<setup, include = FALSE>>=
+library(dogesr)
+data("doges")
+doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges$Years))
+@
 
-\maketitle
 
 \abstract{
 During most of the lifespan of the Venetian republic, doges or
@@ -427,7 +416,6 @@ using RStudio or \texttt{pandoc} after installing the needed packages.
 This paper has been supported in part by project and DemocratAI
 PID2020-115570GB-C22.
 
-\bibliographystyle{mdpi}
 \bibliography{doges.bib}
 
 \newpage
