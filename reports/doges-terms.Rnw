@@ -43,9 +43,8 @@ doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges
 \abstract{
 During most of the lifespan of the Venetian republic, doges or
 presidents were elected for life. However, a long tenure was a rare
-event, which effectively resulted in term limits, as has already been deported by several authors. In this paper we examine these tenures
-and its evolution during the existence of the Venetian republic, trying
-to prove Smith et al.~thesis, but also the event or events that
+event, which effectively resulted in term limits, as has already been reported by several authors. In this paper we examine the length of these tenures
+and its evolution during the existence of the Venetian republic, following Smith et al. claim that specific events in Venetian history caused this \emph{shortening}, but also the dates, and possibly event or events that
 effectively caused that limitation by design. Finally, we will discuss
 for the causes of this limitation and its effective consequences.
 }
