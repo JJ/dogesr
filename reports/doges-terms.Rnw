@@ -1,5 +1,5 @@
 \documentclass[histories,article,submit,pdftex,oneauthor]{mdpi}
-
+\usepackage{xcolor}
 % MDPI preface
 \firstpage{1}
 \makeatletter
@@ -28,9 +28,9 @@
 \address{$^{1}$ \quad Department of Computer Architecture and Technology, University of Granada; jmerelo@ugr.es}
 \corres{Correspondence: jmerelo@ugr.es}
 
+\newcommand{\rev}[1]{{\color{purple} #1}}
 
-\Title{It's a doges' life: examining term limits in Venetian doges life
-tenure}
+\Title{It's a doges' life: examining term limits in Venetian doges life tenure}
 \TitleCitation{Examining term limits in Venetian doges}
 
 <<setup, include = FALSE>>=
@@ -56,7 +56,7 @@ for the causes of this limitation and its effective consequences.
 The Venetian republic, which existed from the seventh to the end of the
 eighteenth century, was a unique polity in many different aspects,
 including the fact that it lasted for more than one thousand years
-essentially under the same set of laws; its stability in a geographic
+essentially under the same set of laws \rev{\cite{martin2003venice}}; its stability in a geographic
 milieu, the Italian peninsula, that underwent many waves of upheaval
 under the opposite forces of the Papal states, the Holy Roman Empire,
 and later the Ottoman, French, Spanish and Austro-Hungarian empires
