@@ -215,7 +215,7 @@ experience with Foscari. This ranking, however, shows how very long
 terms were extremely infrequent, and there were no doge that ruled for
 more than 20 years after 1521, when Leonardo Loredan died.
 
-<<distribution, fig.pos="h!tbp",  echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
+<<distribution, fig.pos="h!tbp", fig.height=5, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
 library(ggplot2)
 ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 @
@@ -438,6 +438,8 @@ using RStudio or \texttt{pandoc} after installing the needed packages.
 }
 
 \funding{This paper has been supported in part by project and DemocratAI PID2020-115570GB-C22.}
+
+\section*{References}
 
 \bibliography{doges.bib}
 
