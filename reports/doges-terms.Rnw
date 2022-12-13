@@ -76,7 +76,7 @@ with a certain economic position\rev{,} or at any rate chosen by the doge, \rev{
 the beginning of the XIV century a \emph{closure} (\emph{serrata}) took
 place \cite{serrata,roesch00}: seats in the Maggior Consiglio were
 closed to only a few families, hereafter called \emph{vecchie} or
-``old'' families.
+``old'' families. \rev{Whether this constituted an actual closing or reduction of the amount of people eligible for office or an enlargement, is still under dispute \cite{roesch00}. However, by introducing a legal foundation for this eligibility, it certainly contributed to the definition of a noble or patrician class, which was by many authors considered the constitutional event of the Venetian republic \cite{roesch00}. }
 
 This had a series of consequences, including the creation of a
 (relatively) egalitarian society \cite{Stockwell2011}, at least among the
