@@ -66,13 +66,13 @@ Many explanations have been sought for this fact, and of course the
 governing institutions have been examined, including the head of
 government, the so called \emph{doge} (\emph{doxe} in the vernacular
 Veneto language; the term is approximately equivalent to ``duke'' in
-other languages), \rev{which was elected for life}. \rev{Although initially they were chosen in a popular assembly, eventually and d}uring the longest period, doges were elected by an electoral college composed of 41 nobles, which were also \rev{chosen}
+other languages), \rev{which was elected for life}. \rev{Although initially they were chosen in a popular assembly, eventually and} during the longest period, doges were elected by an electoral college composed of 41 nobles, which were also \rev{chosen}
 through a series of lotteries and nominations emanating from the
 \emph{Maggior Consiglio}, which \rev{eventually} included all noble families in Venice
 \cite{molinari2020republic}.
 
 \rev{The move from the popular assembly to a electoral college \cite{smith2021long}}, composed of all persons
-with a certain economic position\rev{,} or at any rate chosen by the doge, \rev{provoked many changes in the social dynamics, as well as the institutional design.}. \rev{Moreover}, by
+with a certain economic position\rev{,} or at any rate chosen by the doge, \rev{provoked many changes in the social dynamics, as well as the institutional design}. \rev{Moreover}, by
 the beginning of the XIV century a \emph{closure} (\emph{serrata}) took
 place \cite{serrata,roesch00}: seats in the Maggior Consiglio were
 closed to only a few families, hereafter called \emph{vecchie} or
@@ -83,12 +83,17 @@ This had a series of consequences, including the creation of a
 nobles; according to other authors \cite{serrata}, this had the
 opposite effect of creating a chasm between the aristocrats and the
 \emph{popolani}, or common folk, which ultimately brought the demise of
-the Republic. At any rate, it brought stability and certainty in the
+the Republic. \rev{The \emph{serrata}, even if identified as an individual event in a point in time, can be rather considered an extended period of legal and social change that extended along more than thirty years \cite{roesch00}. }
+
+
+At any rate, it brought stability and certainty in the
 succession of the head of the state, which happened in a few weeks after
 the deceased doge was interred; it is also a fact that except for a
 single case, no doge had to be indicted of corruption or treason, or for
 that matter simply removed or murdered, as was the case in many of the
 other Italian city-states or Europe at large.
+
+\rev{The \emph{serrata} was not the last watershed event; some authors \cite{roesch00,chojnacki00} talk about a second and even a third \emph{serrata}. }
 
 But the way election was performed, as well as the pool of eligible
 candidates, cannot by themselves explain the stability and duration of
