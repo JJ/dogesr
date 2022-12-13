@@ -176,7 +176,7 @@ than two natural years:
 
 <<one.year.or.less, echo = FALSE>>=
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. The first column is the order or accession to dogarate. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}")
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}", row.names = F)
 @
 
 This represented 18.85 percent of all doges, a remarkable number.
@@ -186,10 +186,10 @@ the end of the republic (when, as is the main hypothesis, they were
 actually elected at an old age).
 
 So it effectively looks like many doges effectively had a short shelf
-life. As a matter of fact, the doge that staid in power the longest was
+life. As a matter of fact, the doge that staid in power the longest, \rev{shown in Table \ref{tab:doge:most}, was a strange event that the Republic tried to ensure it did not happen again}.
 
 <<longest.doge, echo = FALSE>>=
-knitr::kable(doges.all.years[which.max(doges.all.years$years),])
+knitr::kable(doges.all.years[which.max(doges.all.years$years),], row.names = F, caption="Doge that spent the most years in office, and the number of years it lasted\\protect\\label{tab:doge:most}.")
 @
 
 Francesco Foscari was elected when he was 50, defeating Pietro Loredan.
@@ -202,7 +202,7 @@ Looking at the other end, the 10 doges that staid in power the longest:
 <<using.doges.years, echo = FALSE>>=
 doges.years.all <- unique(doges.years())
 doges.years.all$Family.doge <- NULL
-knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges ranked by tenure; as in the previous table, the left-most column indicates their position in the temporally ordered list of doges; it also shows the precise years where they acceded to power and left, and the total number of years.")
+knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges ranked by tenure and the precise years where they acceded to power and left, and the total number of years.", row.names = F)
 @
 
 First thing we can note is that, among the top 10, there is only one,
