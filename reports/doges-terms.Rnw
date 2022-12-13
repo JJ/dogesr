@@ -83,10 +83,10 @@ This had a series of consequences, including the creation of a
 nobles; according to other authors \cite{serrata}, this had the
 opposite effect of creating a chasm between the aristocrats and the
 \emph{popolani}, or common folk, which ultimately brought the demise of
-the Republic. \rev{The \emph{serrata}, even if identified as an individual event in a point in time, can be rather considered an extended period of legal and social change that extended along more than thirty years \cite{roesch00}. \cite{roesch00} identifies several specific laws, approved during those dates, that limit election to the Maggior Consiglio to those whose fathers and grand fathers had already participated in it, and later forcing the doge to seek approval from the Council of Forty to include new members in the council.}
+the Republic. \rev{The \emph{serrata}, even if identified as an individual event in a point in time, can be rather considered an extended period of legal and social change that extended along more than thirty years \cite{roesch00}. \cite{roesch00} identifies several specific laws, approved during those dates, that limit election to the Maggior Consiglio to those whose fathers and grand fathers had already participated in it, and later forcing the doge to seek approval from the Council of Forty to include new members in the council. Additionally, it apparently made the extended family or \emph{casata} a political subject by making family ties the main, if not the only, way of sharing the power of the republic \cite{bellavitis13}.}
 
 At any rate, it brought stability and certainty in the
-succession of the head of the state, which happened \rev{with certainty} in a few weeks after
+succession of the head of the state, which happened \rev{invariably} in a few weeks after
 the deceased doge was interred; it is also a fact that except for a
 single case, no doge had to be indicted of corruption or treason, or for
 that matter simply removed or murdered, as was the case in many of the
