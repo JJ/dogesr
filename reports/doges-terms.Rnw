@@ -76,7 +76,7 @@ with a certain economic position\rev{,} or at any rate chosen by the doge, \rev{
 the beginning of the XIV century a \emph{closure} (\emph{serrata}) took
 place \cite{serrata,roesch00}: seats in the Maggior Consiglio were
 closed to only a few families, hereafter called \emph{vecchie} or
-``old'' families. \rev{Whether this constituted an actual closing or reduction of the amount of people eligible for office or an enlargement, is still under dispute \cite{roesch00}. However, by introducing a legal foundation for this eligibility, it certainly contributed to the definition of a noble or patrician class, which was by many authors considered the constitutional event of the Venetian republic \cite{roesch00}. }
+``old'' families. \rev{Whether this constituted an actual closing or reduction of the amount of people eligible for office or an enlargement, is still under dispute \cite{roesch00}; some authors \cite{lane_1963} claim that it was simply a codification of what was already happening \emph{de facto}. However, by introducing a legal/technical foundation for this eligibility, it certainly contributed to the definition of a noble or patrician class, which was by many authors considered the constitutional event of the Venetian republic \cite{roesch00}. }
 
 This had a series of consequences, including the creation of a
 (relatively) egalitarian society \cite{Stockwell2011}, at least among the
@@ -85,23 +85,22 @@ opposite effect of creating a chasm between the aristocrats and the
 \emph{popolani}, or common folk, which ultimately brought the demise of
 the Republic. \rev{The \emph{serrata}, even if identified as an individual event in a point in time, can be rather considered an extended period of legal and social change that extended along more than thirty years \cite{roesch00}. \cite{roesch00} identifies several specific laws, approved during those dates, that limit election to the Maggior Consiglio to those whose fathers and grand fathers had already participated in it, and later forcing the doge to seek approval from the Council of Forty to include new members in the council.}
 
-
 At any rate, it brought stability and certainty in the
-succession of the head of the state, which happened in a few weeks after
+succession of the head of the state, which happened \rev{with certainty} in a few weeks after
 the deceased doge was interred; it is also a fact that except for a
 single case, no doge had to be indicted of corruption or treason, or for
 that matter simply removed or murdered, as was the case in many of the
 other Italian city-states or Europe at large.
 
-\rev{The \emph{serrata} was not the last watershed event; some authors \cite{roesch00,chojnacki00} talk about a second and even a third \emph{serrata}, extending the concept to include legal changes that made the definition of nobility and other social castes evolve again \cite{chojnacki00}  }
+\rev{Although it can be claimed that the \emph{serrata} was not the last watershed event; some authors \cite{roesch00,chojnacki00} talk about a second and even a third \emph{serrata}, extending the concept to include legal changes that made the definition of nobility and other social castes evolve again \cite{chojnacki00}, it is anyway interesting to check what kind of intended or unintended side effects it brought into the institutional design of the Republic.}
 
-But the way election was performed, as well as the pool of eligible
+\rev{Since} the way election was performed, as well as the pool of eligible
 candidates, cannot by themselves explain the stability and duration of
-the republic. Another factor might be at play here: Since doges were
+the republic, \rev{we need to investigate if} another factor might be at play here: Since doges were
 elected for life, it was apparently a conscious design by the electoral
 college to choose them in such a way that their terms would not last too
-long \cite{smith2021long}. Using data from
-\texttt{dogesr} \cite{dogesr}, we will, in this paper, see to
+long \cite{smith2021long}. \rev{That is why, in this paper,} using data \rev{and code} from the
+\texttt{dogesr} \cite{dogesr} R library \rev{(published in the CRAN repository, and available under a free license)}, we will, \rev{check} to
 what extent that happened and if there was some evolution during the
 time the Republic of Venice existed. We will also look at the change
 points in the duration of the elected rulers, and try to relate them to
