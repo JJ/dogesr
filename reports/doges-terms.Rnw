@@ -25,7 +25,7 @@
 \AuthorNames{Juan-Julián Merelo-Guervós}
 \AuthorCitation{JJ Merelo}
 
-\address{$^{1}$ \quad Department of Computer Architecture and Technology, University of Granada; jmerelo@ugr.es}
+\address{$^{1}$ \quad Department of Computer \rev{Engineering, Automation and Robotics}, University of Granada; jmerelo@ugr.es}
 \corres{Correspondence: jmerelo@ugr.es}
 
 \newcommand{\rev}[1]{{\color{purple} #1}}
