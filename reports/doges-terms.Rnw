@@ -122,24 +122,26 @@ The main reference in this area is the paper by Smith et al. \cite{smith2021long
 a certain age imposed term limits on their tenure, and also how these
 limits changed during war time, electing in these cases younger doges
 who might be more open to taking aggressive measures to protect the
-republic. They propose that by not having a term limit by law, it is
+republic. They propose that by not having a term limit \rev{imposed} by law, it is
 impossible for any ruler to change it; the time a ruler stays in power
 will be enforced by nature itself, as long as the pool of candidates is
-reduced to persons that have a certain age. This also has the side
+reduced to persons that have a certain age \ref{and health state}. This also has the side
 effect of including only candidates with a long life of service to the
-republic, including (term-limited) appointments at the Senate and other
-institutions with executive power. In general, term limits pursue
+republic, \rev{which might have included} (term-limited) appointments at the Senate and other
+institutions with executive power, \rev{such as the council of Ten}. In general, term limits pursue
 avoiding accumulation of power (and associated wealth) by elected
-officials; in some cases they are extremely short. The republic of
+officials \rev{and their extended families}; in some cases \rev{what the law imposed were} extremely short.
+
+\rev{For instance, } the republic of
 Ragusa (current Dubrovnik, a country that was once a Venetian colony and
-that is heavily influenced by Venetian politics) limited terms of
-\emph{rectors} to a single month \cite{kunvcevic2018political}, and they could not be
-reelected until after two years. Limited terms also produced rotation
+that \rev{was} heavily influenced by Venetian politics) limited terms of
+\emph{rectors}\rev{, the highest office in the country, equivalent to the president of the republic,} to a single month \cite{kunvcevic2018political}, and they could not be
+reelected until two years \rev{after they had left office}. Limited terms also produced rotation
 and sharing of power between the different families that were a part of
-the nobility, which again contributed to long-term stability.
+the nobility, \rev{which in the case of Ragusa were just a few dozens}, which again contributed to long-term stability.
 
 How this was introduced in the political mindset is subject to
-discussion. Smith et al.~put the point of change in 1172, when new laws
+discussion. \cite{smith2021long} put the point of change in 1172, when new laws
 made the election the responsibility of an electoral committee, which
 underwent a series of changes until, after the Serrata that reduced the
 eligibility to a closed set of noble families, it became a permanent
