@@ -72,7 +72,7 @@ through a series of lotteries and nominations emanating from the
 \cite{molinari2020republic}.
 
 \rev{The move from the popular assembly to a electoral college \cite{smith2021long}}, composed of all persons
-with a certain economic position\rev{,} or at any rate chosen by the doge, \rev{provoked many changes in the social dynamics, as well as the institutional design}. \rev{Moreover}, by
+with a certain economic position\rev{,} or at any rate chosen by the doge, \rev{provoked many changes in the social dynamics, as well as the institutional design, possibly including, according to \cite{smith2021long} who quote Maranini as mentioned in \cite{coggins199864} as the origin of the idea, \emph{informal} term limits to avoid doges accumulating power individually and for their families during long tenures. Following up this law, the last years of the XII century saw the approval of other laws imposing term limits on \emph{other} offices, from council positions to lower-ranking clerical offices \cite{lane1973venice}. }. \rev{Moreover}, by
 the beginning of the XIV century a \emph{closure} (\emph{serrata}) took
 place \cite{serrata,roesch00}: seats in the Maggior Consiglio were
 closed to only a few families, hereafter called \emph{vecchie} or
