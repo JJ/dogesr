@@ -207,9 +207,8 @@ knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="T
 
 First thing we can note is that, among the top 10, there is only one,
 Leonardo Loredan, who was elected years after the aforementioned
-Francesco Foscari. This was, according to everyone, an unexpected event
-\cite{loredan}, and he was chosen by the minimum needed
-to get elected. So he was really an outlier, and it might have happened
+Francesco Foscari. This was, according to \rev{some historians \cite{rendina1984dogi}}, and he was chosen by the minimum needed
+to get elected, \rev{even as his main opponent died unexpectedly during the election process}. So he was really an outlier, \rev{although according to \cite{smith2020turn}, doges with a longer \emph{shelf life} should be entirely expected in terms of turmoil, which was the case at the turn of the XVI century}; it might have happened, \rev{however},
 that the change point that brought informal term limits was the bad
 experience with Foscari. This ranking, however, shows how very long
 terms were extremely infrequent, and there were no doge that ruled for
