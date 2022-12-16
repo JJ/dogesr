@@ -127,9 +127,9 @@ republic. \rev{This would make Venice an \emph{informal} gerontocracy \cite{gero
 \rev{That might be the superficial reason why Venice chose to go that way}, but \cite{smith2021long} argue that by not having a term limit \rev{imposed} by law, it is
 impossible for any ruler to change it; the time a ruler stays in power
 will be enforced by nature itself, as long as the pool of candidates is
-reduced to persons that have a certain age \ref{and health state}.
+reduced to persons that have a certain age \rev{and health state}.
 
-This also has the side
+\rev{Electing only doges when they have reached certain age} also has the side
 effect of including only candidates with a \rev{proven track record} and a long life of service to the
 republic, \rev{which might have included} (term-limited) appointments at the Senate and other
 institutions with executive power, \rev{such as the council of Ten}. \rev{But this does not seem to be the \emph{reason} why which they were chosen; it was simply an effect caused by the fact that doges, all of them belonging (since the Serrata) to noble families, spent their adult life in different (and term-limited) political appointments}. In general, term limits pursue
@@ -143,20 +143,17 @@ and sharing of power between the different families that were a part of
 the nobility, \rev{which in the case of Ragusa were just a few dozens}, which again contributed to long-term stability.
 
 How \rev{and why} this was introduced in the political mindset is subject to
-discussion.
-
-<!-- this needs to be revised -->
-\cite{smith2021long} put the point of change in 1172, when new laws
+discussion. \cite{smith2021long} \rev{mention that the average number of years before and after 1172 changed dramatically. That was the point in time} when new laws
 made the election the responsibility of an electoral committee, which
 underwent a series of changes until, after the Serrata that reduced the
-eligibility to a closed set of noble families, it became a permanent
-fixture. These new laws also made terms for certain offices limited, and
-in general, it was a complete overhaul of the political system. For
-Smith et al., it produced as a side effect the effective reduction of
+\rev{eligible pool} to a closed set of noble families, it became a permanent
+fixture. These new laws also made terms for certain offices limited \rev{and non-recurrent until after a number of years}.
+In general, \rev{laws published in the few years following 1172} a complete overhaul of the political system. For
+\cite{smith2021long}, it produced as a side effect the effective reduction of
 doges' rule, producing doges that were increasingly older at the moment
 of taking office. Their results indicate that between 1172 and 1797 (end
 of the Republic) the average term duration was 7.6 years, while before
-that, it was almost double, 13.2 years.
+that, it was almost double, 13.2 years. \rev{They also claim that periods of war and conflicts relaxed that informal rule, since it was considered that younger people were more daring and capable of defending the Republic or defeating the enemies; this despite the fact that the doge that made the biggest gains for the republic, Enrico Dandolo \cite{madden1995outside}, was chosen when he was (around) 85, after which he led Venice and the rest of the crusades to invade Zara and then Constantinople. His reign still lasted for thirteen years.}
 
 In a first exploration of this hypothesis using our data \cite{dogesr},
 we concluded that it was \emph{not} the date and event proposed by Smith
