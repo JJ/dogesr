@@ -35,6 +35,7 @@
 
 <<setup, include = FALSE>>=
 library(dogesr)
+library(kableExtra)
 data("doges")
 doges.all.years <- unique(data.frame( doge = data.doges$Doge, years = data.doges$Years))
 @
@@ -177,7 +178,8 @@ than two natural years:
 
 <<one.year.or.less, echo = FALSE>>=
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}", row.names = F)
+knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}", row.names = F, booktabs = T) %>%
+    kable_styling(latex_options = c("striped","hold_position"))
 @
 
 This represented 18.85 percent of all doges, a remarkable number.
@@ -203,7 +205,8 @@ Looking at the other end, the 10 doges that staid in power the longest:
 <<using.doges.years, echo = FALSE>>=
 doges.years.all <- unique(doges.years())
 doges.years.all$Family.doge <- NULL
-knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges ranked by tenure and the precise years where they acceded to power and left, and the total number of years.", row.names = F)
+knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges ranked by tenure \\protect\\rev{length, } the precise years where they acceded to power and left, and the total number of years.", row.names = F, booktabs=T)  %>%
+    kable_styling(latex_options = c("striped","hold_position"))
 @
 
 First thing we can note is that, among the top 10, there is only one,
@@ -287,7 +290,8 @@ families. Other tests also yield the same change point. See \ref{fig:serrata} fo
 
 <<table, echo=FALSE>>=
 knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years, Median=medians$Years),
-              caption="Table with the median and average span, in years, of the doge rule, pre and post the found change point" )
+              caption="Table with the median and average span, in years, of the doge rule, pre and post the found change point", booktabs= T )  %>%
+    kable_styling(latex_options = "hold_position")
 @
 
 There is a difference of more than four years in the average, and
