@@ -165,7 +165,7 @@ Serrata.
 \hypertarget{terms}{%
 \section{Examining doges' terms}\label{terms}}
 
-Let us first examine the claims about doges' terms using independent
+Let us first examine the claims about doges' terms using independent\rev{ly collected}
 data, the one provided by the \texttt{dogesr} package and collected
 independently from the one mentioned by \cite{smith2021long}. How this data was collected is explained in \cite{dogesr}; it does not include the exact date of election and death, just
 the year, so it is in fact impossible to know the precise number of
