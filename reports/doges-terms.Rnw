@@ -318,12 +318,12 @@ significant structural change in this period, not even after the
 introduction of the electoral college, as \rev{singled out} by \cite{smith2021long}\footnote{\rev{This does not mean that the laws introduced in 1172 themselves were not conducing to structural change, only that the change cannot be observed until much later, after more changes were introduced, because in the period between both events was characterized by a high level of conflict, which, again according to \cite{smith2021long}, implies selecting younger candidates with more \emph{èlan}. To a certain point, the observed shift in structural change confirms, rather than rectifies, the main thesis of that paper.}}
 As a matter of fact, looking at Figure \ref{fig:boxplot}, we see
 that the VIII century had exceptionally short terms; it increased
-slightly during the IX century, but then stabilized until the change
+slightly during the IX century, but \rev{it} then stabilized until the change
 point in the XIV century, when it shows a clear decrease, which is
 statistically significant. Other tests, the Buishand and Buishand U
-test, stop at index = 28, but again the p-value is relatively high. This
+test, stop at index = 28, but again the p-value is relatively high. \rev{Doge number 28th in our dataset}
 would also happen before the year 1000, and thus, again, does not match
-the hypothesis of change in regime by the end of the XII century.
+\rev{the date indicated by \cite{smith2021long}}.
 
 However, there seems to be some significant change by the end of the
 republic, at least according to Figure 2. Let us look at the series that
