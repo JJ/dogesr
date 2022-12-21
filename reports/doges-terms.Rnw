@@ -275,7 +275,7 @@ maximized; \rev{in this case, we will be measuring when the average doge term ch
 There are many such algorithms that use different statistical
 tests.
 
-<<serrata, echo=FALSE, fig.pos="h!tbp", fig.height=5, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable).\\protect\\label{fig:serrata}">>=
+<<serrata, echo=FALSE, fig.pos="h!tbp", fig.height=5, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable). \\protect\\rev{The red point and legend indicates average, the median is also shown in the chart}.\\protect\\label{fig:serrata}">>=
 ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
   stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
   geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) +
@@ -285,9 +285,9 @@ ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
 Using Lanzante's test \cite{LANZANTE} from the \texttt{trend} R package \cite{trend},
 this change occurs in the moment Francesco Dandolo took office.
 Francisco Dandolo ruled from 1329 to 1339, right after the last laws of
-the Serrata were enacted, please see also \cite{dogesr} for the
+the Serrata were enacted\footnote{Please see also \rev{refer to} \cite{dogesr} for the
 importance of the Dandolo family in the social network of Venetian noble
-families. Other tests also yield the same change point. See \ref{fig:serrata} for a boxplot of the difference, in years, of the doges' term pre- and post-Serrata.
+families}. Other tests also yield the same change point. See \ref{fig:serrata} for a boxplot of the difference, in years, of the doges' term pre- and post-Serrata.
 
 <<table, echo=FALSE>>=
 knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years, Median=medians$Years),
