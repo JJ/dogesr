@@ -304,7 +304,7 @@ This, in fact, points to other \rev{possible} change points present in the time 
 Let us try and analyze, separately, these two periods, looking for other
 change points. First, the pre-Serrata period. We would be interested in
 checking if, after all, the introduction of the electoral college
-effectively had some effect.
+effectively had some \rev{measurable and significant} effect.
 
 <<change.point2, echo=FALSE>>=
 cp.estimate.2 <- pettitt.test(before.dandolo$years)
@@ -315,7 +315,8 @@ yields a change point at index 9 (after Galla Gaulo, who was blinded and
 exiled after a year in power); however, this result has a p-value higher
 than 0.05 and thus we need to conclude that there is, indeed, no
 significant structural change in this period, not even after the
-introduction of the electoral college, as affirmed by \cite{smith2021long}. As a matter of fact, looking at Figure 2, we see
+introduction of the electoral college, as \rev{singled out} by \cite{smith2021long}\footnote{\rev{This does not mean that the laws introduced in 1172 themselves were not conducing to structural change, only that the change cannot be observed until much later, after more changes were introduced, because in the period between both events was characterized by a high level of conflict, which, again according to \cite{smith2021long}, implies selecting younger candidates with more \emph{èlan}. To a certain point, the observed shift in structural change confirms, rather than rectifies, the main thesis of that paper.}}
+As a matter of fact, looking at Figure \ref{fig:boxplot}, we see
 that the VIII century had exceptionally short terms; it increased
 slightly during the IX century, but then stabilized until the change
 point in the XIV century, when it shows a clear decrease, which is
