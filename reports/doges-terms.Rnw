@@ -297,10 +297,10 @@ knitr::kable( data.frame( Period=c("Post-1329","Pre-1329"), Average=means$Years,
 
 There is a difference of more than four years in the average, and
 median, pre-and post Serrata, although this effect was not immediate,
-but took a few elections to sink in. Please note than both quantities
-are lower than the ones published in \cite{smith2021long}, with the difference also being smaller.
+but took a few elections to sink in; \rev{in fact, as indicated in the introduction, the Serrata included a series of laws passed during a 30 year period; the end of this 30 year period is very close to the change point found here}. Please note than both quantities
+are lower than the ones published in \cite{smith2021long}\rev{: 13.2 before 1172, 7.6 after, with a difference of 5.6, as opposed to a difference in averages of  4.1 before and after the Serrata}.
 
-This, in fact, points to other change points present in the time series.
+This, in fact, points to other \rev{possible} change points present in the time series.
 Let us try and analyze, separately, these two periods, looking for other
 change points. First, the pre-Serrata period. We would be interested in
 checking if, after all, the introduction of the electoral college
