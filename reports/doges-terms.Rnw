@@ -199,7 +199,7 @@ Francesco Foscari was elected when he was 50, defeating Pietro Loredan.
 After being in power for 34 years, he was the only doge forced to
 abdicate after the \emph{serrata} or new rules electing the doges and
 given a pension for life \cite{wiel1891two}. In fact, he died a few days later,
-although the stress caused by his demise might have contributed to that.
+although the stress caused by his \rev{dismissal} might have contributed to \rev{his death}.
 Looking at the other end, the 10 doges that staid in power the longest:
 
 <<using.doges.years, echo = FALSE>>=
