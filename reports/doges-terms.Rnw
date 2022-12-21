@@ -166,26 +166,26 @@ Serrata.
 \hypertarget{terms}{%
 \section{Examining doges' terms}\label{terms}}
 
-Let us first examine the claims about doges' terms using independent\rev{ly collected}
+Let us first examine the claims about \rev{informal limits to the} doges' terms using independent\rev{ly collected}
 data, the one provided by the \texttt{dogesr} package and collected
 independently from the one mentioned by \cite{smith2021long}. How this data was collected is explained in \cite{dogesr}; it does not include the exact date of election and death, just
 the year, so it is in fact impossible to know the precise number of
-months they were in office, only the year it started and ended. A term
-of 0 years thus simply indicates that both events occurred in the same
-physical year. Taking this into account, there were quite a few doges
+months they were in office, only the year it started and ended. \rev{It does not include age when elected either, since that datum is irrelevant to the main focus of this paper.}
+A term
+of 0 years thus simply indicates that both events (\rev{election and death}) occurred in the same
+\rev{calendar} year. Taking this into account, there were quite a few doges
 whose tenure was extraordinarily short, staying in office during less
 than two natural years:
 
 <<one.year.or.less, echo = FALSE>>=
 doges.one.year <- unique(doges.all.years[doges.all.years$years <= 1,])
-knitr::kable(doges.one.year[order(doges.one.year$years),],col.names=NULL,caption="Doges whose tenure was within a natural year (indicated with 0 in the last column) or went from one year to the next. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}", row.names = F, booktabs = T) %>%
+knitr::kable(doges.one.year[order(doges.one.year$years),],caption="Doges whose tenure was within a \\protect\\rev{calendar} year (indicated with 0 in the last column) or went from one year to the next. Since due to the imprecision in the data it is impossible to know the exact amount of months, they are grouped together in a single table.\\protect\\label{tab:oneyear}", booktabs = T) %>%
     kable_styling(latex_options = c("striped","hold_position"))
 @
 
-This represented 18.85 percent of all doges, a remarkable number.
+\rev{All in all} 18.85 percent of all doges \rev{were in office during at most two calendar years}, a remarkable number.
 The first column indicates a high number of them ruled at the beginning
-of the republic (when their cause of death was probably murder) and by
-the end of the republic (when, as is the main hypothesis, they were
+of the republic (when their cause of death was probably murder) and \rev{after the Republic changed the system of election} (when, as is the main hypothesis, they were
 actually elected at an old age).
 
 So it effectively looks like many doges effectively had a short shelf
@@ -195,21 +195,22 @@ life. As a matter of fact, the doge that staid in power the longest, \rev{shown 
 knitr::kable(doges.all.years[which.max(doges.all.years$years),], row.names = F, caption="Doge that spent the most years in office, and the number of years it lasted\\protect\\label{tab:doge:most}.")
 @
 
-Francesco Foscari was elected when he was 50, defeating Pietro Loredan.
+Francesco Foscari was elected when he was 50, defeating \rev{the other candidate, } Pietro Loredan.
 After being in power for 34 years, he was the only doge forced to
-abdicate after the \emph{serrata} or new rules electing the doges and
-given a pension for life \cite{wiel1891two}. In fact, he died a few days later,
-although the stress caused by his \rev{dismissal} might have contributed to \rev{his death}.
-Looking at the other end, the 10 doges that staid in power the longest:
+abdicate after the \emph{serrata} (new rules electing the doges \rev{explained in the introduction}) and
+given a pension for life \cite{wiel1891two}. In fact, he died a few days \rev{after abdication},
+although the stress caused by his \rev{dismissal} might have contributed to \rev{his death, that is, if left unchecked he could have been doge for a few years still}.
 
+%
 <<using.doges.years, echo = FALSE>>=
 doges.years.all <- unique(doges.years())
 doges.years.all$Family.doge <- NULL
-knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges ranked by tenure \\protect\\rev{length, } the precise years where they acceded to power and left, and the total number of years.", row.names = F, booktabs=T)  %>%
+knitr::kable(head(doges.years.all[order(-doges.years.all$Years),],10),caption="Table that shows the top ten doges ranked by tenure \\protect\\rev{length, } the precise years where they acceded to power and left, and the total number of years.\\protect\\label{tab:doge:top}", row.names = F, booktabs=T)  %>%
     kable_styling(latex_options = c("striped","hold_position"))
 @
 
-First thing we can note is that, among the top 10, there is only one,
+Looking at the other end \rev{of the ranking}, the 10 doges that staid in power the longest \rev{are shown in Table \ref{tab:doge:top}. }
+First thing we \rev{may observe} is that, among the top 10, there is only one,
 Leonardo Loredan, who was elected years after the aforementioned
 Francesco Foscari. This was, according to \rev{some historians \cite{rendina1984dogi}}, and he was chosen by the minimum needed
 to get elected, \rev{even as his main opponent died unexpectedly during the election process}. So he was really an outlier, \rev{although according to \cite{smith2020turn}, doges with a longer \emph{shelf life} should be entirely expected in terms of turmoil, which was the case at the turn of the XVI century}; it might have happened, \rev{however},
