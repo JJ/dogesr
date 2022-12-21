@@ -242,9 +242,10 @@ Let us start checking that fact by looking at the average duration in
 office through the history of the Republic, shown in figure \ref{fig:boxplot}.
 
 There seems to be a clear difference before and after the fourteenth
-century; there is also a return to longer tenures by the end of the
-Republic, in the 18th century. However, this is \emph{later} than Smith
-et al.~indicate almost by a whole century. In our previous report
+century \rev{(indicated by the two first digits of the century, 13, in the chart)}; there is also a return to longer tenures by the end of the
+Republic, in the 18th century; \rev{in fact, centuries X to XIII show a remarkably stable average of around 12 years from election to death}.
+
+\rev{This chart also shows that, apparently, the change from the XII to the XIII was, on average, small; the change was rather on the high and low quartiles, with a higher variation in the amount of time a doge lived\footnote{This can be explained within \cite{smith2021long} framework, who stated that in times of conflict, younger doges were chosen. Certainly the XIII century was a time when the Republic was almost continuously at war, notably the IV Crusade that ended with Venice taking over Constatinople: short periods of peace with "old" doges, followed by long periods of conflict with "younger" doges, like Enrico Dandolo \cite{madden2006enrico}. However, this effect should not stop by the end of the century and would affect the rest of the elections; this is why we are interested in checking whether there was an change in the average, \emph{including the exceptions to the rule in times of conflict}.}. After observing this apparent shift, we would like to investigate a bit more thoroughly when that change happened}. In our previous report
 \cite{dogesr} we showed that the difference between the average term
 pre- and post-Serrata is \emph{higher} than the one indicated by Smith
 et al.~in their paper; effectively, Serrata laws were introduced in the
