@@ -215,8 +215,8 @@ Francesco Foscari. This was, according to \rev{some historians \cite{rendina1984
 to get elected, \rev{even as his main opponent died unexpectedly during the election process}. So he was really an outlier, \rev{although according to \cite{smith2020turn}, doges with a longer \emph{shelf life} should be entirely expected in terms of turmoil, which was the case at the turn of the XVI century}; it might have happened, \rev{however},
 that the change point that brought informal term limits was the bad
 experience with Foscari. This ranking, however, shows how very long
-terms were extremely infrequent, and there were no doge that ruled for
-more than 20 years after 1521, when Leonardo Loredan died.
+terms were extremely infrequent, and there were no doge\rev{s} that ruled for
+more than twenty years after 1521, when Leonardo Loredan died.
 
 <<distribution, fig.pos="h!tbp", fig.height=5, echo = FALSE, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in \\protect\\cite{smith2021long}.\\protect\\label{fig:histo}">>=
 library(ggplot2)
