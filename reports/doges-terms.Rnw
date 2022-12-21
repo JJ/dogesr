@@ -225,9 +225,7 @@ ggplot(doges.years.all, aes(x=Years))+geom_histogram(binwidth=5)
 @
 
 The histogram with 5-years wide bins shown in Figure \ref{fig:histo}, shows how infrequent, in
-fact, were terms of more than 10 years.
-
-The distribution is skewed towards very short terms because it also
+fact, were terms of more than 10 years. The distribution is skewed towards very short terms because it also
 includes the first years of the institution, when murder or destitution
 by popular revolt was relatively usual; it also shows a relatively long
 tail exactly for the same reasons, but since it is clustered in the
@@ -238,8 +236,8 @@ doges.years.all$Century <- as.factor(doges.years.all$Century)
 ggplot(doges.years.all, aes(x=Century,y=Years))+geom_boxplot()
 @
 
-The authors of \cite{smith2021long} also indicate that
-an informal term limitation was introduced at a certain point in time.
+\cite{smith2021long} also indicate that
+an informal term limitation was \rev{evident at} a certain point in time, \rev{with big differences before and after 1172. There is no claim, however, that the \emph{cause} of that term limitation occurred in that moment, or dismiss any other possible date or event as the trigger. We will try, in this paper, to check if it is at all possible to find the point of change and match it to some specific or significant event}.
 Let us start checking that fact by looking at the average duration in
 office through the history of the Republic, shown in figure \ref{fig:boxplot}.
 
