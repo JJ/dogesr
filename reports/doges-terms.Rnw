@@ -245,11 +245,11 @@ There seems to be a clear difference before and after the fourteenth
 century \rev{(indicated by the two first digits of the century, 13, in the chart)}; there is also a return to longer tenures by the end of the
 Republic, in the 18th century; \rev{in fact, centuries X to XIII show a remarkably stable average of around 12 years from election to death}.
 
-\rev{This chart also shows that, apparently, the change from the XII to the XIII was, on average, small; the change was rather on the high and low quartiles, with a higher variation in the amount of time a doge lived\footnote{This can be explained within \cite{smith2021long} framework, who stated that in times of conflict, younger doges were chosen. Certainly the XIII century was a time when the Republic was almost continuously at war, notably the IV Crusade that ended with Venice taking over Constatinople: short periods of peace with "old" doges, followed by long periods of conflict with "younger" doges, like Enrico Dandolo \cite{madden2006enrico}. However, this effect should not stop by the end of the century and would affect the rest of the elections; this is why we are interested in checking whether there was an change in the average, \emph{including the exceptions to the rule in times of conflict}.}. After observing this apparent shift, we would like to investigate a bit more thoroughly when that change happened}. In our previous report
+\rev{This chart also shows that, apparently, the change from the XII to the XIII was, on average, small; the change was rather on the high and low quartiles, with a higher variation in the amount of time a doge lived\footnote{\rev{This can be explained within \cite{smith2021long} framework, who stated that in times of conflict, younger doges were chosen. Certainly the XIII century was a time when the Republic was almost continuously at war, notably the IV Crusade that ended with Venice taking over Constantinople: short periods of peace with "old" doges, followed by long periods of conflict with "younger" doges, like Enrico Dandolo \cite{madden2006enrico}. However, this effect should not stop by the end of the century and would affect the rest of the elections; this is why we are interested in checking whether there was an change in the average, \emph{including the exceptions to the rule in times of conflict}.}}. After observing this apparent shift, we would like to investigate a bit more thoroughly when that change happened}. In our previous report
 \cite{dogesr} we showed that the difference between the average term
 pre- and post-Serrata is \emph{higher} than the one indicated by Smith
 et al.~in their paper; effectively, Serrata laws were introduced in the
-early XIV century.
+early XIV century\rev{, when the shift in Figure \ref{fig:boxplot} is observed}.
 
 <<change.point, echo=FALSE>>=
 library(trend)
@@ -269,9 +269,10 @@ medians <- aggregate(Years ~  pre.serrata, doges.years.all, median)
 In this paper, however, we will analyze, using statistical methods, when
 the actual change points in the time series that includes all the terms,
 and which we have already summarized above, occurs. Change-point
-detection algorithms indicate the precise moment when a structural
-change occurs, so that averages before and after the change are
-maximized. There are many such algorithms that use different statistical
+detection algorithms \rev{\cite{truong2020selective}} indicate the precise moment when a structural
+change occurs, so that \rev{differences in} averages before and after the change are
+maximized; \rev{in this case, we will be measuring when the average doge term changes}.
+There are many such algorithms that use different statistical
 tests.
 
 <<serrata, echo=FALSE, fig.pos="h!tbp", fig.height=5, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office pre and post 1329 (indicated with the pre.serrata variable).\\protect\\label{fig:serrata}">>=
@@ -281,7 +282,7 @@ ggplot(doges.years.all, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
   geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
 @
 
-Using Lanzante's test \cite{LANZANTE} from the \texttt{trend} R package,
+Using Lanzante's test \cite{LANZANTE} from the \texttt{trend} R package \cite{trend},
 this change occurs in the moment Francesco Dandolo took office.
 Francisco Dandolo ruled from 1329 to 1339, right after the last laws of
 the Serrata were enacted, please see also \cite{dogesr} for the
