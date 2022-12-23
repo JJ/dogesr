@@ -328,9 +328,9 @@ test, stop at index = 28, but again the p-value is relatively high. \rev{Doge nu
 would also happen before the year 1000, and thus, again, does not match
 \rev{the date indicated by \cite{smith2021long}}.
 
-However, there seems to be some significant change by the end of the
-republic, at least according to Figure 2. Let us look at the series that
-starts with Francesco Dandolo and look for some significant change
+However, there seems to be some \rev{(possibly)} significant change by the end of the
+republic, at least according to Figure \ref{fig:boxplot}\rev{, which shows a shift from a median that is lower than 5 years, to a median equal to 10 during the XVIII century}. Let us look at the series that
+starts with Francesco Dandolo \rev{trying to identify if there are actually} some \rev{statistically} significant change
 points.
 
 <<change.point3, echo=FALSE>>=
@@ -343,14 +343,14 @@ doges.years.post.serrata[doges.years.post.serrata$Start >= 1658,]$pre.decline <-
 
 In this case, we use another change-point detection test which is more
 adequate in this case, Pettitt's test \cite{pettitt1979non}. This indicates the
-change point occurs with the Giovanni Pesaro tenure. This was an
-election quite unlike others previous to them. He had been a corrupt
+change point occurs with the Giovanni Pesaro tenure\rev{, from 1658 to 1659 \ref{rendina1984dogi}}. This was an
+election quite unlike others: \rev{Giovanni Pesaro} had been a corrupt
 administrator, and married a non-patrician to boot. However, his hawkish
 attitude and the fact that he pledged his own money to support the war
 against the Ottoman empire tipped the balance in his favor, making him
 possibly the first doge to be elected not because of his qualities (and
 age), but because of his money. The republic at the time of him taking
-office, 1658, was starting to decline, and although he ruled for a
+office, 1658, was \rev{already in terminal} decline, and although he ruled for a
 single year, possibly precipitated this change in regime.
 
 <<decline, echo=FALSE, fig.pos="h!tbp", fig.height=5, fig.cap="Box-and-whiskers plot of the span, in years, of doges in office after 1329 and pre and post 1658 (indicated with the pre.decline variable).\\protect\\label{fig:decline}">>=
