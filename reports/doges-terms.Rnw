@@ -377,15 +377,16 @@ quite low indeed, indicating a \emph{very} significant difference \rev{indeed, i
 \hypertarget{conclusions}{%
 \section{Conclusions and discussion}\label{conclusions}}
 
-As indicated by \cite{smith2021long}, there seems to be
-evidence \rev{that} term limits of doges of the Republic of Venice \rev{were actually enforced, albeit not in a formal way}. In their
-paper they \rev{show there was a significant difference between terms before and after} 1172,
-when the Maggior Consiglio was formed, \rev{which implied a shift from popular vote to a vote by an electoral college}. The \rev{statistical} analysis that we have
-performed in this paper effectively indicates that, at a certain point
-in time during the history of the Republic of Venice, there was a
-conscious choice by the electoral college to choose, among the eligible
-candidates, those that were beyond a certain age, and thus with a
-limited \rev{expected} lifespan.
+As indicated by \cite{smith2021long}, there seems to be evidence \rev{that} term
+limits of doges of the Republic of Venice \rev{were actually enforced, albeit
+not in a formal way}. In their paper they \rev{show there was a significant
+difference between terms before and after} 1172, when the Maggior Consiglio was
+formed, \rev{which implied a shift from popular vote to a vote by an electoral
+college}. The \rev{statistical} analysis that we have performed in this paper
+effectively indicates that, at a certain point in time during the history of the
+Republic of Venice, there was a conscious choice by the electoral college to
+choose, among the eligible candidates, those that were beyond a certain age, and
+thus with a limited \rev{expected} lifespan.
 
 \rev{U}sing \rev{a statistical technique called} change-point analysis\rev{which
 computes the point in a series where th average changes in a statistically
@@ -409,7 +410,7 @@ corruption \rev{due to long terms in office}.
 What happened in the Serrata is that the pool of eligible families was
 reduced to just two dozens. This pool was continuously expanded, but
 still, at any point in time, there were just a few males in every family
-who could even aspire to be candidates. If a doge was chosen for an
+who could even aspire to be candidates \rev{due to age, offices already held, or other qualifications like military experience}. If a doge was chosen for an
 extended term, the probability of becoming doge in every generation was
 quite diminished. By having such a high churn in the highest office, any
 candidate who was defeated in an election was relatively likely to be
