@@ -343,7 +343,7 @@ doges.years.post.serrata[doges.years.post.serrata$Start >= 1658,]$pre.decline <-
 
 In this case, we use another change-point detection test which is more
 adequate in this case, Pettitt's test \cite{pettitt1979non}. This indicates the
-change point occurs with the Giovanni Pesaro tenure\rev{, from 1658 to 1659 \ref{rendina1984dogi}}. This was an
+change point occurs with the Giovanni Pesaro tenure\rev{, from 1658 to 1659 \cite{rendina1984dogi}}. This was an
 election quite unlike others: \rev{Giovanni Pesaro} had been a corrupt
 administrator, and married a non-patrician to boot. However, his hawkish
 attitude and the fact that he pledged his own money to support the war
@@ -364,44 +364,43 @@ wtest.post.serrata <- wilcox.test(doges.years.post.serrata[doges.years.post.serr
 wtest.periods <- wilcox.test(doges.years.post.serrata[doges.years.post.serrata$pre.decline ==TRUE,]$Years,doges.years.all[doges.years.all$pre.serrata ==TRUE,]$Years)
 @
 
-In this case, plotted in Figure \ref{fig:decline}, the difference in medians, of 1.5 years, is smaller; same happens
-with the difference in averages. There is a clear overlap between the
-two intervals, and the Pettitt test has a p-value which is relatively
+\rev{The statistical distribution of terms before and after this presidency}, plotted in Figure \ref{fig:decline}, \rev{shows a smaller} difference in medians, of \rev{2.5} years; the difference in averages \rev{with respect to the one shown in the main change point also decreases}. There is a clear overlap between the
+two rev{statistical distributions}, and the Pettitt test has a p-value which is relatively
 high. As a matter of fact, a non-parametric Wilcox test shows no
-significant difference. We can then dismiss this change point as not
-significant, although it can explain the greater duration of the doges
+significant difference. We \rev{could} then dismiss this change point as not
+significant, although it can explain the greater duration of the doges' \rev{terms}
 elected by the last period of the republic. If we compare the period
 between the Serrata and this candidate to change point and the
 pre-Serrata era, the Wilcox test yields a p-value of 0.004499 which is
-quite low indeed, indicating a \emph{very} significant difference.
+quite low indeed, indicating a \emph{very} significant difference \rev{indeed, implying that excluding this last period of the republic when the informal term limits apparently disappeared makes the difference in terms pre and post Serrata even more significant}.
 
 \hypertarget{conclusions}{%
 \section{Conclusions and discussion}\label{conclusions}}
 
 As indicated by \cite{smith2021long}, there seems to be
-evidence in the term limits of doges of the Republic of Venice. In their
-paper they indicate 1172 as a departure point for the term ``limits'',
-when the Maggior Consiglio was formed. The analysis that we have
+evidence \rev{that} term limits of doges of the Republic of Venice \rev{were actually enforced, albeit not in a formal way}. In their
+paper they \rev{show there was a significant difference between terms before and after} 1172,
+when the Maggior Consiglio was formed, \rev{which implied a shift from popular vote to a vote by an electoral college}. The \rev{statistical} analysis that we have
 performed in this paper effectively indicates that, at a certain point
 in time during the history of the Republic of Venice, there was a
 conscious choice by the electoral college to choose, among the eligible
 candidates, those that were beyond a certain age, and thus with a
-limited lifespan.
+limited \rev{expected} lifespan.
 
-However, our analysis does not support their claim that this ``design''
-change took place immediately after 1172; using change-point analysis,
-several algorithms support the election of Francesco Dandolo as the
+\rev{U}sing \rev{a statistical technique called} change-point analysis\rev{which computes the point in a series where th average changes in a statistically significant way},
+several algorithms support the \rev{moment in which the} election of Francesco Dandolo \rev{took place} as the
 moment where the shift in the central tendencies, the median and the
 average, took place; no significant structural shift occurred either
 before or after that, although there are smaller, non significant ones,
-that support a certain segmentation of this tradition, so that we could
-say that between 1328 and 1658 most nobles sitting in the final stage of
-the electoral college were aware of this ``tradition'', and so elected
-older persons to the office, with a median life span of just 5 years.
-How this informal measure in this reduced time period contributed to
-stability is difficult to say. However, we can discuss that the fact
+that support a certain segmentation of this "tradition", so that we could
+say that between 1328 and 1658 \rev{(when Pesaro was elected)} most nobles sitting in the final stages of
+the electoral college were aware of \rev{it}, and so elected
+older persons to the office, \rev{which resulted in doges} with a median \rev{remaining} life span of just 5 years.
+
+How this informal measure in this reduced time period contributed to \rev{the}
+stability \ref{of the state at large} is difficult to say. However, we can discuss that the fact
 that it happened after the Serrata points to a rationale among electors
-that is different to the one claimed by \cite{smith2021long}, that is, avoiding entrenchment in power and corruption.
+that is \rev{complementary} to the one\rev{s} claimed by \cite{smith2021long}, that is, avoiding entrenchment in power and corruption.
 
 What happened in the Serrata is that the pool of eligible families was
 reduced to just two dozens. This pool was continuously expanded, but
