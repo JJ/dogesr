@@ -401,32 +401,34 @@ were aware of \rev{it}, and so elected older persons to the office, \rev{which
 resulted in doges} with a median \rev{remaining} life span of just 5 years.
 
 How this informal measure in this reduced time period contributed to \rev{the}
-stability \ref{of the state at large} is difficult to say. However, we can
+stability \rev{of the state at large} is difficult to say. However, we can
 discuss that the fact that it happened \rev{precisely} after the Serrata points
 to a rationale among electors that is \rev{complementary} to the one\rev{s}
 claimed by \cite{smith2021long}, that is, avoiding entrenchment in power and
 corruption \rev{due to long terms in office}.
 
-What happened in the Serrata is that the pool of eligible families was
-reduced to just two dozens. This pool was continuously expanded, but
-still, at any point in time, there were just a few males in every family
-who could even aspire to be candidates \rev{due to age, offices already held, or other qualifications like military experience}. If a doge was chosen for an
-extended term, the probability of becoming doge in every generation was
-quite diminished. By having such a high churn in the highest office, any
-candidate who was defeated in an election was relatively likely to be
-chosen in the \emph{next} one taking place a few years (less than six,
-on average), down the line. This simple fact probably kept powerful
-families from staging a coup, which was riskier than simply waiting for
-nature to follow its course. ``What goes around, comes around'', they
-could think. With a very small set of families, their turn would
-eventually come sooner or later, probably in this same generation.
+What happened in the Serrata is that the pool of eligible families was reduced
+to just two dozens. This pool was continuously expanded, but still, at any point
+in time, there were just a few males in every family who could even aspire to be
+candidates \rev{due to age, offices already held, or other qualifications like
+military experience}. If doge\rev{s would have been} chosen for an extended
+\rev{and possibly unpredictable} term \rev{due to their young age}, the
+probability of becoming doge in every generation was quite diminished. \rev{On
+the other hand, b}y having such a high churn in the highest office, any
+candidate who was defeated in an election was relatively likely to be chosen in
+the \emph{next} one taking place a few years (less than six, on average), down
+the line. This simple fact probably kept powerful families from staging a coup,
+which was riskier than simply waiting for nature to follow its course. ``What
+goes around, comes around'', they could think. With a very small set of
+families, their turn would eventually come sooner or later, probably \rev{ans
+possibly} in this same generation.
 
-Having an electoral college did not really have that effect. Electing a
-person who could stay in power for many years did not decrease the
-possibility of having a person in your own family be elected. Since the
-pool was larger, the possibilities stayed more or less the same, and
+\rev{The single fact of changing from election in a popular assembly to instituting} an electoral college did not really have that effect. Electing a
+person who could stay in power for many years did not \rev{change} the
+possibility of having a person in your own family elected \rev{in a significant way}. Since the
+pool was larger \rev{(any family of a certain standing in the city, a pool that changed continuously)}, the possibilities stayed more or less the same, and
 close to zero. Someone in your family could or could not be elected
-next, but since there were many other possible candidates, it was really
+next, but since there were \emph{many} other possible candidates, it was really
 indifferent that this happened many years later, since it would not be
 the \emph{turn} of your family no matter what.
 
@@ -434,15 +436,15 @@ The number of families inscribed in the Golden Book increased with time,
 however. By the XVII century, anyone could pay their way into the
 Maggior Consiglio, thus increasing the number of possible families to
 choose from and decreasing the incentive of choosing doges for short
-terms. This might be a future and interesting line of work, that might
+terms. \rev{How this influenced the length of the terms} might be a future and interesting line of work, that might
 be pursued in future papers.
 
-A more sensitive analysis could become a future line of work. In their paper, \cite{smith2021long} examine also how the presence or absence of conflict could have an influence in the age of the elected doge; that could be one additional line of research, but, along the lines of the \cite{dogesr} report, how the position of the candidate in the social network could also play an additional role in this choice.
+A more sensitive analysis could \rev{also be pursued in the future}. In their paper, \cite{smith2021long} examine also how the presence or absence of conflict could have an influence in the age of the elected doge; that could be one additional line of research, but, along the lines of the \cite{dogesr} report, how the position of the candidate in the social network could also play an additional role in this choice.
 
-It would be interesting to check whether other republics with similar systems, such as the Vatican or the republic of Genoa, did have a similar informal term limit and what kind of factors influenced it. Further research will be needed to prove or disprove these hypotheses, and show similarities (or disparities) with the Venetian system.
+It would be interesting to check whether other republics with similar systems, such as the Vatican, \rev{the republic of Ragusa} or the republic of Genoa, did have a similar informal term limit and what kind of factors influenced it. Further research, \rev{as well as data gathering}, will be needed to prove or disprove these hypotheses, and show similarities (or disparities) with the Venetian system.
 
 \dataavailability{
-This paper has been written using RMarkdown, and all analysis performed
+This paper has been written using \rev{the literary programming system {\tt knitr}}, and all analysis performed
 are embedded in its source code, which is
 \href{https://github.com/JJ/dogesr/blob/main/reports/doges-terms.Rnw}{available
 at GitHub} under a free license. As indicated, it uses as data source
