@@ -318,7 +318,7 @@ yields a change point at index 9 (after Galla Gaulo, who was blinded and
 exiled after a year in power); however, this result has a p-value higher
 than 0.05 and thus we need to conclude that there is, indeed, no
 significant structural change in this period, not even after the
-introduction of the electoral college, as \rev{singled out} by \cite{smith2021long}\footnote{\rev{This does not mean that the laws introduced in 1172 themselves were not conducing to structural change, only that the change cannot be observed until much later, after more changes were introduced, because in the period between both events was characterized by a high level of conflict, which, again according to \cite{smith2021long}, implies selecting younger candidates with more \emph{èlan}. To a certain point, the observed shift in structural change confirms, rather than rectifies, the main thesis of that paper.}}
+introduction of the electoral college, as \rev{singled out} by \cite{smith2021long}\footnote{\rev{This does not mean that the laws introduced in 1172 themselves were not conducing to structural change, only that the change cannot be observed until much later, after more changes were introduced, because in the period between both events was characterized by a high level of conflict, which, again according to \cite{smith2021long}, implies selecting younger candidates with more \emph{elan}. To a certain point, the observed shift in structural change confirms, rather than rectifies, the main thesis of that paper.}}
 As a matter of fact, looking at Figure \ref{fig:boxplot}, we see
 that the VIII century had exceptionally short terms; it increased
 slightly during the IX century, but \rev{it} then stabilized until the change
@@ -423,33 +423,45 @@ goes around, comes around'', they could think. With a very small set of
 families, their turn would eventually come sooner or later, probably \rev{ans
 possibly} in this same generation.
 
-\rev{The single fact of changing from election in a popular assembly to instituting} an electoral college did not really have that effect. Electing a
+\rev{The single fact of changing from election in a popular assembly to
+instituting} an electoral college did not really have that effect. Electing a
 person who could stay in power for many years did not \rev{change} the
-possibility of having a person in your own family elected \rev{in a significant way}. Since the
-pool was larger \rev{(any family of a certain standing in the city, a pool that changed continuously)}, the possibilities stayed more or less the same, and
-close to zero. Someone in your family could or could not be elected
-next, but since there were \emph{many} other possible candidates, it was really
-indifferent that this happened many years later, since it would not be
+possibility of having a person in your own family elected \rev{in a significant
+way}. Since the pool was larger \rev{(any family of a certain standing in the
+city, a pool that changed continuously)}, the possibilities stayed more or less
+the same, and close to zero. Someone in your family could or could not be
+elected next, but since there were \emph{many} other possible candidates, it was
+really indifferent that this happened many years later, since it would not be
 the \emph{turn} of your family no matter what.
 
 The number of families inscribed in the Golden Book increased with time,
-however. By the XVII century, anyone could pay their way into the
-Maggior Consiglio, thus increasing the number of possible families to
-choose from and decreasing the incentive of choosing doges for short
-terms. \rev{How this influenced the length of the terms} might be a future and interesting line of work, that might
-be pursued in future papers.
+however. By the XVII century, anyone could pay their way into the Maggior
+Consiglio, thus increasing the number of possible families to choose from and
+decreasing the incentive of choosing doges for short terms. \rev{How this
+influenced the length of the terms} might be a future and interesting line of
+work, that might be pursued in future papers.
 
-A more sensitive analysis could \rev{also be pursued in the future}. In their paper, \cite{smith2021long} examine also how the presence or absence of conflict could have an influence in the age of the elected doge; that could be one additional line of research, but, along the lines of the \cite{dogesr} report, how the position of the candidate in the social network could also play an additional role in this choice.
+A more sensitive analysis could \rev{also be pursued in the future}. In their
+paper, \cite{smith2021long} examine also how the presence or absence of conflict
+could have an influence in the age of the elected doge; that could be one
+additional line of research, but, along the lines of the \cite{dogesr} report,
+how the position of the candidate in the social network could also play an
+additional role in this choice.
 
-It would be interesting to check whether other republics with similar systems, such as the Vatican, \rev{the republic of Ragusa} or the republic of Genoa, did have a similar informal term limit and what kind of factors influenced it. Further research, \rev{as well as data gathering}, will be needed to prove or disprove these hypotheses, and show similarities (or disparities) with the Venetian system.
+It would be interesting to check whether other republics with similar systems,
+such as the Vatican, \rev{the republic of Ragusa} or the republic of Genoa, did
+have a similar informal term limit and what kind of factors influenced
+it. Further research, \rev{as well as data gathering}, will be needed to prove
+or disprove these hypotheses, and show similarities (or disparities) with the
+Venetian system.
 
 \dataavailability{
-This paper has been written using \rev{the literary programming system {\tt knitr}}, and all analysis performed
-are embedded in its source code, which is
+This paper has been written using \rev{the literary programming system {\tt
+knitr}}, and all analysis performed are embedded in its source code, which is
 \href{https://github.com/JJ/dogesr/blob/main/reports/doges-terms.Rnw}{available
-at GitHub} under a free license. As indicated, it uses as data source
-version 0.1.1 of the CRAN \texttt{dogesR} package and it can be compiled
-using RStudio or \texttt{pandoc} after installing the needed packages.
+at GitHub} under a free license. As indicated, it uses as data source version
+0.1.1 of the CRAN \texttt{dogesr} package and it can be compiled using RStudio
+or \texttt{pandoc} after installing the needed packages.
 }
 
 \funding{This paper has been supported in part by project and DemocratAI PID2020-115570GB-C22.}
