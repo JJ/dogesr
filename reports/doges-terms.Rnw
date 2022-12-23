@@ -387,20 +387,24 @@ conscious choice by the electoral college to choose, among the eligible
 candidates, those that were beyond a certain age, and thus with a
 limited \rev{expected} lifespan.
 
-\rev{U}sing \rev{a statistical technique called} change-point analysis\rev{which computes the point in a series where th average changes in a statistically significant way},
-several algorithms support the \rev{moment in which the} election of Francesco Dandolo \rev{took place} as the
-moment where the shift in the central tendencies, the median and the
-average, took place; no significant structural shift occurred either
-before or after that, although there are smaller, non significant ones,
-that support a certain segmentation of this "tradition", so that we could
-say that between 1328 and 1658 \rev{(when Pesaro was elected)} most nobles sitting in the final stages of
-the electoral college were aware of \rev{it}, and so elected
-older persons to the office, \rev{which resulted in doges} with a median \rev{remaining} life span of just 5 years.
+\rev{U}sing \rev{a statistical technique called} change-point analysis\rev{which
+computes the point in a series where th average changes in a statistically
+significant way}, several algorithms support the \rev{moment in which the}
+election of Francesco Dandolo \rev{took place} as the moment where the shift in
+the central tendencies, the median and the average, took place; no significant
+structural shift occurred either before or after that, although there are
+smaller, non significant ones, that support a certain segmentation of this
+"tradition", so that we could say that between 1328 and 1658 \rev{(when Pesaro
+was elected)} most nobles sitting in the final stages of the electoral college
+were aware of \rev{it}, and so elected older persons to the office, \rev{which
+resulted in doges} with a median \rev{remaining} life span of just 5 years.
 
 How this informal measure in this reduced time period contributed to \rev{the}
-stability \ref{of the state at large} is difficult to say. However, we can discuss that the fact
-that it happened after the Serrata points to a rationale among electors
-that is \rev{complementary} to the one\rev{s} claimed by \cite{smith2021long}, that is, avoiding entrenchment in power and corruption.
+stability \ref{of the state at large} is difficult to say. However, we can
+discuss that the fact that it happened \rev{precisely} after the Serrata points
+to a rationale among electors that is \rev{complementary} to the one\rev{s}
+claimed by \cite{smith2021long}, that is, avoiding entrenchment in power and
+corruption \rev{due to long terms in office}.
 
 What happened in the Serrata is that the pool of eligible families was
 reduced to just two dozens. This pool was continuously expanded, but
