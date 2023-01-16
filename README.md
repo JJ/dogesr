@@ -52,3 +52,13 @@ R data files (contained in the [`data`](data/) ) directory.
 
 Any further change (columns and some such) will also need modification
 of the documentation at the [`man`](man/) directory.
+
+## Papers
+
+Please check the [`report`](reports/) subdirectory for published papers that use
+this library, and their sources, which is released under a free license.
+
+## LICENSE
+
+The contents of this repository are (c) JJ Merelo, 2022, 2023, and are released
+under the GPL 3 license. Please check [`LICENSE`](LICENSE) for details.
