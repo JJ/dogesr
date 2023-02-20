@@ -15,5 +15,5 @@ marriage.graph <- function() {
   doges.mothers.df <- doges.mothers.df[ (doges.mothers.df$data.doges.Family.doge != '' ) & (doges.mothers.df$data.doges.Family.mother != ''),]
   all.links <- data.frame(doge.or.father = c(doges.marriages.df$data.doges.Family.doge,doges.mothers.df$data.doges.Family.doge),
                           dogaressa.or.mother = c(doges.marriages.df$data.doges.Family.dogaressa,doges.mothers.df$data.doges.Family.mother))
-  return(graph.data.frame(all.links))
+  return(graph.data.frame(all.links,directed=F))
 }
