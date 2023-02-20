@@ -23,12 +23,18 @@ Using data from `dogesr` [@dogesr], we will, in this vignette, analyze a sample 
 
 ## Set up
 
-```{r load}
+```{r load, warning=FALSE,message=FALSE}
 library(dogesr)
+library(igraph)
 doges.sn <- marriage.graph()
 ```
 
-This will call the function that creates, from raw data, the `igraph` data structure with which we can work.
+This will call the function that creates, from raw data, the `igraph` data structure with which we can work. We still need to simplify this net to be able to work with it. 
+```{r simplify}
+E(doges.sn)$weight <- 1
+doges.sn <- simplify(doges.sn, edge.attr.comb=list(weight="sum"))
+V(doges.sn)$degree <- degree(doges.sn)
+```
 
 ## Conclusions
 
