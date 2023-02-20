@@ -1,0 +1,35 @@
+---
+title: "Using `dogesr` to work with the social network of Venetian doges' families"
+author: "JJ Merelo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using `dogesr` to work with the social network of Venetian doges' families}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: ../inst/doges.bib
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed
+
+## Set up
+
+```{r load}
+library(dogesr)
+data("doges")
+```
+
+This will import the data from the `dogesr` package into the `data.doges` data frame. We are interested in the `Doges` and `Years` variables. Let's create a data frame out of that:
+
+## Conclusions
+
+## References
