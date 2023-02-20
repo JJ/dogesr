@@ -1,3 +1,11 @@
+# dogesr 0.2.0
+
+Fixes:
+* Improves documentation.
+
+Changes:
+* Adds `marriage.graph` with extracts an `igraph` usable data structure from the marriage data
+
 # dogesr 0.1.6
 
 Fixes:
