@@ -19,16 +19,16 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and if there was some evolution during the time the Republic of Venice existed
+Using data from `dogesr` [@dogesr], we will, in this vignette, analyze a sample of the social network of Venetian noble families, the one that includes *only* marriages by nobles that became doges and, in some cases, their parents.
 
 ## Set up
 
 ```{r load}
 library(dogesr)
-data("doges")
+doges.sn <- marriage.graph()
 ```
 
-This will import the data from the `dogesr` package into the `data.doges` data frame. We are interested in the `Doges` and `Years` variables. Let's create a data frame out of that:
+This will call the function that creates, from raw data, the `igraph` data structure with which we can work.
 
 ## Conclusions
 
