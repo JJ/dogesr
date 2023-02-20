@@ -22,6 +22,7 @@ Imports:
     dplyr,
     ggplot2,
     knitr,
+    igraph,
     qpdf,
     rmarkdown
 VignetteBuilder: knitr
