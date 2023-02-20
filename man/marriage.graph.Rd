@@ -32,7 +32,7 @@ Data originally from the Wikipedia
 
 \examples{
 library(dogesr)
-library(igraph)
+importFrom(igraph,incident,V)
 all.matrimonial.links <- marriage.graph()
 
 # All families linked to the Contarinis
