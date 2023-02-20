@@ -37,7 +37,7 @@ V(doges.sn)$degree <- degree(doges.sn)
 plot(doges.sn,vertex.size=V(doges.sn)$degree, layout=layout_with_kk, vertex.label.cex=0.7)
 ```
 
-Although not terribly clear, we can at least see that there is a big connected component, and a set of components that are disconnected. Let us try and extract that component
+Although not very clearly, we can at least see that there is a big connected component, and a set of components that are disconnected. Let us try and extract that component
 
 ```{r connected}
 components <- igraph::clusters(doges.sn, mode="weak")
@@ -54,6 +54,8 @@ for (f in c("Pasqualigo","Foscari")) {
   print(incident(doges.sn,as.numeric(V(doges.sn)[f])))
 }
 ```
+
+Other than that, we can see that the same families are at the center of the social network: Dandolo, Morosini, Contarini, all those families that appear over and over again through the history of the Republic. This was already shown in the aforementioned paper; the addition of a few links has not substantially changed the scenario, as expected.
 
 ## Conclusions
 
