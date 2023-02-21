@@ -37,7 +37,7 @@ V(doges.sn)$degree <- degree(doges.sn)
 plot(doges.sn,vertex.size=V(doges.sn)$degree, layout=layout_with_kk, vertex.label.cex=0.7)
 ```
 
-Although not very clearly, we can at least see that there is a big connected component, and a set of components that are disconnected. Let us try and extract that component
+Although not very clearly in this rendering, we can at least see that there is a big connected component, and a set of components that are disconnected. Let us try and extract that component
 
 ```{r connected}
 components <- igraph::clusters(doges.sn, mode="weak")
@@ -47,10 +47,10 @@ vert_ids <- V(doges.sn)[components$membership == biggest_cluster_id]
 doges.sn.connected <- igraph::induced_subgraph(doges.sn, vert_ids)
 plot(doges.sn.connected,vertex.size=V(doges.sn.connected)$degree,layout=layout_with_fr, vertex.label.cex=0.7,vertex.color=V(doges.sn.connected)$types)
 ```
-This already shows (roughly) the power-law structure that was already evident in [@dogesr]; however, looking at Figure 1 in that paper, we see that some families that were "excluded" if doges' parents are not included in the social network, are now part of the connected component. The Lando and Pasqualigo families were then "outside", and they are now linked through some links. We'll check now which are the links in this case, as well as other that were also isolated previously.
+This already shows (roughly) the power-law structure that was already evident in [@dogesr]; however, looking at Figure 1 in that paper, we see that some families that were "excluded" if doges' parents are not included in the social network, are now part of the connected component. The Lando, Pasqualigo and Querini families were then "outside", and they are now linked through some matrilinear relationship. We'll check now which are the links in this case, as well as other that were also isolated previously.
 
 ```{r newlinks}
-for (f in c("Pasqualigo","Foscari")) {
+for (f in c("Pasqualigo","Foscari","Querini")) {
   print(incident(doges.sn,as.numeric(V(doges.sn)[f])))
 }
 ```
