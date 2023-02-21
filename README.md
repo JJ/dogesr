@@ -7,11 +7,13 @@
 
 > **Hacktoberfest**: check the [help wanted](https://github.com/JJ/dogesr/labels/help%20wanted) issues
 
-Module (with data) to work with the dogi and dogaresse of the Venetian republic. Main intention is to analyze social networks resulting from marriages and other interactions.
+Module (with data) to work with the dogi and dogaresse of the Venetian
+republic. Main intention is to analyze social networks resulting from marriages
+and other interactions.
 
 ## Install
 
-Install released versions from CRAN as usual, or development version from here 
+Install released versions from CRAN as usual, or development version from here
 
 ```R
 library(devtools)
@@ -47,8 +49,8 @@ This package includes a couple of vignettes. Once installed, write `vignette("do
 
 ## Work with data
 
-Data in its original format is stored in the [`raw-data`](raw-data)
-directory. If you change that data anyhow, issue `make` to rebuild the
+Data in its original format is stored in the [`data-raw`](https://github.com/JJ/dogesr/tree/main/data-raw)
+directory. If you change that data anyhow, type `make` to rebuild the
 R data files (contained in the [`data`](data/) ) directory.
 
 Any further change (columns and some such) will also need modification
@@ -56,10 +58,12 @@ of the documentation at the [`man`](man/) directory.
 
 ## Papers
 
-Please check the [`report`](reports/) subdirectory for published papers that use
-this library, and their sources, which is released under a free license.
+Please check the [`report`](https://github.com/JJ/dogesr/tree/main/reports)
+subdirectory for published papers that use this library, and their sources,
+which is released under a free license.
 
 ## LICENSE
 
 The contents of this repository are (c) JJ Merelo, 2022, 2023, and are released
-under the GPL 3 license. Please check [`LICENSE`](LICENSE) for details.
+under the GPL 3 license. Please check the
+[`LICENSE`](https://github.com/JJ/dogesr/blob/main/LICENSE) for details.
