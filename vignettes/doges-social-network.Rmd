@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-Using data from `dogesr` [@dogesr], we will, in this vignette, analyze a sample of the social network of Venetian noble families, the one that includes *only* marriages by nobles that became doges and, in some cases, their parents.
+Using data from `dogesr` [@dogesr], we will, in this vignette, analyze a sample of the social network of Venetian noble families, the one that includes *only* marriages by nobles that became doges and, in some cases, by their parents.
 
 ## Set up
 
