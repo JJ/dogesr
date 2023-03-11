@@ -63,6 +63,4 @@ Extending the social network of doges to include their parents, which is a way o
 
 However, this is only the case for the Foscari-Sagredo link; in the case of Loredan-Pasqualigo, it was an addition from the previous version of this dataset. At any rate, using a dataset that is continuously improved and enhanced allows digital humanities researchers have a better picture of the society they are researching.
 
-
-
 ## References
