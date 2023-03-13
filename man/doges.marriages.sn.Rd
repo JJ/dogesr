@@ -1,5 +1,5 @@
-\name{doges.marriages}
-\alias{doges.marriages}
+\name{doges.marriages.sn}
+\alias{doges.marriages.sn}
 \title{Data on doges' (and parents) matrimonial links}
 
 \description{
@@ -29,7 +29,7 @@ Data originally from the Wikipedia
 
 \examples{
 library(dogesr)
-data(doges.marriages)
+data(doges.marriages.sn)
 
 # All families linked to the Contarinis
 incident(doges.marriages,as.numeric(V(doges.marriages)["Contarini"]))

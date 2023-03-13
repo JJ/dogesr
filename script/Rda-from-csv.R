@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 library(igraph)
-data.doges <- read.csv("data-raw/venice-doges.csv")
+data.doges <- read.csv("data-raw/venice-doges.csv")do
 data.doges$Years <- data.doges$End - data.doges$Start
 data.doges$Century <- data.doges$Century +1
 save(data.doges, file="data/doges.rda")
