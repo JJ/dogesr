@@ -29,6 +29,7 @@ Data originally from the Wikipedia
 
 \examples{
 library(dogesr)
+library(igraph)
 data(doges.marriages)
 
 # All families linked to the Contarinis
