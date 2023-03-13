@@ -29,7 +29,7 @@ Data originally from the Wikipedia
 
 \examples{
 library(dogesr)
-data(doges.marriages.sn)
+data(doges.marriages)
 
 # All families linked to the Contarinis
 incident(doges.marriages,as.numeric(V(doges.marriages)["Contarini"]))
