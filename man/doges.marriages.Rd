@@ -32,7 +32,7 @@ library(dogesr)
 data(doges.marriages)
 
 # All families linked to the Contarinis
-incident(doges.marriages,as.numeric(V(doges.marriages)["Contarini"]))
+incident(doges.marriages.sn,as.numeric(V(doges.marriages.sn)["Contarini"]))
 }
 
 \keyword{ Venice }
