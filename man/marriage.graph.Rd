@@ -3,7 +3,7 @@
 \title{Data on doges' matrimonial links}
 
 \description{
-Esxtract matrimonial links as an `igraph` object \code{family.types}; it includes doges' marriages, as well as their fathers', when available.
+Extract matrimonial links as an `igraph` object; it includes doges' marriages, as well as their fathers', when available.
 }
 
 \usage{
