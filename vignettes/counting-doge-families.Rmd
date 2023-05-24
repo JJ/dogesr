@@ -1,0 +1,40 @@
+---
+title: "Using `dogesr` to find out about the doges families"
+author: "JJ Merelo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using `dogesr` to find out about the doges families}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: ../inst/doges.bib
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+Only men belonging to one of the Venetian noble families could actually become doge after the *Serrata*; however, even if the number of noble families was initially small, it was eventually expanded to include several hundred noble families [@lane2019enlargement]. Not all of them, however, were able to include one of their own in the list of doges; on the other hand, the same serrata brought about informal mechanisms that guaranteed a fast turnover in the job of doge, so that many families would get the chance [@histories:jj]
+
+Using data from `dogesr` [@dogesr], we will, in this vignette, have a look at these families, who they were, and how many of them were there.
+
+## Set up
+
+We load the dataset needed, called `doge.families`.
+
+```{r load}
+devtools::load_all(".")
+data("doge.families")
+```
+
+This will import the data from the `dogesr` package into the `doge.families` *tibble*.
+
+
+## Conclusions
+
+## References
