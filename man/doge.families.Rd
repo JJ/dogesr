@@ -20,7 +20,7 @@ A table with two columns:
 library(dogesr)
 data("doge.families")
 
-# How many times did the Dandolos became doges?
+# How many times did the Dandolos became doge?
 doge.families[ doge.families$Family.doge == "Dandolo",]$n
 
 # How many families were doges?

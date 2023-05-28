@@ -28,12 +28,16 @@ Using data from `dogesr` [@dogesr], we will, in this vignette, have a look at th
 We load the dataset needed, called `doge.families`.
 
 ```{r load}
-devtools::load_all(".")
+# library("dogesr") # If you have already installed this package
+devtools::load_all(".") # Comment this, uncomment above if you have installed this package
 data("doge.families")
 ```
 
 This will import the data from the `dogesr` package into the `doge.families` *tibble*.
 
+```{r table}
+knitr::kable(head(doges.years[order(-doges.years$years),],n=10),row.names=F,col.names=c("Doge name","Elected in","Years in office"))
+```
 
 ## Conclusions
 
