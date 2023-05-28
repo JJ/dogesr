@@ -1,6 +1,6 @@
 # Comments
 
-This version includes a new function to work with the social graph
+This version includes a new data set with doge families and their frequency
 
 ## R CMD check results
 
