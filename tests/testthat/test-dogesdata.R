@@ -4,4 +4,3 @@ test_that("data is loaded", {
   expect_length(data.doges,11)
   expect_equal(nrow(data.doges),135)
 })
-data
