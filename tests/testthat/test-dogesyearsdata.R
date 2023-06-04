@@ -5,3 +5,6 @@ test_that("data doges years is loaded", {
   expect_equal(nrow(data.doges.years),122)
 })
 
+test_that("There are no gaps in doges", {
+  doges.years <- unique(data.frame(data.doges[,c("Doge","Start","End")]))
+})
