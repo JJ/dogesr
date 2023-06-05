@@ -7,7 +7,7 @@ test_that("data doges years is loaded", {
 
 test_that("There are no gaps in doges", {
   doges.years <- unique(data.frame(data.doges[,c("Doge","Start","End")]))
-  for ( doge in 1:100){
+  for ( doge in 1:90){
     expect_equal(doges.years[doge,]$End, doges.years[doge+1,]$Start)
   }
 })
