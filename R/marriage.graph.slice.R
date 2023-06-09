@@ -3,7 +3,8 @@ library(igraph)
 globalVariables(c("data.doges"))
 
 #' Convert doges data into a social graph
-#'
+#' @param from Exact name of the doge, Orso (first doge) by default
+#' @param to Exact name of the last doge, Ludovico Manin (last one) by default
 #' @return A graph with noble families as nodes, edges representing marriages of doges or parents; the type of family is the attribute family.type
 #' @export
 #'
