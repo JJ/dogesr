@@ -14,5 +14,6 @@ lib <- modules::use("R")
 load("data/doges.rda")
 load("data/families.rda")
 load("data/doges.marriages.rda")
-load("data/doges.families.rda")
+load("data/doge.families.rda")
+load("data/doges.years.rda")
 
