@@ -29,3 +29,4 @@ test_that("full slices work", {
   expect_equal(V(this.marriage.graph)[to.doge]$name,to.doge)
 })
 
+
