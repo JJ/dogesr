@@ -18,3 +18,12 @@ all.links <- data.frame(doge.or.father = c(doges.marriages.df$data.doges.Family.
                         dogaressa.or.mother = c(doges.marriages.df$data.doges.Family.dogaressa,doges.mothers.df$data.doges.Family.mother))
 doges.marriages.sn <- graph.data.frame(all.links,directed=F)
 save(doges.marriages.sn, file="data/doges.marriages.rda")
+
+data.doges.years <- data.doges
+data.doges.years$Doge.raw <- NULL
+data.doges.years$Dogaressa.raw <- NULL
+data.doges.years$Dogaressa <- NULL
+data.doges.years$Family.dogaressa <- NULL
+data.doges.years$Family.mother <- NULL
+doges.years <- distinct(data.doges.years)
+save(doges.years, file="data/doges.years.rda")
