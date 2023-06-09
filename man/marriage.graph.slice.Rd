@@ -7,10 +7,11 @@ Partial graph of doge marriages as an \code{igraph} object; it includes doges' m
 }
 
 \usage{
-marriage.graph.slice(from="Orso",to="Ludovico Manin")
+marriage.graph.slice(...,from="Orso",to="Ludovico Manin")
 }
 
 \arguments{
+\item{...}{Not really used}
 \item{from}{A doge name, the first by default}
 
 \item{to}{Another doge name, the last by default}
