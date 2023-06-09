@@ -8,7 +8,7 @@ Sub-dataset with the list of doges, their family and when it happened.
 A dataset with doge data and the years their reign started and ended.
 }
 \usage{
-doges.years()
+data("doges.years")
 }
 \details{
 It's essentially the original dataset \code{doges} \insertRef{dogesr}{dogesr}, minus data referring to dogaresse, and leaves just data for the doges, eliminating also the "raw" columns.
@@ -29,8 +29,8 @@ Data originally from the Wikipedia
 }
 \examples{
 library(dogesr)
-data(doges.years)
-summary(data.doges.years$Years)
+data("doges.years")
+summary(doges.years$Years)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
