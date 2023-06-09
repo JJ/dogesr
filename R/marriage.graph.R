@@ -1,4 +1,6 @@
-globalVariables(c("doges.marriages.sn"))
+library(igraph)
+
+globalVariables(c("doges.marriages.sn","family.types"))
 
 #' Convert doges data into a social graph
 #'
@@ -8,5 +10,6 @@ globalVariables(c("doges.marriages.sn"))
 #
 
 marriage.graph <- function() {
+  V(doges.marriages.sn)$family.type <- sapply( V(doges.marriages.sn)$name, function(x) family.types[x] )
   return(doges.marriages.sn)
 }
