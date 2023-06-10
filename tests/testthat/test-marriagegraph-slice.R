@@ -7,8 +7,8 @@ test_that("'to' slices work", {
   to.doge <- "Pietro IV Candiano"
   this.marriage.graph <- marriage.graph.slice(to=to.doge)
   expect_type(this.marriage.graph,"list")
-  expect_equal(V(this.marriage.graph)[orso]$name,orso)
-  expect_equal(V(this.marriage.graph)[to.doge]$name,to.doge)
+  expect_equal(V(this.marriage.graph)["Pietro"]$name,"Pietro")
+  expect_equal(V(this.marriage.graph)["Candiano"]$name,"Candiano")
 })
 
 
@@ -16,8 +16,8 @@ test_that("'from' slices work", {
   from.doge <- "Pietro IV Candiano"
   this.marriage.graph <- marriage.graph.slice(from=from.doge)
   expect_type(this.marriage.graph,"list")
-  expect_equal(V(this.marriage.graph)[manin]$name,manin)
-  expect_equal(V(this.marriage.graph)[from.doge]$name,from.doge)
+  expect_equal(V(this.marriage.graph)["Manin"]$name,"Manin")
+  expect_equal(V(this.marriage.graph)["Candiano"]$name,"Candiano")
 })
 
 test_that("full slices work", {
@@ -25,8 +25,8 @@ test_that("full slices work", {
   to.doge <- "Francesco Erizzo"
   this.marriage.graph <- marriage.graph.slice(from=from.doge,to=to.doge)
   expect_type(this.marriage.graph,"list")
-  expect_equal(V(this.marriage.graph)[from.doge]$name,from.doge)
-  expect_equal(V(this.marriage.graph)[to.doge]$name,to.doge)
+  expect_equal(V(this.marriage.graph)["Candiano"]$name,"Candiano")
+  expect_equal(V(this.marriage.graph)["Orseolo"]$name,"Orseolo")
 })
 
 
