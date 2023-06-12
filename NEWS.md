@@ -1,3 +1,5 @@
+# doges 0.4.0
+
 # doges 0.3.0
 
 Fixes:
