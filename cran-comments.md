@@ -1,10 +1,9 @@
 # Comments
 
-This version includes a new data set with doge families and their frequency
+Some refactoring, better functionality of graphs, fixes in data
 
 ## R CMD check results
 
-0 errors ✔ | 1 warning ✖ | 0 notes ✔
-
+Status: 5 WARNINGs, 4 NOTEs
 
 
