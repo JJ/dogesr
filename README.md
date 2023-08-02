@@ -6,8 +6,8 @@
 # dogesR
 
 Module (with data) to work with the dogi and dogaresse of the Venetian
-republic. Main intention is to analyze social networks resulting from marriages
-and other interactions.
+republic and their relatives. Main intention is to analyze social
+networks resulting from marriages and other interactions.
 
 ## Install
 
@@ -39,7 +39,7 @@ You can retrieve this from the [bibliography file](inst/doges.bib) along with ot
 
 ## Examples
 
-This package includes a couple of vignettes. Once installed, write `vignette("dogesr")` to check what's available. Also
+This package includes a few vignettes. Once installed, write `vignette("dogesr")` to check what's available. Also
 
 * `vignette("doges-family-types")` for how to use the family types data set
 * `vignette("doges-terms")` to analyze the amount of time the doges lived/ruled using data provided in this package.
