@@ -53,12 +53,12 @@ Data in its original format is stored in the [`data-raw`](https://github.com/JJ/
 directory. If you change that data anyhow, type `make` to rebuild the
 R data files (contained in the [`data`](data/) ) directory.
 
-Any further change (columns and some such) will also need modification
+Any further change (columns and suchlike) will also need modification
 of the documentation at the [`man`](man/) directory.
 
 ## Papers
 
-Please check the [`report`](https://github.com/JJ/dogesr/tree/main/reports)
+Please check the [`reports`](https://github.com/JJ/dogesr/tree/main/reports)
 subdirectory for published papers that use this library, and their sources,
 which is released under a free license.
 
