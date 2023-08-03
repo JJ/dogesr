@@ -53,7 +53,7 @@ Data in its original format is stored in the [`data-raw`](https://github.com/JJ/
 directory. If you change that data anyhow, type `make` to rebuild the
 R data files (contained in the [`data`](data/) ) directory.
 
-Any further change (columns and suchlike) will also need modification
+Any further change (columns and suchlike) will also require modification
 of the documentation at the [`man`](man/) directory.
 
 ## Papers
