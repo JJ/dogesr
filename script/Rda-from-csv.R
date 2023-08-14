@@ -23,6 +23,7 @@ doges.mothers.df <- doges.mothers.df[ (doges.mothers.df$data.doges.Family.doge !
 all.links <- data.frame(doge.or.father = c(doges.marriages.df$data.doges.Family.doge,doges.mothers.df$data.doges.Family.doge),
                         dogaressa.or.mother = c(doges.marriages.df$data.doges.Family.dogaressa,doges.mothers.df$data.doges.Family.mother))
 doges.marriages.sn <- graph.data.frame(all.links,directed=F)
+V(doges.marriages.sn)$family.type <- unname(unlist(family.types[V(doges.marriages.sn)]))
 save(doges.marriages.sn, file="data/doges.marriages.rda")
 
 data.doges.years <- data.doges
