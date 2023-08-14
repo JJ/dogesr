@@ -24,6 +24,9 @@ all.links <- data.frame(doge.or.father = c(doges.marriages.df$data.doges.Family.
                         dogaressa.or.mother = c(doges.marriages.df$data.doges.Family.dogaressa,doges.mothers.df$data.doges.Family.mother))
 doges.marriages.sn <- graph.data.frame(all.links,directed=F)
 V(doges.marriages.sn)$family.type <- unname(unlist(family.types[V(doges.marriages.sn)]))
+
+family.colors <- list("Ducali"="lightgray","Estinte"="gray","Evangeliche"="gold","Nuove"="lightgreen", "Nuovissime"="red","Soldo"="yellow","Vecchie"="lightblue","Apostoliche"="pink")
+
 save(doges.marriages.sn, file="data/doges.marriages.rda")
 
 data.doges.years <- data.doges
