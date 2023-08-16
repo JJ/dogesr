@@ -26,7 +26,7 @@ doges.marriages.sn <- graph.data.frame(all.links,directed=F)
 V(doges.marriages.sn)$family.type <- unname(unlist(family.types[V(doges.marriages.sn)]))
 
 family.colors <- list("Unknown"="DarkGray","Ducali"="purple","Estinte"="gray","Evangeliche"="gold","Nuove"="lightgreen", "Nuovissime"="red","Soldo"="yellow","Vecchie"="lightblue","Apostoliche"="pink")
-
+save(family.colors, file="data/family.colors.rda")
 V(doges.marriages.sn)$family.type.color <- unname(unlist(family.colors[ V(doges.marriages.sn)$family.type]))
 save(doges.marriages.sn, file="data/doges.marriages.rda")
 
