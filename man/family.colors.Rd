@@ -1,5 +1,5 @@
 \name{family.colors}
-\alias{family.colorss}
+\alias{family.colors}
 \title{Pre-assigned colors for every type of family}
 \usage{
 data("family.colors")
