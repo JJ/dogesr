@@ -1,0 +1,44 @@
+---
+title: "Using `dogesr` for a Venetian doges timeline"
+author: "JJ Merelo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using `dogesr` for a Venetian doges timeline}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: ../inst/doges.bib
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+
+
+## Set up
+
+```{r load}
+library(dogesr)
+data("doges")
+data("families")
+data("family.colors")
+library(ggplot2)
+library(ggthemes)
+doge.type <- unname(unlist(family.types[data.doges$Family.doge]))
+doge.type.color <- unname(unlist(family.colors[doge.type]))
+doge.timeline <- data.frame(start=data.doges$Start,end=data.doges$End,type=doge.type,color=doge.type.color)
+ggplot(doge.timeline,aes(x=doge.timeline$end))+geom_segment(aes(x=start,xend=end,y=doge.type,yend=doge.type,color=doge.type.color))+theme_economist()+theme(legend.position="none")+xlab("Year")
+```
+
+This will import the data from the `dogesr` package into the `data.doges` data frame. We are interested in the `Doges` and `Years` variables. Let's create a data frame out of that:
+
+
+## Conclusions
+
+## References
