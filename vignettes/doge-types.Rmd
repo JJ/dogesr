@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-
+The so called *ducali* family controlled elections to doge in the Republic of Venice for a good part of the early Modern age [@chojnacki1985kinship].
 
 ## Set up
 
