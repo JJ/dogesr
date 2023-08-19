@@ -21,6 +21,7 @@ Imports:
     Rdpack,
     dplyr,
     ggplot2,
+    ggthemes,
     knitr,
     igraph,
     qpdf,
