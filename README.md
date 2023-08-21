@@ -45,7 +45,8 @@ This package includes a few vignettes. Once installed, write `vignette("dogesr")
 * `vignette("doges-terms")` to analyze the amount of time the doges lived/ruled using data provided in this package.
 * `vignette("doges-social-network")` to get the marriage social network of doges and parents, and make some initial exploration.
 * `vignette("doges-split-social-network")` to get the marriage social network of doges and parents for slices of time, from and to specific doges; this one shows how to get the social network before and after the Serrata.
-* `vignette("counting-doge-families")` to work with a table of the families doges belonged to and how many times they actually "made doge"
+* `vignette("counting-doge-families")` to work with a table of the families doges belonged to and how many times they actually "made doge".
+* `vignette("doge-types")` to show the timeline of the different types of families that managed to "make doge".
 
 ## Work with data
 
