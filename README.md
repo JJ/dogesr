@@ -5,13 +5,16 @@
 
 # dogesR
 
-Module (with data) to work with the dogi and dogaresse of the Venetian
-republic and their relatives. Main intention is to analyze social
-networks resulting from marriages and other interactions, but all kind of useful data is (and will be) included in the package.
+Module (with data) to work with the dogi and dogaresse of the
+[Venetian republic](https://en.wikipedia.org/wiki/Republic_of_Venice)
+and their relatives. Main intention is to analyze social networks
+resulting from marriages and other interactions, but all kind of
+useful data is (and will be) included in the package.
 
 ## Install
 
-Install released versions from CRAN as usual, or development version from here
+Install released versions from CRAN as usual, or development version
+from here
 
 ```R
 library(devtools)
@@ -20,7 +23,9 @@ install_github("JJ/dogesr")
 
 ## Reference
 
-It grew from the data used in [this paper](https://arxiv.org/abs/2209.07334); please cite it if you are using this module:
+It grew from the data used in [this
+paper](https://arxiv.org/abs/2209.07334); please cite it if you are
+using this module:
 
 ```
 @misc{https://doi.org/10.48550/arxiv.2209.07334,
@@ -35,11 +40,13 @@ It grew from the data used in [this paper](https://arxiv.org/abs/2209.07334); pl
 }
 ```
 
-You can retrieve this reference from the [bibliography file](inst/doges.bib) along with other references used in examples.
+You can retrieve this reference from the [bibliography
+file](inst/doges.bib) along with other references used in examples.
 
 ## Examples
 
-This package includes a few vignettes. Once installed, write `vignette("dogesr")` to check what's available. Also
+This package includes a few vignettes. Once installed, write
+`vignette("dogesr")` to check what's available. Also
 
 * `vignette("doges-family-types")` for how to use the family types data set
 * `vignette("doges-terms")` to analyze the amount of time the doges lived/ruled using data provided in this package.
@@ -50,18 +57,20 @@ This package includes a few vignettes. Once installed, write `vignette("dogesr")
 
 ## Work with raw data
 
-Data in its original format is stored in the [`data-raw`](https://github.com/JJ/dogesr/tree/main/data-raw)
+Data in its original format is stored in the
+[`data-raw`](https://github.com/JJ/dogesr/tree/main/data-raw)
 directory. If you change that data anyhow, type `make` to rebuild the
 R data files (contained in the [`data`](data/) ) directory.
 
-Any further change (columns and suchlike) will also require modification
-of the documentation at the [`man`](man/) directory.
+Any further change (columns and suchlike) will also require
+modification of the documentation at the [`man`](man/) directory.
 
 ## Papers
 
-Please check the [`reports`](https://github.com/JJ/dogesr/tree/main/reports)
-subdirectory for published papers that use this library, and their sources,
-which is released under a free license.
+Please check the
+[`reports`](https://github.com/JJ/dogesr/tree/main/reports)
+subdirectory for published papers that use this library, and their
+sources, which is released under a free license.
 
 ## LICENSE
 
