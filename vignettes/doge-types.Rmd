@@ -19,7 +19,11 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-The so called *ducali* family controlled elections to doge in the Republic of Venice for a good part of the early Modern age [@chojnacki1985kinship].
+The so called *ducali* families controlled elections to doge in the Republic of Venice for a good part of the early Modern age [@chojnacki1985kinship]. Only nobles were eligible for many of the jobs in the Venetian government, including of course doge. But Venetian nobility was not a homogeneous class, with many divisions based on when and how they effectively became part of the nobility. The families to which the first doges belonged are classified, in this library, as either *estinte* (extinct) or Unknown (in many cases, only the name of the doge is known, not the family name).
+
+The *evangeliche* families are just four, and are part of the families that became noble during the *Serrata* [@lane2019enlargement], same as the *apostoliche* (which were twelve) and the *vecchie*. This set of families are jointly called *lunghi*; the denomination of the rest depends on when they became part of the Golden Book where all families were inscribed: either *nuove* (new) or *nuovissime* (very new); those called *soldi* are simply families that paid their way into nobility, something that became possible in the late stages of the Republic. The *ducali* families are, in fact, *nuove*, but they are just 15 families that were able to include one of their own as doge before the end of the XV century.
+
+As a matter of fact, they monopolized the first job in the Republic for more than two centuries. This vignette tries to visualize this fact, using `dogesr`.
 
 ## Set up
 
