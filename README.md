@@ -7,7 +7,7 @@
 
 Module (with data) to work with the dogi and dogaresse of the Venetian
 republic and their relatives. Main intention is to analyze social
-networks resulting from marriages and other interactions.
+networks resulting from marriages and other interactions, but all kind of useful data is (and will be) included in the package.
 
 ## Install
 
@@ -35,7 +35,7 @@ It grew from the data used in [this paper](https://arxiv.org/abs/2209.07334); pl
 }
 ```
 
-You can retrieve this from the [bibliography file](inst/doges.bib) along with other references used in examples.
+You can retrieve this reference from the [bibliography file](inst/doges.bib) along with other references used in examples.
 
 ## Examples
 
@@ -48,7 +48,7 @@ This package includes a few vignettes. Once installed, write `vignette("dogesr")
 * `vignette("counting-doge-families")` to work with a table of the families doges belonged to and how many times they actually "made doge".
 * `vignette("doge-types")` to show the timeline of the different types of families that managed to "make doge".
 
-## Work with data
+## Work with raw data
 
 Data in its original format is stored in the [`data-raw`](https://github.com/JJ/dogesr/tree/main/data-raw)
 directory. If you change that data anyhow, type `make` to rebuild the
