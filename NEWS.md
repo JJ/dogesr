@@ -1,3 +1,18 @@
+# doges 0.5.0
+
+Fixes:
+
+* Some grammar and spelling fixes
+* Data on doges fixed
+* All families have a type now, including "Unknown" for old families
+
+Changes:
+
+* Adds maternal connections found in the Wikipedia
+* Assigns fixed colors to every type of *casata*
+* Adds vignette for using it.
+* Adds family type and color information to the graph
+
 # doges 0.4.0
 
 Fixes:
