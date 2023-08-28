@@ -1,3 +1,8 @@
+# doges 0.5.1
+
+Changes:
+* Completes some data from Wikipedia
+
 # doges 0.5.0
 
 Fixes:
