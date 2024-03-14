@@ -56,7 +56,6 @@ We import the two libraries used for plotting the timeline, and use a specific t
 
 Using `dogesr` we are able to gather some insight on the power dynamics of the Republic of Venice, and confirm the widely held belief that *ducali* families were in office for the best part of almost three centuries, from the XIV to the XVI century. Except for small gaps, the visualization shows that as a fact.
 
-The reason why 15 families were the sole drivers of power in Venice for such an extended amount of time is left as an exercise.
-
+The reason why fifteen families were essentially the sole drivers of power in Venice for such an extended amount of time is left as an exercise.
 
 ## References

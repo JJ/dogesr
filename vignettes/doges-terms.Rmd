@@ -72,14 +72,15 @@ First thing we can note is that, among the top 10, there is only one, Leonardo L
 
 ```{r distribution, fig.cap="This histogram reproduces, with a fixed bin size, Figure 1 in [@smith2021long]."}
 library(ggplot2)
-ggplot(doges.years, aes(x=Years))+geom_histogram(binwidth=5)
+library(ggthemes)
+ggplot(doges.years, aes(x=Years))+geom_histogram(binwidth=5)+theme_tufte()
 ```
 
 The distribution is skewed because it includes the first years of the institution. This is the distribution by centuries
 
 ```{r boxplot}
 doges.years$Century <- as.factor(doges.years$Century)
-ggplot(doges.years, aes(x=Century,y=Years))+geom_boxplot()
+ggplot(doges.years, aes(x=Century,y=Years))+geom_boxplot()+theme_tufte()
 ```
 
 There seems to be a clear difference before and after the thirteenth century; there is also a return to longer tenures by the end of the Republic, in the 18th century. Was there a real difference?
@@ -92,7 +93,7 @@ medians <- aggregate(Years ~  pre.serrata, doges.years, median)
 ggplot(doges.years, aes(x=pre.serrata, y=Years))+geom_boxplot(notch=T)+
   stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
   geom_text(data = means, aes(label = round(Years, 2), y = Years + 2), size = 3) + 
-  geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)
+  geom_text(data = medians, aes(label = round(Years, 2), y = Years - 1), size = 3)+theme_tufte()
 ```
 
 This difference is significant, as indicated by the Wilcoxon test
