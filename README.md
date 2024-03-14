@@ -5,7 +5,7 @@
 
 # dogesR
 
-Module (with data) to work with the dogi and dogaresse of the
+Package (with data) to work with the dogi and dogaresse of the
 [Venetian republic](https://en.wikipedia.org/wiki/Republic_of_Venice)
 and their relatives. Main intention is to analyze social networks
 resulting from marriages and other interactions, but all kind of
