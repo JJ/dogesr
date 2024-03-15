@@ -12,7 +12,7 @@ data(doges.marriages)
 
 \value{
 An `igraph` objects, with vertices corresponding to dogi/dogaresse
-families, edges (links) corresponding to recorded.
+families, edges (links) corresponding to recorded marriages eigher by doges or by their parents, as shown in the sources. Plese note that this dataset includes self-loops, corresponding to doges that married within their own family.
 
 Every node has two attributes
 \itemize{
@@ -44,6 +44,9 @@ incident(doges.marriages.sn,as.numeric(V(doges.marriages.sn)["Contarini"]))
 
 # Plot graph, with colors depending on the type of family
 plot(doges.marriages.sn,vertex.color=V(doges.marriages.sn)$family.type.color)
+
+# Show self-loops in the dataset
+print(E(doges.marriages.sn)[which_loop(doges.marriages.sn)])
 }
 
 \keyword{ Venice }
