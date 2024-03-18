@@ -55,7 +55,9 @@ This package includes a few vignettes. Once installed, write
 * `vignette("counting-doge-families")` to work with a table of the families doges belonged to and how many times they actually "made doge".
 * `vignette("doge-types")` to show the timeline of the different types of families that managed to "make doge".
 
-## Work with raw data
+## Work with data
+
+Check available datasets with `data(package="dogesr")` once it has been loaded.
 
 Data in its original format is stored in the
 [`data-raw`](https://github.com/JJ/dogesr/tree/main/data-raw)
