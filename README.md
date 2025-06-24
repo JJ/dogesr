@@ -5,6 +5,7 @@
 
 # dogesR
 
+Also available from [CRAN as `dogesr`](https://cran.r-project.org/package=dogesr)
 Package (with data) to work with the dogi and dogaresse of the
 [Venetian republic](https://en.wikipedia.org/wiki/Republic_of_Venice)
 and their relatives. Main intention is to analyze social networks
