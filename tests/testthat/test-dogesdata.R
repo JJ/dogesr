@@ -10,3 +10,12 @@ test_that("doges have family names", {
     expect_true(data.doges[doge,]$Family.doge != '')
   }
 })
+
+data("families")
+data("family.colors")
+
+test_that("All doges have family types and colors", {
+  doge.type <- unname(unlist(family.types[data.doges$Family.doge]))
+  doge.type.color <- unname(unlist(family.colors[doge.type]))
+  expect_equal(length(doge.type), length(doge.type.color))
+})
