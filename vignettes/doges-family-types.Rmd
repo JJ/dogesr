@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-For the longest part of its existence, Venetian noble families used tactical marriage [@Telek2017MarryingTR] to improve the lot of their *case* or dynasties. Since access to nobility was closed by the beginning of the XIV century, and then enlarged little by little, there was a kind of stratification in the nobility, and marrying *older* families was a way of improving the political, commercial and social prospects for your own family.
+For the longest part of its existence, Venetian noble families used marriage tactically [@Telek2017MarryingTR] to improve the lot of their *case* or dynasties. Since access to nobility was closed by the beginning of the XIV century, and then enlarged little by little, there was a kind of stratification in the nobility, and marrying *older* families was a way of improving the political, commercial and social prospects for your own family.
 
 Using data from `dogesr` [@dogesr], we will, in this vignette, see to what extent that happened and how different types of families married with each other.
 
