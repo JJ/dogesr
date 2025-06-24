@@ -22,7 +22,7 @@ doges.mothers.df <- data.frame(data.doges$Family.doge,data.doges$Family.mother)
 doges.mothers.df <- doges.mothers.df[ (doges.mothers.df$data.doges.Family.doge != '' ) & (doges.mothers.df$data.doges.Family.mother != ''),]
 all.links <- data.frame(doge.or.father = c(doges.marriages.df$data.doges.Family.doge,doges.mothers.df$data.doges.Family.doge),
                         dogaressa.or.mother = c(doges.marriages.df$data.doges.Family.dogaressa,doges.mothers.df$data.doges.Family.mother))
-doges.marriages.sn <- graph.data.frame(all.links,directed=F)
+doges.marriages.sn <- graph_from_data_frame(all.links,directed=F)
 V(doges.marriages.sn)$family.type <- unname(unlist(family.types[V(doges.marriages.sn)]))
 
 family.colors <- list("Unknown"="DarkGray","Ducali"="purple","Estinte"="gray","Evangeliche"="gold","Nuove"="lightgreen", "Nuovissime"="red","Soldo"="yellow","Vecchie"="lightblue","Apostoliche"="pink")

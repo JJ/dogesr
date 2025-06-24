@@ -21,5 +21,5 @@ marriage.graph.slice <- function(..., from="Orso",to="Ludovico Manin") {
   doges.mothers.df <- doges.mothers.df[ (doges.mothers.df$sliced.Family.doge != '' ) & (doges.mothers.df$sliced.Family.mother != ''),]
   all.links <- data.frame(doge.or.father = c(doges.marriages.df$sliced.Family.doge,doges.mothers.df$sliced.Family.doge),
                           dogaressa.or.mother = c(doges.marriages.df$sliced.Family.dogaressa,doges.mothers.df$sliced.Family.mother))
-  return(graph.data.frame(all.links,directed=F))
+  return(graph_from_data_frame(all.links,directed=F))
 }
