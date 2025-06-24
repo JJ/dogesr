@@ -34,7 +34,10 @@ data("families")
 data("family.colors")
 
 doge.type <- unname(unlist(family.types[data.doges$Family.doge]))
+print(lengthdoge.type))
+
 doge.type.color <- unname(unlist(family.colors[doge.type]))
+print(length(doge.type.color))
 doge.timeline <- data.frame(start=data.doges$Start,end=data.doges$End,type=doge.type,color=doge.type.color)
 ```
 
