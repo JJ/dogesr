@@ -16,7 +16,7 @@ data("families")
 data("family.colors")
 
 test_that("All doges have family types and colors", {
-  doge.type <- unname(unlist(family.types[data.doges$Family.doge]))
+  doge.type <- unname(family.types[data.doges$Family.doge])
   expect_length(doge.type, KNOWN_LENGTH)
   doge.type.color <- unname(unlist(family.colors[doge.type]))
   expect_length(doge.type.color, KNOWN_LENGTH)
