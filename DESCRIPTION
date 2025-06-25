@@ -2,7 +2,6 @@ Package: dogesr
 Type: Package
 Title: Work with the Doges/Dogaresse Dataset
 Version: 0.5.2
-Author: Juan Julián Merelo-Guervós
 Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
 Authors@R: person(given = c("Juan", "Julián"),
                   family = "Merelo-Guervós",
