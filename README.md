@@ -77,6 +77,6 @@ sources, which is released under a free license.
 
 ## LICENSE
 
-The contents of this repository are (c) JJ Merelo, 2022, 2023, and are released
+The contents of this repository are (c) JJ Merelo, 2022-2025, and are released
 under the GPL 3 license. Please check the
 [`LICENSE`](https://github.com/JJ/dogesr/blob/main/LICENSE) for details.
