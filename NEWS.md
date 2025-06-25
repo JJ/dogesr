@@ -1,8 +1,8 @@
 # dogesr 0.5.2
 
 Changes:
-* Uses the accepted "Soldi" instead of "Soldo"
-* Minor rewriting in vignettes
+* Uses the accepted "Soldi" instead of "Soldo".
+* Minor rewriting in vignettes.
 
 Fixes:
 * Fixes in description
