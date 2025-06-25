@@ -6,7 +6,7 @@ Changes:
 
 Fixes:
 * Fixes in description
-* Addresses deprecations in igraph
+* Addresses deprecations in igraph: `graph.data.frame`
 
 # doges 0.5.1
 
