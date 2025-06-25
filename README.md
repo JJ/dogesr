@@ -14,8 +14,8 @@ useful data is (and will be) included in the package.
 
 ## Install
 
-Install released versions from CRAN as usual, or development version
-from here
+Install released versions (last one is 0.5.2) from CRAN as usual, or development
+version from here
 
 ```R
 library(devtools)

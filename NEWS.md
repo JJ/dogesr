@@ -6,6 +6,7 @@ Changes:
 
 Fixes:
 * Fixes in description
+* Addresses deprecations in igraph
 
 # doges 0.5.1
 
