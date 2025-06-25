@@ -1,7 +1,7 @@
 Package: dogesr
 Type: Package
 Title: Work with the Doges/Dogaresse Dataset
-Version: 0.5.2
+Version: 0.5.3
 Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
 Authors@R: person(given = c("Juan", "Julián"),
                   family = "Merelo-Guervós",
@@ -18,17 +18,17 @@ Suggests:
     devtools,
     tidyr,
     networkD3,
-    tibble
+    ggplot2,
+    ggthemes,
+    dplyr,
+    tibble,
+    knitr,
+    qpdf,
+    rmarkdown
 Config/testthat/edition: 3
 Imports:
     Rdpack,
-    dplyr,
-    ggplot2,
-    ggthemes,
-    knitr,
-    igraph,
-    qpdf,
-    rmarkdown
+    igraph
 VignetteBuilder: knitr
 RdMacros: Rdpack
 RoxygenNote: 7.2.1

@@ -47,6 +47,7 @@ knitr::kable(head(doge.families[order(-doge.families$n),],n=10),row.names=F,col.
 Which types of families are these? We can use data from the rest of the packages to find out:
 
 ```{r family types}
+library(dplyr)
 data("families")
 doge.families$type <- unname(family.types[doge.families$Family.doge])
 knitr::kable(head(doge.families[order(-doge.families$n),],n=20) %>% select(1,3),row.names=F,col.names=c("Doge family","Family type"))
