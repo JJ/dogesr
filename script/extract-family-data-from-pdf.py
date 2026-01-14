@@ -5,7 +5,7 @@ import re
 pdf_path = 'raines-families.pdf'
 
 # Appendix 1 starts on page 58 and ends on page 63
-start_page = 55
+start_page = 54
 end_page = 63
 
 data = []
@@ -26,7 +26,7 @@ def parse_date(date_str):
     return "Unknown"
 
 with pdfplumber.open(pdf_path) as pdf:
-    for i in range(57, 63):
+    for i in range(start_page, end_page):
         page = pdf.pages[i]
         text = page.extract_text()
         if not text: continue
@@ -41,7 +41,7 @@ with pdfplumber.open(pdf_path) as pdf:
             # 1. Name: Uppercase words, supports brackets e.g. GABRIEL (CABRIEL)
             # 2. Date: Non-greedy match until the next Name or End of Line
             # 3. Dash: Supports hyphens (-), en-dashes (–), and em-dashes (—)
-            pattern = r"([A-ZÀÈÌÒÙ ]+(?:\([A-ZÀÈÌÒÙ ]+\))?)\s+([\?\d\w\s',]+?)\s*[-–—]\s*([\?\d\w\s',]+?)(?=\s+[A-ZÀÈÌÒÙ]{2,}|$)"
+            pattern = r"([A-ZÀÈÌÒÙ']{2,}(?:\s+[A-ZÀÈÌÒÙ']{2,})*(?:\s*\([^)]+\))?)\s+([\d\?\w\s'.,àèéìòù-]+?)\s*([-–—])\s*([\d\?\w\s'.,àèéìòù-]+?)(?=\s+[A-ZÀÈÌÒÙ']{2,}|$)"
             matches = re.findall(pattern, line)
 
             for m in matches:
