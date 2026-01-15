@@ -25,3 +25,5 @@ family.types.data$Initial.Date.of.Admission <- sapply(family.types.data$Family, 
   }
 })
 
+save(family.types.data, file="data/family-types-date.rda")
+
