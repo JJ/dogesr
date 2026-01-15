@@ -9,7 +9,13 @@ family.accession.date <- read.csv("data-raw/family-accession-date.csv")
 # Family.name should be changed all lower case except for the first letter
 family.accession.date$Family <- sapply(family.accession.date$Family.Name, function(x) {
   x <- tolower(x)
-  substr(x,1,1) <- toupper(substr(x,1,1))
+  # split in words by whitespace, uppercase first letter of every word, then join again
+  words <- unlist(strsplit(x, " "))
+  words <- sapply(words, function(w) {
+    substr(w, 1, 1) <- toupper(substr(w, 1,1))
+    return(w)
+  })
+  x <- paste(words, collapse = " ")
   return(x)
 })
 
